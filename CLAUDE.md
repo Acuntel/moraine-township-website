@@ -69,11 +69,19 @@ Highland Park, Illinois. Replaces their Squarespace site at morainetownship.org.
    the admin gate, the share card, the tab icon and whether email is actually
    configured. It never sends mail.
 
-   Then drive the two prompts in a real browser:
+   Then the three checks that need a real browser:
 
    ```bash
    node scripts/popup-check.mjs        # 12 checks, all three languages
+   node scripts/axe-scan.mjs           # axe-core, 55 states, ~100 rules
+   node scripts/keyboard-check.mjs     # focus visibility, dialog, reduced motion
    ```
+
+   `axe-scan` is the independent one. `a11y-audit.mjs` is ours and checks the
+   fourteen failure modes we chose, from raw HTML, which is the site marking its
+   own homework. axe computes contrast from what the browser painted, and that
+   is the only reason the `text-ink-muted/70` failure on all 54 pages was ever
+   found.
 
    Space these out. Running the live suite, the popup check and the four
    URL-based audits back to back sends several hundred requests in a minute and

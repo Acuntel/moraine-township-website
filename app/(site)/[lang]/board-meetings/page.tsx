@@ -164,7 +164,7 @@ export default async function BoardMeetingsPage({
 
           {/*
             The Board's adopted schedule, as a document.
-            5 ILCS 120/2.02(b) requires public notice of the schedule of
+            5 ILCS 120/2.02(a) requires public notice of the schedule of
             regular meetings at the start of each year, and this file is the
             record of that notice. It renders from the archive rather than from
             the admin-entered dates above, so the statutory posting stands even

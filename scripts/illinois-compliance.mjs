@@ -30,7 +30,10 @@ const docLinks = (html) =>
 
 const CHECKS = [
   {
-    cite: '5 ILCS 120/2.02(b)',
+    // Verified against the statute text: subsection (a) carries the annual
+    // schedule and the 48-hour agenda. Subsection (b) is the manner and medium
+    // of notice. This cited (b) until the citations were checked.
+    cite: '5 ILCS 120/2.02(a)',
     what: 'Annual schedule of regular meetings posted',
     path: '/board-meetings',
     test: (html, docs) =>
@@ -108,8 +111,17 @@ const CHECKS = [
     test: (html) => /mailto:info@morainetownship\.org/i.test(html),
   },
   {
-    cite: '5 ILCS 120/2.02(c)',
-    what: 'Open Meetings Act accommodation notice for attendees with disabilities',
+    /*
+      This cited 5 ILCS 120/2.02(c) as an Open Meetings Act requirement. It is
+      not one. Reading the Act end to end, the only mention of disability is in
+      Section 7, about a member attending remotely because of illness; 2.02(c)
+      is about agendas setting out general subject matter. The obligation to
+      offer accommodations at a public meeting is real, but it comes from ADA
+      Title II, not from the Open Meetings Act, and it is worth citing the
+      provision that actually imposes it.
+    */
+    cite: '28 CFR 35.160 (ADA Title II, effective communication)',
+    what: 'Notice that accommodations are available for meeting attendees, with a route to request them',
     path: '/board-meetings',
     test: (html) => /accommodation/i.test(html) && /open meetings act/i.test(html),
   },

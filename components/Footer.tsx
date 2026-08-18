@@ -136,10 +136,20 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           <p>
             &copy; {year} {dict.footer.rights}
           </p>
-          {/* Small gray admin entry point, as requested on the call. */}
+          {/*
+            Small gray admin entry point, as requested on the call.
+
+            Deliberately at full opacity. This was `text-ink-muted/70`, which
+            looks like a harmless way to make a link quieter and is not: the
+            token measures 6.05:1 on white, and the /70 modifier rendered it as
+            #979089 for 3.15:1, under the 4.5:1 that WCAG 1.4.3 requires of text
+            this size. It failed on all 54 pages. scripts/contrast.mjs never saw
+            it because that script checks the colour tokens and knows nothing
+            about Tailwind opacity modifiers.
+          */}
           <Link
             href="/admin"
-            className="text-xs text-ink-muted/70 underline underline-offset-2 transition hover:text-ink-muted"
+            className="text-xs text-ink-muted underline underline-offset-2 transition hover:text-ink"
           >
             {dict.footer.admin}
           </Link>

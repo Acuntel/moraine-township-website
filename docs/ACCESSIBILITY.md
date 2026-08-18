@@ -3,6 +3,20 @@
 **Site:** Moraine Township
 **Standard:** WCAG 2.1 Level AA
 **Legal basis:** ADA Title II, 28 CFR Part 35 Subpart H
+
+**Which law actually binds this Township.** The federal one. Illinois does have
+a web accessibility statute, the Information Technology Accessibility Act
+(30 ILCS 587), and it does not reach here: the Illinois Department of Innovation
+and Technology states plainly that it applies to State agencies and public
+universities and "does not directly apply to local governments, school
+districts, community colleges, or private organizations." A township is a unit
+of local government. So the obligation is ADA Title II, and the standard the
+2024 DOJ rule names is WCAG 2.1 Level AA, which is what this file records.
+
+Illinois law shapes *what* has to be published, in the Open Meetings Act, FOIA
+and the Township Code. It does not set the accessibility standard for how it is
+published. `scripts/illinois-compliance.mjs` covers the first; everything else
+here covers the second.
 **Compliance date for this client:** April 26, 2028 (population under 50,000)
 **Last verified:** August 13, 2026 against the live production deployment
 
@@ -41,46 +55,86 @@ node scripts/i18n-leak-check.mjs https://moraine-food-pantry.vercel.app
 
 ## Contrast (1.4.3, 1.4.11)
 
-All 22 foreground/background pairs pass. Measured, not estimated.
+All 28 foreground/background pairs in use pass. Measured, not estimated.
+This table is generated from `scripts/contrast.mjs`, which is the source of
+truth: an earlier version of this file listed a palette the site had already
+stopped using, including a body-text colour that was not on any page.
 
-| Pair                                   | Ratio   | Required |
-| -------------------------------------- | ------- | -------- |
-| Body text `#1C2B2E` on white           | 14.64:1 | 4.5:1    |
-| Muted text `#40575B` on white          | 7.69:1  | 4.5:1    |
-| Headings `#005A60` on white            | 7.98:1  | 4.5:1    |
-| Links `#00757D` on white               | 5.47:1  | 4.5:1    |
-| Links `#00757D` on tint `#E8F5EF`      | 4.88:1  | 4.5:1    |
-| White on donate green `#018552`        | 4.69:1  | 4.5:1    |
-| White on teal-dark `#005A60`           | 7.98:1  | 4.5:1    |
-| Teal-dark on mint `#99D4AD`            | 4.70:1  | 4.5:1    |
-| Focus ring `#00757D` on white          | 5.47:1  | 3:1      |
-| Brand green `#01A667` graphic on white | 3.16:1  | 3:1      |
+| Pair | Colours | Ratio | Required |
+| --- | --- | --- | --- |
+| Body text on cream | `#2A2520` on `#FDFBF7` | 14.68:1 | 4.5:1 |
+| Body text on cream-alt | `#2A2520` on `#F5F0E8` | 13.38:1 | 4.5:1 |
+| Body text on white card | `#2A2520` on `#FFFFFF` | 15.17:1 | 4.5:1 |
+| Muted body text on cream | `#6B6156` on `#FDFBF7` | 5.86:1 | 4.5:1 |
+| Muted body text on cream-alt | `#6B6156` on `#F5F0E8` | 5.34:1 | 4.5:1 |
+| Muted body text on white card | `#6B6156` on `#FFFFFF` | 6.05:1 | 4.5:1 |
+| Headings (teal-dark) on cream | `#005A60` on `#FDFBF7` | 7.72:1 | 4.5:1 |
+| Headings (teal-dark) on cream-alt | `#005A60` on `#F5F0E8` | 7.04:1 | 4.5:1 |
+| Headings (teal-dark) on white card | `#005A60` on `#FFFFFF` | 7.98:1 | 4.5:1 |
+| Links (teal) on cream | `#00757D` on `#FDFBF7` | 5.29:1 | 4.5:1 |
+| Links (teal) on cream-alt | `#00757D` on `#F5F0E8` | 4.82:1 | 4.5:1 |
+| Links (teal) on white card | `#00757D` on `#FFFFFF` | 5.47:1 | 4.5:1 |
+| Eyebrow (teal) on cream | `#00757D` on `#FDFBF7` | 5.29:1 | 4.5:1 |
+| White on green-deep (donate button) | `#FFFFFF` on `#018552` | 4.69:1 | 4.5:1 |
+| White on teal-dark (donate band) | `#FFFFFF` on `#005A60` | 7.98:1 | 4.5:1 |
+| Teal-dark on white (outline button) | `#005A60` on `#FFFFFF` | 7.98:1 | 4.5:1 |
+| Teal-dark on cream-alt (hero button hover) | `#005A60` on `#F5F0E8` | 7.04:1 | 4.5:1 |
+| Amber warning text on amber background | `#78350F` on `#FFFBEB` | 8.75:1 | 4.5:1 |
+| Error text on error background | `#7F1D1D` on `#FEF2F2` | 9.16:1 | 4.5:1 |
+| Focus ring (teal) on cream | `#00757D` on `#FDFBF7` | 5.29:1 | 3:1 |
+| Focus ring (teal) on cream-alt | `#00757D` on `#F5F0E8` | 4.82:1 | 3:1 |
+| Focus ring (teal) on white | `#00757D` on `#FFFFFF` | 5.47:1 | 3:1 |
+| Brand green mark on cream | `#01A667` on `#FDFBF7` | 3.05:1 | 3:1 |
+| Brand green mark on white | `#01A667` on `#FFFFFF` | 3.16:1 | 3:1 |
+| White heading on dark panel | `#FFFFFF` on `#005A60` | 7.98:1 | 4.5:1 |
+| Amber stat accent on dark panel | `#F0C060` on `#005A60` | 4.72:1 | 4.5:1 |
+| Mint eyebrow on dark panel | `#99D4AD` on `#005A60` | 4.70:1 | 4.5:1 |
+| White on amber CTA | `#FFFFFF` on `#A9661A` | 4.56:1 | 4.5:1 |
+
+**Decorative-only tokens.** From the Brand Kit, but too light to carry text or
+serve as a meaningful graphic. Backgrounds, fills, borders and rules only:
+
+| Token | Role | On cream |
+| --- | --- | --- |
+| `#D4882A` | amber (fills only) | 2.76:1 |
+| `#45B4A4` | brand-aqua | 2.44:1 |
+| `#66BB6A` | brand-green-light | 2.29:1 |
+| `#99D4AD` | brand-mint | 1.64:1 |
+| `#9C9285` | ink-faint (borders only) | 2.96:1 |
+| `#E8E0D4` | line (rules only) | 1.27:1 |
+
+### One thing a token table cannot catch
+
+Every value above is the token. Tailwind opacity modifiers are applied at the
+point of use and change the rendered colour without changing the token, so this
+check cannot see them. The footer admin link was written `text-ink-muted/70`,
+which took a compliant 6.05:1 colour down to 3.15:1 as rendered, and failed on
+all 54 pages. `scripts/contrast.mjs` reported everything green throughout.
+
+That is why `scripts/axe-scan.mjs` exists and why it runs against the deployed
+site rather than the palette: axe computes contrast from what the browser
+actually painted. Any new `text-*/NN` or `bg-*/NN` on text needs checking there,
+not here.
 
 ### The one brand compromise, stated plainly
 
-The Brand Kit primary green `#01A667` measures **3.16:1** on white. That clears the
+The Brand Kit primary green `#01A667` measures 3.16:1 on white. That clears the
 3:1 bar for graphics and UI boundaries (1.4.11) but not the 4.5:1 bar for normal
-text (1.4.3).
-
-So the palette splits the green in two:
+text (1.4.3), so the palette splits it in two:
 
 - `brand-green` `#01A667` stays the brand green for the logo, borders, icon
   tints and decorative fills.
-- `brand-green-deep` `#018552`, the same hue darkened to 80%, carries white text
-  on the donate buttons.
+- `brand-green-deep` `#018552`, the same hue darkened, carries white text on the
+  donate buttons at 4.69:1.
 
 Side by side the difference is barely perceptible, and the donate control still
-reads as bright brand green. Nothing else needed to change.
+reads as bright brand green.
 
-**Decorative-only tokens.** These are from the Brand Kit but are too light to
-carry text or serve as a meaningful graphic on white. They are backgrounds and
-fills only:
-
-| Token               | Hex       | On white |
-| ------------------- | --------- | -------- |
-| `brand-aqua`        | `#45B4A4` | 2.52:1   |
-| `brand-green-light` | `#66BB6A` | 2.36:1   |
-| `brand-mint`        | `#99D4AD` | 1.70:1   |
+The curved "MORAINE TOWNSHIP" lettering inside the logo mark is white on
+`#01A667` at 3.16:1. It is exempt: WCAG 1.4.3 places no contrast requirement on
+text that is part of a logo or brand name. The mark also carries
+`aria-label="Moraine Township"`, and the name appears as ordinary text eleven
+times on the home page, so nothing depends on reading the logo.
 
 ---
 
@@ -166,7 +220,7 @@ is present **and reachable**, not merely described. A page that says "budgets ar
 posted here" and links nothing is a compliance failure, and that is the failure
 mode this catches.
 
-**Result: 15/15 satisfied.** Covering 5 ILCS 120/2.02, 2.02(c), 2.06(b) and 7.3;
+**Result: 15/15 satisfied.** Covering 5 ILCS 120/2.02(a), 2.02(b), 2.06(b) and 7.3;
 5 ILCS 140/3, /4 and /6; 30 ILCS 15; 35 ILCS 200/18-60; 50 ILCS 205/20;
 60 ILCS 1 Articles 80 and 130; and 28 CFR 35.200.
 
