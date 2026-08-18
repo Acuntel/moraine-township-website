@@ -4,7 +4,17 @@ Next.js 14 + TypeScript + Tailwind. Trilingual government site for Moraine Towns
 Highland Park, Illinois. Replaces their Squarespace site at morainetownship.org.
 
 **Live:** https://moraine-food-pantry.vercel.app
+**Repo:** https://github.com/Acuntel/moraine-township-website (private)
 **Vercel project:** `moraine-food-pantry` (`prj_MLSzcr1R2lWjfiOR1GDNSwqNeEUz`)
+
+> The repo has no deploy hook. Deploys are manual: `npx vercel --prod --yes`
+> from this folder, with the sandbox disabled. Pushing to GitHub does not
+> deploy anything.
+
+> **Never commit a real credential, including into a test.** The admin password
+> was hardcoded in `tests/admin-auth.test.ts` and would have been published with
+> the first push. The tests set `ADMIN_PASSWORD` themselves, so they use a
+> fixture. Real values live only as encrypted Vercel environment variables.
 
 > The Vercel project is still named `moraine-food-pantry` from the original mock.
 > Renaming it in the dashboard changes the `.vercel.app` URL, so it was left alone
