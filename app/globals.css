@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-franklin: "Libre Franklin";
+    --ease-flow: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* The fixed header would otherwise sit on top of an anchor target. */
+    scroll-padding-top: 7rem;
+  }
+
+  body {
+    @apply bg-cream text-ink antialiased;
+    font-family:
+      var(--font-franklin), "Franklin Gothic Medium", Arial, sans-serif;
+    line-height: 1.62;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    @apply bg-brand-green-deep text-white;
+  }
+
+  /* A visible focus ring on every interactive element is required at Level AA
+     (2.4.7). Never remove without an equally visible replacement. */
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand-teal ring-offset-2 ring-offset-cream;
+    border-radius: 6px;
+  }
+
+  h1,
+  h2 {
+    @apply font-display font-bold text-ink;
+    text-wrap: balance;
+  }
+
+  h3,
+  h4 {
+    @apply font-semibold text-brand-teal-dark;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-content px-5 sm:px-8;
+  }
+
+  .section {
+    padding-top: clamp(3.5rem, 8vw, 6rem);
+    padding-bottom: clamp(3.5rem, 8vw, 6rem);
+  }
+
+  .prose-page p {
+    @apply text-[1.0625rem] leading-[1.72] text-ink-muted;
+  }
+
+  .prose-page p + p {
+    @apply mt-5;
+  }
+
+  /* Links stay underlined so they are distinguishable without relying on
+     colour alone (1.4.1), but with a light decoration so body copy does not
+     look striped. */
+  .link {
+    @apply text-brand-teal underline decoration-brand-teal/30 underline-offset-[5px] transition-colors duration-300 hover:text-brand-teal-dark hover:decoration-brand-teal-dark;
+  }
+
+  /* The nav underline sweeps in from the left and out to the right, which is
+     the small motion detail that made the mock feel considered. */
+  .nav-link {
+    @apply relative text-[0.9rem] font-medium text-ink-muted transition-colors duration-300;
+  }
+
+  .nav-link::after {
+    content: "";
+    @apply absolute -bottom-1 left-0 right-0 h-[1.5px] origin-right scale-x-0 bg-brand-green;
+    transition: transform 0.4s var(--ease-flow);
+  }
+
+  .nav-link:hover {
+    @apply text-ink;
+  }
+
+  .nav-link:hover::after,
+  .nav-link[aria-current="page"]::after {
+    @apply origin-left scale-x-100;
+  }
+
+  .nav-link[aria-current="page"] {
+    @apply text-brand-teal-dark;
+  }
+
+  /* Over the dark hero the whole control set inverts. Full white, not a tint,
+     because contrast over a photograph has to hold at the lightest pixel. */
+  .nav-link-on-dark,
+  .nav-link-on-dark[aria-current="page"] {
+    @apply text-white;
+  }
+
+  .nav-link-on-dark::after {
+    @apply bg-white;
+  }
+
+  .card {
+    @apply rounded-lg border border-line bg-white p-7 shadow-sm;
+    transition:
+      transform 0.5s var(--ease-flow),
+      box-shadow 0.5s var(--ease-flow);
+  }
+
+  .card-lift:hover,
+  .card-lift:focus-within {
+    @apply -translate-y-1.5 shadow-lg;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2.5 rounded-full px-7 py-3.5 text-[0.95rem] font-semibold;
+    transition:
+      transform 0.4s var(--ease-flow),
+      background-color 0.3s ease,
+      box-shadow 0.4s var(--ease-flow);
+  }
+
+  .btn-primary {
+    @apply bg-brand-green-deep text-white shadow-glow hover:-translate-y-0.5 hover:bg-brand-teal-dark;
+  }
+
+  /* The mock's action colour. amber-deep is the only amber that carries white
+     text at Level AA (4.56:1). */
+  .btn-accent {
+    @apply bg-amber-deep text-white hover:-translate-y-0.5 hover:bg-[#8F5514];
+    box-shadow: 0 10px 30px -8px rgba(169, 102, 26, 0.45);
+  }
+
+  .btn-outline {
+    @apply border border-line bg-white text-brand-teal-dark hover:-translate-y-0.5 hover:border-brand-green hover:shadow-md;
+  }
+
+  .btn-ghost-light {
+    @apply border border-white/45 text-white hover:-translate-y-0.5 hover:bg-white hover:text-brand-teal-dark;
+  }
+
+  .eyebrow {
+    @apply text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-brand-teal;
+  }
+}
+
+/* Respect the operating system setting. The donation hearts, the card lift and
+   the nav sweep all stop moving for anyone who has asked for less motion. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .card-lift:hover,
+  .card-lift:focus-within,
+  .btn:hover {
+    transform: none;
+  }
+}

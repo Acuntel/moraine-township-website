@@ -1,0 +1,2 @@
+<loc>https://www.morainetownship.org/assessments</loc>
+<loc>https://www.morainetownship.org/home-impact</loc>

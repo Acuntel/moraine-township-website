@@ -1,0 +1,2358 @@
+{
+  "scanned": 235,
+  "imageOnly": 3,
+  "untagged": 157,
+  "imageOnlyMB": 3.2,
+  "files": [
+    {
+      "label": "daggitt aerial view",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/daggitt_aerial_view.pdf",
+      "category": "cemetery",
+      "year": null,
+      "bytes": 414418,
+      "chars": 0,
+      "tagged": false,
+      "imageOnly": true
+    },
+    {
+      "label": "Mooney modernmap",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/mooney_modernmap.pdf",
+      "category": "cemetery",
+      "year": null,
+      "bytes": 26434,
+      "chars": 146,
+      "tagged": false,
+      "imageOnly": true
+    },
+    {
+      "label": "mooneypictures",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/mooneypictures.pdf",
+      "category": "cemetery",
+      "year": null,
+      "bytes": 2865803,
+      "chars": 1,
+      "tagged": false,
+      "imageOnly": true
+    },
+    {
+      "label": "2026 1 7 Moraine Board Minutes l4ja",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2026_1_7_moraine_board_minutes-l4ja.pdf",
+      "category": "minutes",
+      "year": 2026,
+      "bytes": 58017,
+      "chars": 4529,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2026 2 18 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2026-_2_18_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2026,
+      "bytes": 105270,
+      "chars": 3833,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2026 06 3 Moraine Board Minutes TO POST",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2026-_06_3_moraine_board_minutes-to-post.pdf",
+      "category": "minutes",
+      "year": 2026,
+      "bytes": 123691,
+      "chars": 3335,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2026 27 Food Pantry Application ENGLISH",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2026-27-food-pantry-application-english.pdf",
+      "category": "pantry",
+      "year": 2026,
+      "bytes": 174266,
+      "chars": 1990,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2026 2 4 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2026-_2_4_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2026,
+      "bytes": 151797,
+      "chars": 4369,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2026 1 21 Moraine Regular Board Meeting Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2026_1_21_moraine_regular_board_meeting_minutes.pdf",
+      "category": "minutes",
+      "year": 2026,
+      "bytes": 60099,
+      "chars": 3719,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2026 27 Food Pantry Application SPANISH",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2026-27-food-pantry-application-spanish.pdf",
+      "category": "pantry",
+      "year": 2026,
+      "bytes": 192680,
+      "chars": 2187,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2026 3 18 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2026-_3_18_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2026,
+      "bytes": 164868,
+      "chars": 5016,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2024 LEVY TO BE COLLECTED 2025 FOR FY 2026",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2024-levy-to-be-collected-2025-for-fy-2026.pdf",
+      "category": "levy",
+      "year": 2026,
+      "bytes": 230679,
+      "chars": 2686,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2026 27 Food Pantry Application RUSSIAN",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2026-27-food-pantry-application-russian.pdf",
+      "category": "pantry",
+      "year": 2026,
+      "bytes": 183560,
+      "chars": 2436,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2026 4 22 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2026-_4_22_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2026,
+      "bytes": 130327,
+      "chars": 4556,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2026-05-06 Moraine Board Minutes 2",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2026-_05_06_moraine_board_minutes-2.pdf",
+      "category": "minutes",
+      "year": 2026,
+      "bytes": 154328,
+      "chars": 4289,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "Resolution Setting Elected Officials Compensation 2025 2029",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/resolution-setting-elected-officials-compensation-2025-2029.pdf",
+      "category": "notices",
+      "year": 2029,
+      "bytes": 83187,
+      "chars": 3189,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2026-06-17 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2026-_06_17_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2026,
+      "bytes": 100980,
+      "chars": 4305,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2026-05-20 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2026-_05_20_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2026,
+      "bytes": 137443,
+      "chars": 4540,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2026 SUPERVISOR STATEMENT OF FINANCIAL AFFAIRS",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2026-supervisor-statement-of-financial-affairs.pdf",
+      "category": "notices",
+      "year": 2026,
+      "bytes": 289067,
+      "chars": 6310,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2026-08-05 Moraine Board Agenda",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2026_08_05_moraine_board_agenda.pdf",
+      "category": "agenda",
+      "year": 2026,
+      "bytes": 187308,
+      "chars": 1006,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2026 Grant Application Due February 1 2026 updated",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2026-grant-application-due-february-1-2026-updated.pdf",
+      "category": "grants",
+      "year": 2026,
+      "bytes": 539176,
+      "chars": 3605,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "Moraine Township Regular Board Meeting Schedule 2026 2",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/moraine_township_regular_board_meeting_schedule_2026-2.pdf",
+      "category": "schedule",
+      "year": 2026,
+      "bytes": 41591,
+      "chars": 983,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2025 6 11 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2025_6_11_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2025,
+      "bytes": 94589,
+      "chars": 3689,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2025 7 9 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2025_7_9_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2025,
+      "bytes": 80232,
+      "chars": 4679,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2025 9 17 Moraine Board Agenda 5mp2",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2025_9_17_moraine_board_agenda-5mp2.pdf",
+      "category": "agenda",
+      "year": 2025,
+      "bytes": 23983,
+      "chars": 551,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2025 9 10 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2025_9_10_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2025,
+      "bytes": 56634,
+      "chars": 3326,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2025 8 6 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2025_8_6_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2025,
+      "bytes": 92579,
+      "chars": 3265,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2025 8 14 Latino Mtg agenda",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2025_8_14_latino-mtg-agenda.pdf",
+      "category": "agenda",
+      "year": 2025,
+      "bytes": 315580,
+      "chars": 811,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "Tax Levy for tax year 2025 collectable in 2026",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/tax-levy-for-tax-year-2025-collectable-in-2026.pdf",
+      "category": "levy",
+      "year": 2026,
+      "bytes": 196988,
+      "chars": 2825,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2025 Annual Town Meeting Sup Stmt",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2025-annual-town-meeting-sup-stmt.pdf",
+      "category": "annualmeeting",
+      "year": 2025,
+      "bytes": 160967,
+      "chars": 4994,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2025-01-08 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2025_01_08_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2025,
+      "bytes": 124949,
+      "chars": 5361,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2025-02-26 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2025_02_26_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2025,
+      "bytes": 120713,
+      "chars": 4000,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2025-02-12 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2025_02_12_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2025,
+      "bytes": 106643,
+      "chars": 4531,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2025-08-20 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2025_08_20_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2025,
+      "bytes": 60778,
+      "chars": 3428,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2025-10-29 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2025_10_29_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2025,
+      "bytes": 53699,
+      "chars": 3364,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2025-10-15 Moraine Regular Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2025_10_15_moraine_regular_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2025,
+      "bytes": 52457,
+      "chars": 3289,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2025-04-28 Special Joint Moraine Board Minutes with CMHB",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2025_04_28_special_joint_moraine_board_minutes_with_cmhb.pdf",
+      "category": "minutes",
+      "year": 2025,
+      "bytes": 57358,
+      "chars": 1461,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2025-11-19 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2025_11_19_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2025,
+      "bytes": 56690,
+      "chars": 4070,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2025-01-22 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2025_01_22_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2025,
+      "bytes": 132463,
+      "chars": 5740,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "ANNUAL FOIA POSTING 2025",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/annual-foia-posting-2025.pdf",
+      "category": "foia",
+      "year": 2025,
+      "bytes": 97464,
+      "chars": 2315,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2025-03-19 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2025_03_19_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2025,
+      "bytes": 188242,
+      "chars": 6506,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2025-12-17 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2025_12_17_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2025,
+      "bytes": 60060,
+      "chars": 4350,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "Resolution Opposing Township Consolidation into County Government 04 08 2025",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/resolution-opposing-township-consolidation-into-county-government-04-08-2025.pdf",
+      "category": "notices",
+      "year": 2025,
+      "bytes": 44004,
+      "chars": 1408,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "FOOD PANTRY FLYER NOV 2025",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/food-pantry-flyer-nov-2025.pdf",
+      "category": "pantry",
+      "year": 2025,
+      "bytes": 308585,
+      "chars": 1002,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2025-05-07 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2025-05-07-moraine-board-minutes.pdf",
+      "category": "minutes",
+      "year": 2025,
+      "bytes": 183128,
+      "chars": 4150,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2025-04-16 Moraine Board Minutes 2",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2025_04_16_moraine_board_minutes-2.pdf",
+      "category": "minutes",
+      "year": 2025,
+      "bytes": 232461,
+      "chars": 6723,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "Setting Elected Officials Compensation 2021 TO 2025 1",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/setting-elected-officials-compensation-2021-to-2025-1.pdf",
+      "category": "notices",
+      "year": 2025,
+      "bytes": 105633,
+      "chars": 2467,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2024-04-09 Annual Town Meeting Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2024_04_09_annual_town_meeting_minutes.pdf",
+      "category": "minutes",
+      "year": 2024,
+      "bytes": 42981,
+      "chars": 1568,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2024-01-10 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2024_01_10_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2024,
+      "bytes": 120176,
+      "chars": 5191,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2024-01-24 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2024_01_24_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2024,
+      "bytes": 110194,
+      "chars": 4724,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2024-02-07 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2024_02_07_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2024,
+      "bytes": 100108,
+      "chars": 4115,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2024-02-21 Moraine Board Minutes 2",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2024_02_21_moraine_board_minutes-2.pdf",
+      "category": "minutes",
+      "year": 2024,
+      "bytes": 105019,
+      "chars": 4386,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "Township Newsleter Spring 2025",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/township-newsleter-spring-2025.pdf",
+      "category": "newsletter",
+      "year": 2025,
+      "bytes": 1190814,
+      "chars": 4317,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2024-08-21 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2024_08_21_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2024,
+      "bytes": 109197,
+      "chars": 4557,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2024SUPERVISORSTATEMENTOFFINANCIALAFFAIRS",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2024supervisorstatementoffinancialaffairs.pdf",
+      "category": "notices",
+      "year": 2024,
+      "bytes": 162256,
+      "chars": 4213,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2024-10-09 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2024_10_09_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2024,
+      "bytes": 97120,
+      "chars": 3828,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2024-09-11 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2024_09_11_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2024,
+      "bytes": 144742,
+      "chars": 6008,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2024-09-25 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2024_09_25_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2024,
+      "bytes": 150995,
+      "chars": 6669,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2023-04-18 Annual Town Meeting Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2023_04_18_annual_town_meeting_minutes.pdf",
+      "category": "minutes",
+      "year": 2023,
+      "bytes": 41053,
+      "chars": 1483,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2024-10-23 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2024_10_23_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2024,
+      "bytes": 156125,
+      "chars": 6738,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2022 LEVY COLLECTED 2023",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2022-levy-collected-2023.pdf",
+      "category": "levy",
+      "year": 2023,
+      "bytes": 258517,
+      "chars": 2121,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "MORAINE TOWNSHIP FINAL DECENNIAL REPORT JUNE 12 2024",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/moraine-township-final-decennial-report-june-12-2024.pdf",
+      "category": "decennial",
+      "year": 2024,
+      "bytes": 874983,
+      "chars": 4892,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2023 SUPERVISOR STATEMENT OF FINANCIAL AFFAIRS",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2023-supervisor-statement-of-financial-affairs.pdf",
+      "category": "notices",
+      "year": 2023,
+      "bytes": 586766,
+      "chars": 2893,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2024-12-18 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2024_12_18_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2024,
+      "bytes": 166791,
+      "chars": 6546,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2023-05-09 Moraine Decennial Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2023_05_09_moraine_decennial_minutes.pdf",
+      "category": "minutes",
+      "year": 2023,
+      "bytes": 50979,
+      "chars": 1927,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2024-11-20 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2024_11_20_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2024,
+      "bytes": 184912,
+      "chars": 6567,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2023-05-09 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2023_05_09_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2023,
+      "bytes": 117175,
+      "chars": 4798,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2023-06-27 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2023_06_27_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2023,
+      "bytes": 78592,
+      "chars": 3100,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2023-06-13 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2023_06_13_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2023,
+      "bytes": 75455,
+      "chars": 2897,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2023-07-18 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2023_07_18_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2023,
+      "bytes": 84394,
+      "chars": 3345,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2023-09-12 2023 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2023_09_12_2023_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2023,
+      "bytes": 109455,
+      "chars": 4243,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2023-04-25 2023 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2023_04_25_2023_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2023,
+      "bytes": 137456,
+      "chars": 5847,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2022 SUPERVISOR STATEMENT OF FINANCIAL AFFAIRS",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2022-supervisor-statement-of-financial-affairs.pdf",
+      "category": "notices",
+      "year": 2022,
+      "bytes": 163483,
+      "chars": 3327,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2023-08-22 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2023_08_22_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2023,
+      "bytes": 133281,
+      "chars": 5641,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2023-12-19 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2023_12_19_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2023,
+      "bytes": 157291,
+      "chars": 6734,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2021 LEVY COLLECTED CALENDAR 2022",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2021-levy-collected-calendar-2022.pdf",
+      "category": "levy",
+      "year": 2022,
+      "bytes": 314050,
+      "chars": 2077,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2022 5 24 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2022_5_24_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2022,
+      "bytes": 142284,
+      "chars": 5856,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2022 Annual Town Meeting Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2022_annual_town_meeting_minutes.pdf",
+      "category": "minutes",
+      "year": 2022,
+      "bytes": 146668,
+      "chars": 4682,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "MORAINE TOWNSHIP AUDIT MARCH 31 2023",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/moraine-township-audit-march-31-2023.pdf",
+      "category": "audit",
+      "year": 2023,
+      "bytes": 1217253,
+      "chars": 2700,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2022-02-08 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2022_02_08_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2022,
+      "bytes": 112129,
+      "chars": 4254,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2022-01-27 22 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2022_01_27_22_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2022,
+      "bytes": 152071,
+      "chars": 6079,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2022-04-12 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2022_04_12_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2022,
+      "bytes": 55371,
+      "chars": 1817,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2022-03-08 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2022_03_08_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2022,
+      "bytes": 153121,
+      "chars": 6243,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2022-04-19 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2022_04_19_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2022,
+      "bytes": 119274,
+      "chars": 4890,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "22 23 FYE BUDGET PASSED APRIL 19 2022",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/22-23-fye-budget-passed-april-19-2022.pdf",
+      "category": "budget",
+      "year": 2022,
+      "bytes": 268038,
+      "chars": 2993,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2022-10-11 2022 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2022_10_11_2022_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2022,
+      "bytes": 126448,
+      "chars": 5357,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "COMPTROLLER REPORT AFR Moraine Twp 2022",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/comptroller-report-afr-moraine-twp-2022.pdf",
+      "category": "comptroller",
+      "year": 2022,
+      "bytes": 500846,
+      "chars": 4849,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2021minutes april22",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2021minutes_april22.pdf",
+      "category": "minutes",
+      "year": 2021,
+      "bytes": 154563,
+      "chars": 6245,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "FYE 2022 AMENDED BUDGET AND APPROPRIATION ORDINANCE PASSED APRIL 19 2022",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/fye-2022-amended-budget-and-appropriation-ordinance-passed-april-19-2022.pdf",
+      "category": "budget",
+      "year": 2022,
+      "bytes": 242933,
+      "chars": 2951,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2021minutes april8",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2021minutes_april8.pdf",
+      "category": "minutes",
+      "year": 2021,
+      "bytes": 149762,
+      "chars": 6126,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "TREASURER REPORT FYE MARCH 2022",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/treasurer-report-fye-march-2022.pdf",
+      "category": "treasurer",
+      "year": 2022,
+      "bytes": 138908,
+      "chars": 3529,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2021minutes february11",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2021minutes_february11.pdf",
+      "category": "minutes",
+      "year": 2021,
+      "bytes": 140107,
+      "chars": 4360,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2021minutes august19",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2021minutes_august19.pdf",
+      "category": "minutes",
+      "year": 2021,
+      "bytes": 179845,
+      "chars": 5834,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2021minutes february25",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2021minutes_february25.pdf",
+      "category": "minutes",
+      "year": 2021,
+      "bytes": 51873,
+      "chars": 5147,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2021minutes july13",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2021minutes_july13.pdf",
+      "category": "minutes",
+      "year": 2021,
+      "bytes": 134705,
+      "chars": 2927,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2022-02-22 Moraine Board Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2022_02_22_moraine_board_minutes.pdf",
+      "category": "minutes",
+      "year": 2022,
+      "bytes": 574268,
+      "chars": 6668,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2021minutes january14",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2021minutes_january14.pdf",
+      "category": "minutes",
+      "year": 2021,
+      "bytes": 145266,
+      "chars": 6246,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2021minutes june24",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2021minutes_june24.pdf",
+      "category": "minutes",
+      "year": 2021,
+      "bytes": 164802,
+      "chars": 4795,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2021minutes june10",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2021minutes_june10.pdf",
+      "category": "minutes",
+      "year": 2021,
+      "bytes": 160142,
+      "chars": 5047,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2021minutes march18",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2021minutes_march18.pdf",
+      "category": "minutes",
+      "year": 2021,
+      "bytes": 151419,
+      "chars": 4615,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2021minutes may27",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2021minutes_may27.pdf",
+      "category": "minutes",
+      "year": 2021,
+      "bytes": 145799,
+      "chars": 5328,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2021 Annual Town Meeting Minutes",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2021-annual-town-meeting-minutes.pdf",
+      "category": "minutes",
+      "year": 2021,
+      "bytes": 210848,
+      "chars": 4853,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2021minutes may5",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2021minutes_may5.pdf",
+      "category": "minutes",
+      "year": 2021,
+      "bytes": 144526,
+      "chars": 3575,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2021minutes october14",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2021minutes_october14.pdf",
+      "category": "minutes",
+      "year": 2021,
+      "bytes": 164762,
+      "chars": 6667,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2021yearinreview xehs",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2021yearinreview-xehs.pdf",
+      "category": "newsletter",
+      "year": 2021,
+      "bytes": 64170,
+      "chars": 2578,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2021minutes september9",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2021minutes_september9.pdf",
+      "category": "minutes",
+      "year": 2021,
+      "bytes": 150729,
+      "chars": 5310,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2021minutes september23",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2021minutes_september23.pdf",
+      "category": "minutes",
+      "year": 2021,
+      "bytes": 157358,
+      "chars": 5240,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "March 31 2022 Final Audit Report",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/march-31-2022-final-audit-report.pdf",
+      "category": "audit",
+      "year": 2022,
+      "bytes": 1988499,
+      "chars": 2884,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "Setting Compensation of Township Supervisor Clerk Assessor 2017 TO 2021 Copy",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/setting-compensation-of-township-supervisor-clerk-assessor-2017-to-2021-copy.pdf",
+      "category": "notices",
+      "year": 2021,
+      "bytes": 102892,
+      "chars": 2448,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "Setting Compensation of Township Trustees 2017 to 2021 Copy",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/setting-compensation-of-township-trustees-2017-to-2021-copy.pdf",
+      "category": "notices",
+      "year": 2021,
+      "bytes": 56731,
+      "chars": 1599,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2021minutes november11",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2021minutes_november11.pdf",
+      "category": "minutes",
+      "year": 2021,
+      "bytes": 182285,
+      "chars": 5535,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "AFR Moraine 2021 as filed",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/afr-moraine-2021-as-filed.pdf",
+      "category": "audit",
+      "year": 2021,
+      "bytes": 501753,
+      "chars": 4849,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2020minutes april23",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2020minutes_april23.pdf",
+      "category": "minutes",
+      "year": 2020,
+      "bytes": 73474,
+      "chars": 6143,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2020minutes august13",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2020minutes_august13.pdf",
+      "category": "minutes",
+      "year": 2020,
+      "bytes": 53400,
+      "chars": 6175,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2020 AFR COMPTROLLER REPORT",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2020-afr-comptroller-report.pdf",
+      "category": "comptroller",
+      "year": 2020,
+      "bytes": 234470,
+      "chars": 4808,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "TreasurersReportFYE2021",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/treasurersreportfye2021.pdf",
+      "category": "treasurer",
+      "year": 2021,
+      "bytes": 131468,
+      "chars": 3256,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2020minutes february13",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2020minutes_february13.pdf",
+      "category": "minutes",
+      "year": 2020,
+      "bytes": 69068,
+      "chars": 6172,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2020minutes december10",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2020minutes_december10.pdf",
+      "category": "minutes",
+      "year": 2020,
+      "bytes": 151547,
+      "chars": 5682,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2020minutes january22",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2020minutes_january22.pdf",
+      "category": "minutes",
+      "year": 2020,
+      "bytes": 59974,
+      "chars": 3995,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2020minutes july23",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2020minutes_july23.pdf",
+      "category": "minutes",
+      "year": 2020,
+      "bytes": 49213,
+      "chars": 3772,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2020minutes january9",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2020minutes_january9.pdf",
+      "category": "minutes",
+      "year": 2020,
+      "bytes": 70389,
+      "chars": 5912,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2020minutes july9",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2020minutes_july9.pdf",
+      "category": "minutes",
+      "year": 2020,
+      "bytes": 51828,
+      "chars": 4593,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2020minutes june11",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2020minutes_june11.pdf",
+      "category": "minutes",
+      "year": 2020,
+      "bytes": 75734,
+      "chars": 7010,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2021minutes october28",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2021minutes_october28.pdf",
+      "category": "minutes",
+      "year": 2021,
+      "bytes": 235873,
+      "chars": 6482,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2020minutes may14",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2020minutes_may14.pdf",
+      "category": "minutes",
+      "year": 2020,
+      "bytes": 70123,
+      "chars": 5701,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2020minutes may26",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2020minutes_may26.pdf",
+      "category": "minutes",
+      "year": 2020,
+      "bytes": 63740,
+      "chars": 5586,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2020minutes june25",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2020minutes_june25.pdf",
+      "category": "minutes",
+      "year": 2020,
+      "bytes": 61517,
+      "chars": 5254,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2020minutes october8",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2020minutes_october8.pdf",
+      "category": "minutes",
+      "year": 2020,
+      "bytes": 52685,
+      "chars": 5533,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2020minutes november12",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2020minutes_november12.pdf",
+      "category": "minutes",
+      "year": 2020,
+      "bytes": 55084,
+      "chars": 6776,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2020minutes october22",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2020minutes_october22.pdf",
+      "category": "minutes",
+      "year": 2020,
+      "bytes": 151741,
+      "chars": 6533,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2020minutes september24",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2020minutes_september24.pdf",
+      "category": "minutes",
+      "year": 2020,
+      "bytes": 52435,
+      "chars": 5145,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "TaxLevy2020",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/taxlevy2020.pdf",
+      "category": "levy",
+      "year": 2020,
+      "bytes": 72062,
+      "chars": 1548,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2020minutes september10",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2020minutes_september10.pdf",
+      "category": "minutes",
+      "year": 2020,
+      "bytes": 160731,
+      "chars": 6387,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "2019minutes december12",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2019minutes_december12.pdf",
+      "category": "minutes",
+      "year": 2019,
+      "bytes": 69499,
+      "chars": 6021,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2019minutes november21",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2019minutes_november21.pdf",
+      "category": "minutes",
+      "year": 2019,
+      "bytes": 74338,
+      "chars": 5636,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2019minutes october10",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2019minutes_october10.pdf",
+      "category": "minutes",
+      "year": 2019,
+      "bytes": 71473,
+      "chars": 6273,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2019minutes october24",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2019minutes_october24.pdf",
+      "category": "minutes",
+      "year": 2019,
+      "bytes": 77396,
+      "chars": 6916,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2019minutes september26",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2019minutes_september26.pdf",
+      "category": "minutes",
+      "year": 2019,
+      "bytes": 70677,
+      "chars": 6269,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "AFR Moraine 2019",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/afr-moraine-2019.pdf",
+      "category": "audit",
+      "year": 2019,
+      "bytes": 211195,
+      "chars": 4853,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2018-04-10 Moraine Annual Meeting",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2018_04_10_moraine_annual_meeting.pdf",
+      "category": "annualmeeting",
+      "year": 2018,
+      "bytes": 56171,
+      "chars": 3898,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2019-04-09 Moraine Annual Meeting",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2019_04_09_moraine_annual_meeting.pdf",
+      "category": "annualmeeting",
+      "year": 2019,
+      "bytes": 74904,
+      "chars": 2736,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "TreasurersReportFYE2020",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/treasurersreportfye2020.pdf",
+      "category": "treasurer",
+      "year": 2020,
+      "bytes": 145032,
+      "chars": 2690,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2018 AFR Report",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2018-afr-report.pdf",
+      "category": "audit",
+      "year": 2018,
+      "bytes": 213192,
+      "chars": 4851,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2017-04-25 Moraine Annual Meeting",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2017_04_25_moraine_annual_meeting.pdf",
+      "category": "annualmeeting",
+      "year": 2017,
+      "bytes": 45542,
+      "chars": 3354,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "2016-04-12 Moraine Annual Meeting",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2016_04_12_moraine_annual_meeting.pdf",
+      "category": "annualmeeting",
+      "year": 2016,
+      "bytes": 38236,
+      "chars": 3822,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "TreasurersReportFYE2019",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/treasurersreportfye2019.pdf",
+      "category": "treasurer",
+      "year": 2019,
+      "bytes": 115809,
+      "chars": 2859,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "Setting Compensation of Township Elected Officials 2013 to 2017",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/setting-compensation-of-township-elected-officials-2013-to-2017.pdf",
+      "category": "notices",
+      "year": 2017,
+      "bytes": 282089,
+      "chars": 861,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "AFR Moraine 2017",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/afr-moraine-2017.pdf",
+      "category": "audit",
+      "year": 2017,
+      "bytes": 210305,
+      "chars": 4853,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "AFR 2016 Moraine",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/afr-2016-moraine.pdf",
+      "category": "audit",
+      "year": 2016,
+      "bytes": 221419,
+      "chars": 5059,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "TALK OF THE TOWNSHIP FALL 2022",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/talk-of-the-township-fall-2022.pdf",
+      "category": "newsletter",
+      "year": 2022,
+      "bytes": 4766393,
+      "chars": 4559,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "TreasurersReportFYE2016",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/treasurersreportfye2016.pdf",
+      "category": "treasurer",
+      "year": 2016,
+      "bytes": 192299,
+      "chars": 2389,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "AFR report 2015",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/afr-report-2015.pdf",
+      "category": "audit",
+      "year": 2015,
+      "bytes": 222735,
+      "chars": 3283,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "Alert 1 income req",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/alert-1-income-req.pdf",
+      "category": "assessorinfo",
+      "year": null,
+      "bytes": 12023,
+      "chars": 296,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "4 1 26 Disclosure",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/4-1-26-disclosure.pdf",
+      "category": "assessorinfo",
+      "year": null,
+      "bytes": 132950,
+      "chars": 461,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "Application Volunteer Fillable",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/application-volunteer-fillable.pdf",
+      "category": "volunteer",
+      "year": null,
+      "bytes": 105117,
+      "chars": 5093,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "BOTminutes july17",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/botminutes_july17.pdf",
+      "category": "minutes",
+      "year": null,
+      "bytes": 34786,
+      "chars": 1144,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "TreasurersReportFYE2018",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/treasurersreportfye2018.pdf",
+      "category": "treasurer",
+      "year": 2018,
+      "bytes": 1073523,
+      "chars": 2527,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "BOTminutes june28",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/botminutes_june28.pdf",
+      "category": "minutes",
+      "year": null,
+      "bytes": 47258,
+      "chars": 1441,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "BOTminutes march8",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/botminutes_march8.pdf",
+      "category": "minutes",
+      "year": null,
+      "bytes": 42398,
+      "chars": 1023,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "BAA Flyer Spanish",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/baa-flyer_spanish.pdf",
+      "category": "benefits",
+      "year": null,
+      "bytes": 333002,
+      "chars": 2141,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "BOTminutes may10",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/botminutes_may10.pdf",
+      "category": "minutes",
+      "year": null,
+      "bytes": 33810,
+      "chars": 1133,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "BOTminutes may11",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/botminutes_may11.pdf",
+      "category": "minutes",
+      "year": null,
+      "bytes": 32664,
+      "chars": 863,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "BA Flyer English",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/ba-flyer-english.pdf",
+      "category": "benefits",
+      "year": null,
+      "bytes": 466471,
+      "chars": 1745,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "BOTminutes november5",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/botminutes_november5.pdf",
+      "category": "minutes",
+      "year": null,
+      "bytes": 122933,
+      "chars": 1244,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "Amended Budget FYE 3 31 26",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/amended-budget-fye-3-31-26.pdf",
+      "category": "budget",
+      "year": null,
+      "bytes": 221968,
+      "chars": 3014,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "BOTminutes october29",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/botminutes_october29.pdf",
+      "category": "minutes",
+      "year": null,
+      "bytes": 121503,
+      "chars": 1507,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "COMPTROLLER REPORT MARCH 31 2023",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/comptroller-report-march-31-2023.pdf",
+      "category": "comptroller",
+      "year": 2023,
+      "bytes": 8066867,
+      "chars": 255,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "DaggittFamilyChart",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/daggittfamilychart.pdf",
+      "category": "cemetery",
+      "year": null,
+      "bytes": 111851,
+      "chars": 1633,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "Annual Financial Report FYE 3 31 25 FINAL",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/annual-financial-report-fye-3-31-25-final.pdf",
+      "category": "audit",
+      "year": null,
+      "bytes": 1113791,
+      "chars": 1624,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "Comptroller Report FYE24",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/comptroller-report-fye24.pdf",
+      "category": "comptroller",
+      "year": null,
+      "bytes": 532504,
+      "chars": 4810,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "Budget FYE 3 31 27",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/budget-fye-3-31-27.pdf",
+      "category": "budget",
+      "year": null,
+      "bytes": 228522,
+      "chars": 2866,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "Daggitt 1987 article",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/daggitt_1987_article.pdf",
+      "category": "cemetery",
+      "year": null,
+      "bytes": 1493881,
+      "chars": 4636,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "Comptroller Report 3 31 25 FINAL",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/comptroller-report-3-31-25-final.pdf",
+      "category": "comptroller",
+      "year": null,
+      "bytes": 1243922,
+      "chars": 5532,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "LiheapFlyer",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/liheapflyer.pdf",
+      "category": "benefits",
+      "year": null,
+      "bytes": 136508,
+      "chars": 1624,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "FY 24 25 Amended Budget to post",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/fy-24-25-amended-budget-to-post.pdf",
+      "category": "budget",
+      "year": null,
+      "bytes": 206495,
+      "chars": 2962,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "MooneyQuitDeed1960",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/mooneyquitdeed1960.pdf",
+      "category": "cemetery",
+      "year": null,
+      "bytes": 333394,
+      "chars": 1712,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "Mooney toCathBishop",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/mooney_tocathbishop.pdf",
+      "category": "cemetery",
+      "year": null,
+      "bytes": 815513,
+      "chars": 753,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "JohnMooney biog",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/johnmooney_biog.pdf",
+      "category": "cemetery",
+      "year": null,
+      "bytes": 751099,
+      "chars": 3948,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "Moraine Township Meeting Minutes 5 18 25",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/moraine-township-meeting-minutes-5-18-25.pdf",
+      "category": "minutes",
+      "year": null,
+      "bytes": 39310,
+      "chars": 1414,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "Moraine Township Minutes 7 23 25",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/moraine_township_minutes_7-23-25.pdf",
+      "category": "minutes",
+      "year": null,
+      "bytes": 72309,
+      "chars": 3091,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "Mooneys plat1907",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/mooneys_plat1907.pdf",
+      "category": "cemetery",
+      "year": null,
+      "bytes": 646772,
+      "chars": 1204,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "Moraine Township Minutes 5 21 25",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/moraine_township_minutes_5-21-25.pdf",
+      "category": "minutes",
+      "year": null,
+      "bytes": 74105,
+      "chars": 3897,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "MorTwpAuditorReptFY09 10",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/mortwpauditorreptfy09-10.pdf",
+      "category": "audit",
+      "year": null,
+      "bytes": 473069,
+      "chars": 2827,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "Moraine Township AFR 24",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/moraine-township-afr-24.pdf",
+      "category": "audit",
+      "year": null,
+      "bytes": 919371,
+      "chars": 1512,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "MorTwpAuditorReptFY10 11",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/mortwpauditorreptfy10-11.pdf",
+      "category": "audit",
+      "year": null,
+      "bytes": 779672,
+      "chars": 2825,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "MorTwpAuditorReptFY12 13",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/mortwpauditorreptfy12-13.pdf",
+      "category": "audit",
+      "year": null,
+      "bytes": 794329,
+      "chars": 3139,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "MorTwpAuditorReptFY11 12",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/mortwpauditorreptfy11-12.pdf",
+      "category": "audit",
+      "year": null,
+      "bytes": 781810,
+      "chars": 3049,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "DS11",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/ds11.pdf",
+      "category": "passport",
+      "year": null,
+      "bytes": 852784,
+      "chars": 14451,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "DS82",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/ds82.pdf",
+      "category": "passport",
+      "year": null,
+      "bytes": 742066,
+      "chars": 12359,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "MorTwpAuditorReptFY13 14",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/mortwpauditorreptfy13-14.pdf",
+      "category": "audit",
+      "year": null,
+      "bytes": 738855,
+      "chars": 3217,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "MorTwp News 99668 k4nt",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/mortwp-news-99668-k4nt.pdf",
+      "category": "newsletter",
+      "year": null,
+      "bytes": 2143597,
+      "chars": 7528,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "MorTwpAuditorReptFY14 15",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/mortwpauditorreptfy14-15.pdf",
+      "category": "audit",
+      "year": null,
+      "bytes": 867388,
+      "chars": 3326,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "MorTwpAuditorReptFY16 17",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/mortwpauditorreptfy16-17.pdf",
+      "category": "audit",
+      "year": null,
+      "bytes": 1039747,
+      "chars": 2738,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "MorTwpAuditorReptFY17 18",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/mortwpauditorreptfy17-18.pdf",
+      "category": "audit",
+      "year": null,
+      "bytes": 1357563,
+      "chars": 2738,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "GA Application",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/ga-application.pdf",
+      "category": "assistance",
+      "year": null,
+      "bytes": 948536,
+      "chars": 2590,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "MorTwpBudget FY14 15",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/mortwpbudget_fy14-15.pdf",
+      "category": "budget",
+      "year": null,
+      "bytes": 110287,
+      "chars": 2250,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "MorTwpAuditorReptFY19 20",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/mortwpauditorreptfy19-20.pdf",
+      "category": "audit",
+      "year": null,
+      "bytes": 1203746,
+      "chars": 2779,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "MorTwpBudget FY15 16",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/mortwpbudget_fy15-16.pdf",
+      "category": "budget",
+      "year": null,
+      "bytes": 106245,
+      "chars": 2741,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "MorTwpBudget FY18 19",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/mortwpbudget_fy18-19.pdf",
+      "category": "budget",
+      "year": null,
+      "bytes": 63659,
+      "chars": 1265,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "MorTwpBudget FY16 17",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/mortwpbudget_fy16-17.pdf",
+      "category": "budget",
+      "year": null,
+      "bytes": 102042,
+      "chars": 2553,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "MorTwpAuditorReptFY15 16",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/mortwpauditorreptfy15-16.pdf",
+      "category": "audit",
+      "year": null,
+      "bytes": 1793380,
+      "chars": 2714,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "MorTwpBudget FY12 13",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/mortwpbudget-fy12-13.pdf",
+      "category": "budget",
+      "year": null,
+      "bytes": 884302,
+      "chars": 4910,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "MorTwpAuditorReptFY18 19",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/mortwpauditorreptfy18-19.pdf",
+      "category": "audit",
+      "year": null,
+      "bytes": 1531869,
+      "chars": 2738,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "Revised Press Release Senior Assessment Freeze 1 5 26 PDF",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/revised-press-release-senior-assessment-freeze-1-5-26-pdf.pdf",
+      "category": "assessorinfo",
+      "year": null,
+      "bytes": 158184,
+      "chars": 1536,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "MorTwpBudget FY13 14",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/mortwpbudget_fy13-14.pdf",
+      "category": "budget",
+      "year": null,
+      "bytes": 842683,
+      "chars": 4904,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "Online Appeal Filing Instructions with graphics",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/online-appeal-filing-instructions-with-graphics.pdf",
+      "category": "assessorinfo",
+      "year": null,
+      "bytes": 315647,
+      "chars": 1709,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "MorTwpAuditorReptFY20 21",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/mortwpauditorreptfy20-21.pdf",
+      "category": "audit",
+      "year": null,
+      "bytes": 1167127,
+      "chars": 2770,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "Talk Township Fa07",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/talk_township_fa07.pdf",
+      "category": "newsletter",
+      "year": null,
+      "bytes": 340857,
+      "chars": 11052,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "Talk Township Fa06",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/talk_township_fa06.pdf",
+      "category": "newsletter",
+      "year": null,
+      "bytes": 418552,
+      "chars": 9441,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "Talk Township Sp07",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/talk_township_sp07.pdf",
+      "category": "newsletter",
+      "year": null,
+      "bytes": 467513,
+      "chars": 9861,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "SIGNED BUDGET ORDINANCE",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/signed-budget-ordinance.pdf",
+      "category": "budget",
+      "year": null,
+      "bytes": 255653,
+      "chars": 2938,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "MorTwpBudget FY20 21",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/mortwpbudget_fy20-21.pdf",
+      "category": "budget",
+      "year": null,
+      "bytes": 263226,
+      "chars": 3389,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "Talk Township Sp08",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/talk_township_sp08.pdf",
+      "category": "newsletter",
+      "year": null,
+      "bytes": 436441,
+      "chars": 10984,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "Talk Township Su09",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/talk_township_su09.pdf",
+      "category": "newsletter",
+      "year": null,
+      "bytes": 567157,
+      "chars": 9802,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "MorTwpBudget FY19 20",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/mortwpbudget_fy19-20.pdf",
+      "category": "budget",
+      "year": null,
+      "bytes": 1713740,
+      "chars": 2901,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "Talk Township Su11",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/talk_township_su11.pdf",
+      "category": "newsletter",
+      "year": null,
+      "bytes": 533942,
+      "chars": 11288,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "Talk Township Su12",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/talk_township_su12.pdf",
+      "category": "newsletter",
+      "year": null,
+      "bytes": 886701,
+      "chars": 11964,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "Talk Township Su10",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/talk_township_su10.pdf",
+      "category": "newsletter",
+      "year": null,
+      "bytes": 1451154,
+      "chars": 11447,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "Talk Township Su20",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/talk_township_su20.pdf",
+      "category": "newsletter",
+      "year": null,
+      "bytes": 1209663,
+      "chars": 4411,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "Talk Township Wn10",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/talk_township_wn10.pdf",
+      "category": "newsletter",
+      "year": null,
+      "bytes": 888313,
+      "chars": 11482,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "Talk Township Wn09",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/talk_township_wn09.pdf",
+      "category": "newsletter",
+      "year": null,
+      "bytes": 1059523,
+      "chars": 10273,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "Talk Township Wn11",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/talk_township_wn11.pdf",
+      "category": "newsletter",
+      "year": null,
+      "bytes": 986194,
+      "chars": 11637,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "SignedOrdinance",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/signedordinance.pdf",
+      "category": "notices",
+      "year": null,
+      "bytes": 536537,
+      "chars": 5989,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "Talk Township Wn12",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/talk_township_wn12.pdf",
+      "category": "newsletter",
+      "year": null,
+      "bytes": 1218205,
+      "chars": 11484,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "Talk Township Wn14",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/talk_township_wn14.pdf",
+      "category": "newsletter",
+      "year": null,
+      "bytes": 1804538,
+      "chars": 5421,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "Talk Township Wn15",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/talk_township_wn15.pdf",
+      "category": "newsletter",
+      "year": null,
+      "bytes": 2144141,
+      "chars": 5679,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "Spanish GA Application",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/spanish-ga-application.pdf",
+      "category": "assistance",
+      "year": null,
+      "bytes": 785364,
+      "chars": 2382,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "Talk Township Wn13",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/talk_township_wn13.pdf",
+      "category": "newsletter",
+      "year": null,
+      "bytes": 2493836,
+      "chars": 11504,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "Treasurers Report FYE 24 SENT TO CLERK",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/treasurers-report-fye-24-sent-to-clerk.pdf",
+      "category": "treasurer",
+      "year": null,
+      "bytes": 113454,
+      "chars": 2776,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "Treasurers Report Mailed to Clerk FYE 3 31 25",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/treasurers-report-mailed-to-clerk-fye-3-31-25.pdf",
+      "category": "treasurer",
+      "year": null,
+      "bytes": 144443,
+      "chars": 2869,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "TwpSect27 28 1840",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/twpsect27_28_1840.pdf",
+      "category": "assessorinfo",
+      "year": null,
+      "bytes": 1728582,
+      "chars": 350,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "TREASUERS REPORT",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/treasuers-report.pdf",
+      "category": "treasurer",
+      "year": null,
+      "bytes": 4591285,
+      "chars": 2706,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "Talk Township Su21 c6f5",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/talk_township_su21-c6f5.pdf",
+      "category": "newsletter",
+      "year": null,
+      "bytes": 12556449,
+      "chars": 3882,
+      "tagged": true,
+      "imageOnly": false
+    },
+    {
+      "label": "Talk Township Wn19",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/talk_township_wn19.pdf",
+      "category": "newsletter",
+      "year": null,
+      "bytes": 13111357,
+      "chars": 3102,
+      "tagged": false,
+      "imageOnly": false
+    },
+    {
+      "label": "Thomas J Healy photo and bio",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/thomas-j-healy-photo-and-bio.pdf",
+      "category": "assessorinfo",
+      "year": null,
+      "bytes": 16821401,
+      "chars": 436,
+      "tagged": false,
+      "imageOnly": false
+    }
+  ]
+}

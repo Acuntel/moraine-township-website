@@ -1,0 +1,445 @@
+{
+  "ocred": 86,
+  "failed": [
+    {
+      "label": "daggitt aerial view",
+      "reason": "OCR produced only 5 characters"
+    },
+    {
+      "label": "mooneypictures",
+      "reason": "OCR produced only 0 characters"
+    }
+  ],
+  "files": [
+    {
+      "label": "Resolution Setting Elected Officials Compensation 2025 2029",
+      "chars": 3189,
+      "bytes": 624045
+    },
+    {
+      "label": "2024 LEVY TO BE COLLECTED 2025 FOR FY 2026",
+      "chars": 2686,
+      "bytes": 749722
+    },
+    {
+      "label": "Tax Levy for tax year 2025 collectable in 2026",
+      "chars": 2825,
+      "bytes": 836940
+    },
+    {
+      "label": "2025 Annual Town Meeting Sup Stmt",
+      "chars": 4994,
+      "bytes": 971249
+    },
+    {
+      "label": "2025-02-26 Moraine Board Minutes",
+      "chars": 4000,
+      "bytes": 751434
+    },
+    {
+      "label": "2025-01-08 Moraine Board Minutes",
+      "chars": 5361,
+      "bytes": 921293
+    },
+    {
+      "label": "2025-01-22 Moraine Board Minutes",
+      "chars": 5740,
+      "bytes": 981345
+    },
+    {
+      "label": "2025-02-12 Moraine Board Minutes",
+      "chars": 4531,
+      "bytes": 777231
+    },
+    {
+      "label": "2025-04-28 Special Joint Moraine Board Minutes with CMHB",
+      "chars": 1461,
+      "bytes": 301920
+    },
+    {
+      "label": "2025-03-19 Moraine Board Minutes",
+      "chars": 6506,
+      "bytes": 1234358
+    },
+    {
+      "label": "2025-04-16 Moraine Board Minutes 2",
+      "chars": 6723,
+      "bytes": 1311227
+    },
+    {
+      "label": "2025-05-07 Moraine Board Minutes",
+      "chars": 4150,
+      "bytes": 843978
+    },
+    {
+      "label": "Resolution Opposing Township Consolidation into County Government 04 08 2025",
+      "chars": 1408,
+      "bytes": 284337
+    },
+    {
+      "label": "Setting Elected Officials Compensation 2021 TO 2025 1",
+      "chars": 2467,
+      "bytes": 494498
+    },
+    {
+      "label": "2024-02-07 Moraine Board Minutes",
+      "chars": 4115,
+      "bytes": 705721
+    },
+    {
+      "label": "2024-01-10 Moraine Board Minutes",
+      "chars": 5191,
+      "bytes": 881761
+    },
+    {
+      "label": "2024-01-24 Moraine Board Minutes",
+      "chars": 4724,
+      "bytes": 801806
+    },
+    {
+      "label": "2024-04-09 Annual Town Meeting Minutes",
+      "chars": 1568,
+      "bytes": 292152
+    },
+    {
+      "label": "2024-02-21 Moraine Board Minutes 2",
+      "chars": 4386,
+      "bytes": 743896
+    },
+    {
+      "label": "2024-08-21 Moraine Board Minutes",
+      "chars": 4557,
+      "bytes": 788631
+    },
+    {
+      "label": "2024-09-25 Moraine Board Minutes",
+      "chars": 6669,
+      "bytes": 1140422
+    },
+    {
+      "label": "2024-10-09 Moraine Board Minutes",
+      "chars": 3828,
+      "bytes": 665786
+    },
+    {
+      "label": "2024-10-23 Moraine Board Minutes",
+      "chars": 6738,
+      "bytes": 1176936
+    },
+    {
+      "label": "2024-12-18 Moraine Board Minutes",
+      "chars": 6546,
+      "bytes": 1224088
+    },
+    {
+      "label": "2024-11-20 Moraine Board Minutes",
+      "chars": 6567,
+      "bytes": 1404349
+    },
+    {
+      "label": "2024-09-11 Moraine Board Minutes",
+      "chars": 6008,
+      "bytes": 1055718
+    },
+    {
+      "label": "2023-04-18 Annual Town Meeting Minutes",
+      "chars": 1483,
+      "bytes": 267503
+    },
+    {
+      "label": "2023-05-09 Moraine Board Minutes",
+      "chars": 4798,
+      "bytes": 829626
+    },
+    {
+      "label": "2023-05-09 Moraine Decennial Minutes",
+      "chars": 1927,
+      "bytes": 339547
+    },
+    {
+      "label": "2022 LEVY COLLECTED 2023",
+      "chars": 2121,
+      "bytes": 888257
+    },
+    {
+      "label": "2023-06-13 Moraine Board Minutes",
+      "chars": 2897,
+      "bytes": 516912
+    },
+    {
+      "label": "2023-04-25 2023 Moraine Board Minutes",
+      "chars": 5847,
+      "bytes": 1011128
+    },
+    {
+      "label": "2023-07-18 Moraine Board Minutes",
+      "chars": 3345,
+      "bytes": 586952
+    },
+    {
+      "label": "2023-09-12 2023 Moraine Board Minutes",
+      "chars": 4243,
+      "bytes": 747726
+    },
+    {
+      "label": "2023-06-27 Moraine Board Minutes",
+      "chars": 3100,
+      "bytes": 559098
+    },
+    {
+      "label": "2023-08-22 Moraine Board Minutes",
+      "chars": 5641,
+      "bytes": 976010
+    },
+    {
+      "label": "2023-12-19 Moraine Board Minutes",
+      "chars": 6734,
+      "bytes": 1160081
+    },
+    {
+      "label": "2022 5 24 Moraine Board Minutes",
+      "chars": 5856,
+      "bytes": 1051026
+    },
+    {
+      "label": "2022-01-27 22 Moraine Board Minutes",
+      "chars": 6079,
+      "bytes": 1062024
+    },
+    {
+      "label": "2022-02-08 Moraine Board Minutes",
+      "chars": 4254,
+      "bytes": 750207
+    },
+    {
+      "label": "2022 Annual Town Meeting Minutes",
+      "chars": 4682,
+      "bytes": 856999
+    },
+    {
+      "label": "2021 LEVY COLLECTED CALENDAR 2022",
+      "chars": 2077,
+      "bytes": 931262
+    },
+    {
+      "label": "2022-04-12 Moraine Board Minutes",
+      "chars": 1817,
+      "bytes": 340805
+    },
+    {
+      "label": "2022-04-19 Moraine Board Minutes",
+      "chars": 4890,
+      "bytes": 846847
+    },
+    {
+      "label": "2022-03-08 Moraine Board Minutes",
+      "chars": 6243,
+      "bytes": 1100450
+    },
+    {
+      "label": "2022-10-11 2022 Moraine Board Minutes",
+      "chars": 5357,
+      "bytes": 931752
+    },
+    {
+      "label": "2022-02-22 Moraine Board Minutes",
+      "chars": 6668,
+      "bytes": 2880307
+    },
+    {
+      "label": "FYE 2022 AMENDED BUDGET AND APPROPRIATION ORDINANCE PASSED APRIL 19 2022",
+      "chars": 2951,
+      "bytes": 997347
+    },
+    {
+      "label": "22 23 FYE BUDGET PASSED APRIL 19 2022",
+      "chars": 2993,
+      "bytes": 1052079
+    },
+    {
+      "label": "TREASURER REPORT FYE MARCH 2022",
+      "chars": 3529,
+      "bytes": 759444
+    },
+    {
+      "label": "2021 Annual Town Meeting Minutes",
+      "chars": 4853,
+      "bytes": 1282646
+    },
+    {
+      "label": "2021minutes november11",
+      "chars": 5535,
+      "bytes": 1022987
+    },
+    {
+      "label": "2021minutes october28",
+      "chars": 6482,
+      "bytes": 1289982
+    },
+    {
+      "label": "Setting Compensation of Township Trustees 2017 to 2021 Copy",
+      "chars": 1599,
+      "bytes": 290900
+    },
+    {
+      "label": "Setting Compensation of Township Supervisor Clerk Assessor 2017 TO 2021 Copy",
+      "chars": 2448,
+      "bytes": 285572
+    },
+    {
+      "label": "TreasurersReportFYE2021",
+      "chars": 3256,
+      "bytes": 627590
+    },
+    {
+      "label": "2019-04-09 Moraine Annual Meeting",
+      "chars": 2736,
+      "bytes": 490117
+    },
+    {
+      "label": "TreasurersReportFYE2020",
+      "chars": 2690,
+      "bytes": 645640
+    },
+    {
+      "label": "TreasurersReportFYE2019",
+      "chars": 2859,
+      "bytes": 607749
+    },
+    {
+      "label": "TreasurersReportFYE2016",
+      "chars": 2389,
+      "bytes": 153853
+    },
+    {
+      "label": "Alert 1 income req",
+      "chars": 296,
+      "bytes": 54947
+    },
+    {
+      "label": "Setting Compensation of Township Elected Officials 2013 to 2017",
+      "chars": 861,
+      "bytes": 255863
+    },
+    {
+      "label": "AFR report 2015",
+      "chars": 3283,
+      "bytes": 157080
+    },
+    {
+      "label": "Amended Budget FYE 3 31 26",
+      "chars": 3014,
+      "bytes": 1088425
+    },
+    {
+      "label": "TreasurersReportFYE2018",
+      "chars": 2527,
+      "bytes": 1041775
+    },
+    {
+      "label": "Budget FYE 3 31 27",
+      "chars": 2866,
+      "bytes": 1099404
+    },
+    {
+      "label": "FY 24 25 Amended Budget to post",
+      "chars": 2962,
+      "bytes": 996454
+    },
+    {
+      "label": "DS82",
+      "chars": 12359,
+      "bytes": 3768548
+    },
+    {
+      "label": "Mooney modernmap",
+      "chars": 146,
+      "bytes": 337780
+    },
+    {
+      "label": "DS11",
+      "chars": 14451,
+      "bytes": 4004900
+    },
+    {
+      "label": "JohnMooney biog",
+      "chars": 3948,
+      "bytes": 1517900
+    },
+    {
+      "label": "GA Application",
+      "chars": 2590,
+      "bytes": 5253026
+    },
+    {
+      "label": "MooneyQuitDeed1960",
+      "chars": 1712,
+      "bytes": 314742
+    },
+    {
+      "label": "Daggitt 1987 article",
+      "chars": 4636,
+      "bytes": 1301826
+    },
+    {
+      "label": "Mooney toCathBishop",
+      "chars": 753,
+      "bytes": 784769
+    },
+    {
+      "label": "Mooneys plat1907",
+      "chars": 1204,
+      "bytes": 582820
+    },
+    {
+      "label": "MorTwpBudget FY20 21",
+      "chars": 3389,
+      "bytes": 1182571
+    },
+    {
+      "label": "MorTwpBudget FY13 14",
+      "chars": 4904,
+      "bytes": 712191
+    },
+    {
+      "label": "MorTwpBudget FY12 13",
+      "chars": 4910,
+      "bytes": 790957
+    },
+    {
+      "label": "SIGNED BUDGET ORDINANCE",
+      "chars": 2938,
+      "bytes": 996789
+    },
+    {
+      "label": "SignedOrdinance",
+      "chars": 5989,
+      "bytes": 3717728
+    },
+    {
+      "label": "Spanish GA Application",
+      "chars": 2382,
+      "bytes": 4923291
+    },
+    {
+      "label": "MorTwpBudget FY19 20",
+      "chars": 2901,
+      "bytes": 1780042
+    },
+    {
+      "label": "Treasurers Report FYE 24 SENT TO CLERK",
+      "chars": 2776,
+      "bytes": 581953
+    },
+    {
+      "label": "Treasurers Report Mailed to Clerk FYE 3 31 25",
+      "chars": 2869,
+      "bytes": 691264
+    },
+    {
+      "label": "TREASUERS REPORT",
+      "chars": 2706,
+      "bytes": 3463526
+    }
+  ]
+}
