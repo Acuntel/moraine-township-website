@@ -86,6 +86,12 @@ Highland Park, Illinois. Replaces their Squarespace site at morainetownship.org.
    tag and crops the page, which looks exactly like an overflow that is not
    there.
 
+   **The four URL audits default to `http://localhost:3111`, not production.**
+   Run them with no argument and no local server and every page reports
+   `TypeError: fetch failed` with `0 pages checked`, which reads exactly like a
+   site-wide regression or rate limiting and is neither. Pass the deployment
+   explicitly to audit it: `node scripts/a11y-audit.mjs https://moraine-food-pantry.vercel.app`.
+
    `console-check` is the only thing here that would catch a page that renders
    correct HTML and then throws in the browser. The HTML-based audits cannot
    see a script that fails after hydration or an asset that 404s.
