@@ -92,7 +92,7 @@ function assetOrigin(): string {
  * reader users in place of the picture.
  */
 const OG_ALT: Record<Locale, string> = {
-  en: "Moraine Township, established 1850. Staff and volunteers stand together outside the Township office, behind the words: a food pantry, emergency assistance, door to door transportation and property assessment for residents of Highland Park, Highwood, Lake Forest and Deerfield.",
-  es: "Moraine Township, fundado en 1850. El personal y los voluntarios están juntos afuera de la oficina del Township, detrás del texto: una despensa de alimentos, asistencia de emergencia, transporte puerta a puerta y evaluación de propiedades para los residentes de Highland Park, Highwood, Lake Forest y Deerfield.",
-  ru: "Moraine Township, основан в 1850 году. Сотрудники и волонтёры стоят вместе у здания администрации, за текстом: продовольственная кладовая, экстренная помощь, транспорт от двери до двери и оценка недвижимости для жителей Хайленд-Парка, Хайвуда, Лейк-Фореста и Дирфилда.",
+  en: "Moraine Township, established 1850. Staff and volunteers stand together outside the Township office, behind the words: a food pantry, emergency assistance, door to door transportation and property assessment for residents of Highland Park, Highwood, and parts of Lake Forest and Deerfield.",
+  es: "Moraine Township, fundado en 1850. El personal y los voluntarios están juntos afuera de la oficina del Township, detrás del texto: una despensa de alimentos, asistencia de emergencia, transporte puerta a puerta y evaluación de propiedades para los residentes de Highland Park, Highwood y partes de Lake Forest y Deerfield.",
+  ru: "Moraine Township, основан в 1850 году. Сотрудники и волонтёры стоят вместе у здания администрации, за текстом: продовольственная кладовая, экстренная помощь, транспорт от двери до двери и оценка недвижимости для жителей Хайленд-Парка, Хайвуда, а также частей Лейк-Фореста и Дирфилда.",
 };

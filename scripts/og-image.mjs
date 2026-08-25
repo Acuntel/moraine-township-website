@@ -71,7 +71,7 @@ const HTML = `<!doctype html>
       <div class="rule"></div>
       <div class="tagline">A food pantry, emergency assistance, door to door
         transportation and property assessment for residents of Highland Park,
-        Highwood, Lake Forest and Deerfield.</div>
+        Highwood, and parts of Lake Forest and Deerfield.</div>
     </div>
     <div class="foot">
       <span>morainetownship.org</span><span class="dot"></span>

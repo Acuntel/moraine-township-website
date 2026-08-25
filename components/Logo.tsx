@@ -31,14 +31,28 @@ export function Logo({
       <defs>
         <path id={arcId} d="M 18 62 A 42 42 0 0 1 102 62" fill="none" />
       </defs>
+      {/*
+        The arc is 132 units long. At the original 13.5px the name measured
+        153.9, and SVG simply does not paint the characters that fall off the
+        end of a path, so the mark read "ORAINE TOWNSHI" in the header and the
+        footer of every page. The size below fits naturally; textLength pins it
+        to the arc even if Libre Franklin has not loaded and a wider fallback
+        font is substituted.
+      */}
       <text
         fill="#FFFFFF"
-        fontSize="13.5"
+        fontSize="11.5"
         fontWeight="700"
-        letterSpacing="0.5"
+        letterSpacing="0.2"
         style={{ fontFamily: "var(--font-franklin), Arial, sans-serif" }}
       >
-        <textPath href={`#${arcId}`} startOffset="50%" textAnchor="middle">
+        <textPath
+          href={`#${arcId}`}
+          startOffset="50%"
+          textAnchor="middle"
+          textLength={126}
+          lengthAdjust="spacingAndGlyphs"
+        >
           MORAINE TOWNSHIP
         </textPath>
       </text>
