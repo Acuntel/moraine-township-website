@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 import { LINKS } from "@/lib/township";
 
 /**
@@ -27,6 +29,61 @@ export function markDonationStarted() {
 
 type Variant = "floating" | "inline" | "header" | "hero";
 
+/**
+ * On a phone the floating circle sits over the right-hand end of the text
+ * column, because the column runs nearly the full width of the screen. Measured
+ * on /services it covered up to 74px of the line ends, which is a fifth of the
+ * measure. No size or corner change fixes that: any control fixed to the
+ * viewport covers whatever scrolls beneath it.
+ *
+ * So it steps aside while the reader is moving down the page and comes back the
+ * moment they stop, scroll up, or reach either end. Donate is still on every
+ * page and still large, which is what the Supervisor asked for, but it is not
+ * sitting on the words while somebody is reading them.
+ *
+ * Desktop is untouched: there the page has margins wide enough for the circle
+ * to sit beside the text rather than on it.
+ */
+function useTuckAwayWhileReading() {
+  const [tucked, setTucked] = useState(false);
+
+  useEffect(() => {
+    let last = window.scrollY;
+    let frame = 0;
+
+    const measure = () => {
+      frame = 0;
+      const y = window.scrollY;
+      const doc = document.documentElement;
+      const atTop = y < 80;
+      const atBottom = y + window.innerHeight >= doc.scrollHeight - 140;
+
+      if (atTop || atBottom) {
+        setTucked(false);
+      } else if (y > last + 4) {
+        setTucked(true);
+      } else if (y < last - 4) {
+        setTucked(false);
+      }
+
+      if (Math.abs(y - last) > 4) last = y;
+    };
+
+    const onScroll = () => {
+      if (frame) return;
+      frame = requestAnimationFrame(measure);
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (frame) cancelAnimationFrame(frame);
+    };
+  }, []);
+
+  return tucked;
+}
+
 export function DonateButton({
   label,
   ariaLabel,
@@ -39,6 +96,10 @@ export function DonateButton({
   externalNote: string;
   variant?: Variant;
 }) {
+  // Called before any early return: a hook below one is a crash every gate
+  // misses, because the component only renders that branch on some pages.
+  const tucked = useTuckAwayWhileReading();
+
   const common = {
     href: LINKS.paypalDonate,
     target: "_blank",
@@ -51,7 +112,9 @@ export function DonateButton({
     return (
       <a
         {...common}
-        className="group fixed bottom-6 right-6 z-30 flex h-[4.6rem] w-[4.6rem] flex-col items-center justify-center rounded-full bg-brand-green-deep text-white shadow-glow ring-[6px] ring-cream/70 transition-transform duration-500 ease-flow hover:-translate-y-1 hover:bg-brand-teal-dark sm:h-[5.2rem] sm:w-[5.2rem]"
+        className={`group fixed bottom-6 right-6 z-30 flex h-[4.6rem] w-[4.6rem] flex-col items-center justify-center rounded-full bg-brand-green-deep text-white shadow-glow ring-[6px] ring-cream/70 transition-[transform,opacity] duration-500 ease-flow hover:-translate-y-1 hover:bg-brand-teal-dark focus-visible:translate-x-0 focus-visible:opacity-100 motion-reduce:transition-none sm:pointer-events-auto sm:h-[5.2rem] sm:w-[5.2rem] sm:translate-x-0 sm:opacity-100 ${
+          tucked ? "pointer-events-none translate-x-[135%] opacity-0" : ""
+        }`}
       >
         <HeartIcon className="h-5 w-5 transition-transform duration-500 ease-bounce group-hover:scale-110 sm:h-6 sm:w-6" />
         <span className="mt-0.5 px-1 text-center text-[0.62rem] font-semibold leading-tight tracking-tight sm:text-[0.7rem]">
