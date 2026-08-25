@@ -75,7 +75,14 @@ Highland Park, Illinois. Replaces their Squarespace site at morainetownship.org.
    node scripts/popup-check.mjs        # 12 checks, all three languages
    node scripts/axe-scan.mjs           # axe-core, 55 states, ~100 rules
    node scripts/keyboard-check.mjs     # focus visibility, dialog, reduced motion
+   node scripts/reflow-check.mjs       # 1.4.10, 320px and 390px, three languages
    ```
+
+   `reflow-check` measures the document against the viewport under real mobile
+   emulation. Nothing else here covers 1.4.10, and a screenshot cannot answer
+   it: a headless screenshot without device emulation ignores the viewport meta
+   tag and crops the page, which looks exactly like an overflow that is not
+   there.
 
    `axe-scan` is the independent one. `a11y-audit.mjs` is ours and checks the
    fourteen failure modes we chose, from raw HTML, which is the site marking its
@@ -87,6 +94,7 @@ Highland Park, Illinois. Replaces their Squarespace site at morainetownship.org.
    URL-based audits back to back sends several hundred requests in a minute and
    Vercel starts rate limiting, which surfaces as three audits failing at once
    and passing individually. That is throttling, not a regression.
+
 2. **Never put white text on `brand-green` (`#01A667`).** It measures 3.16:1.
    Use `brand-green-deep` (`#018552`). See `docs/ACCESSIBILITY.md`.
 3. **Never write alt text for an image you have not opened and looked at.**
@@ -108,8 +116,8 @@ Highland Park, Illinois. Replaces their Squarespace site at morainetownship.org.
    gallery filters it out, because empty alt text on a government site is a
    compliance failure, not a cosmetic one.
 9. **If you crop an image, check the crop still shows what the alt text claims.**
-    The Mooney sign was cropped so only half the wording was visible while the
-    description named all of it. `focal` on each photo exists for this.
+   The Mooney sign was cropped so only half the wording was visible while the
+   description named all of it. `focal` on each photo exists for this.
 10. **Anything that reacts to a resident coming back to the page must use
     `useReturnToPage`, never a mount-only effect.** Tapping `tel:` hands off to
     the dialer and Donate opens PayPal in a new tab; neither remounts the page,
@@ -133,7 +141,7 @@ says plainly which are missing rather than failing silently.
 | `BLOB_READ_WRITE_TOKEN` | Saving admin edits and uploading photographs. Provisioned by the `moraine-content` Vercel Blob store (`store_RGKqoKPqCyG7vYr1`), which holds both `content/site.json` and `photos/*`. Without it the site serves the seed content in `lib/store.ts` and the admin refuses to pretend a save worked. | **Set**                         |
 | `RESEND_API_KEY`        | The contact form and the missed-call follow-up email.                                                                                                                                                                                                                                               | **Set**                         |
 | `MAIL_TO`               | The destination. Defaults to `info@morainetownship.org`, the address the Supervisor asked for.                                                                                                                                                                                                      | **Set**                         |
-| `MAIL_FROM`             | The sender. Must be on a domain verified with Resend. Currently the shared `onboarding@resend.dev`, which **cannot reach the Township**. See `docs/EMAIL.md`.                                                                                                                                        | **Set**, temporary              |
+| `MAIL_FROM`             | The sender. Must be on a domain verified with Resend. Currently the shared `onboarding@resend.dev`, which **cannot reach the Township**. See `docs/EMAIL.md`.                                                                                                                                       | **Set**, temporary              |
 
 Pull them locally with:
 
