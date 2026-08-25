@@ -1,8 +1,18 @@
 #!/usr/bin/env node
 /**
- * The floating Donate button on a phone: does it step aside while the reader
- * moves down the page, and does it come back when they stop, scroll up, or
- * reach either end?
+ * The floating Donate button, on a phone and on a desktop.
+ *
+ * The rule it has to keep: wherever it is visible, it is not sitting on top of
+ * words. On a phone the text column runs nearly the full width of the screen,
+ * so a control fixed to the viewport has nowhere to sit that is not on the
+ * text. Measured before the fix, it covered up to 74px of the ends of lines on
+ * /services, which is about a fifth of the measure.
+ *
+ * So it steps aside while the reader moves down the page, and when things
+ * settle it comes back only where it is not covering anything. Desktop is
+ * unchanged: there the margins are wide enough for it to sit beside the text.
+ *
+ * Run: node scripts/donate-button-check.mjs [baseUrl]
  */
 import { execFile } from 'node:child_process'
 import { mkdtempSync, rmSync } from 'node:fs'
@@ -13,7 +23,10 @@ const CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
 const BASE = (process.argv[2] ?? 'https://moraine-food-pantry.vercel.app').replace(/\/$/, '')
 const PORT = 9367
 
-const profile = mkdtempSync(join(tmpdir(), 'moraine-fabb-'))
+const PAGES = ['/services', '/food-pantry', '/about', '/ru/services']
+const STOPS = [0, 300, 700, 1100, 1600, 2200]
+
+const profile = mkdtempSync(join(tmpdir(), 'moraine-donate-'))
 const chrome = execFile(CHROME, [
   '--headless=new',
   `--remote-debugging-port=${PORT}`,
@@ -47,16 +60,17 @@ async function evaluate(ws, expression) {
   return res.result?.value
 }
 
-/** Visible state of the button plus how much text it currently covers. */
+/** Is it visible, and if so how many runs of text is it covering? */
 const STATE = `
   (() => {
     const fab = document.querySelector('a[href*="paypal"].fixed');
     if (!fab) return { error: 'no floating donate button' };
     const cs = getComputedStyle(fab);
     const f = fab.getBoundingClientRect();
-    const onScreen = parseFloat(cs.opacity) > 0.5 && f.left < window.innerWidth - 8;
+    const visible = parseFloat(cs.opacity) > 0.5 && f.left < window.innerWidth - 8;
     let covered = 0;
-    if (onScreen) {
+    const samples = [];
+    if (visible) {
       const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
       let node;
       while ((node = walker.nextNode())) {
@@ -69,22 +83,17 @@ const STATE = `
           if (r.width === 0 || r.height === 0) continue;
           const ox = Math.min(r.right, f.right) - Math.max(r.left, f.left);
           const oy = Math.min(r.bottom, f.bottom) - Math.max(r.top, f.top);
-          if (ox > 1 && oy > 1) { covered += 1; break; }
+          if (ox > 1 && oy > 1) {
+            covered += 1;
+            if (samples.length < 2) samples.push(node.textContent.trim().slice(0, 40));
+            break;
+          }
         }
       }
     }
-    return { opacity: Number(cs.opacity), onScreen, coveredRuns: covered };
+    return { visible, covered, samples };
   })()
 `
-
-/** Scroll in steps so the listener sees real direction changes. */
-async function scrollBy(ws, delta, steps = 6) {
-  for (let i = 0; i < steps; i += 1) {
-    await evaluate(ws, `window.scrollBy(0, ${Math.round(delta / steps)}); 'ok'`)
-    await sleep(90)
-  }
-  await sleep(450)
-}
 
 const results = []
 function record(name, pass, detail = '') {
@@ -99,7 +108,7 @@ try {
       const list = await (await fetch(`http://127.0.0.1:${PORT}/json/list`)).json()
       page = list.find((t) => t.type === 'page')
     } catch {
-      /* not up */
+      /* not up yet */
     }
     if (!page) await sleep(250)
   }
@@ -119,62 +128,42 @@ try {
       mobile: width === 390,
     })
 
-    for (const path of ['/services', '/food-pantry']) {
+    for (const path of PAGES) {
       await send(ws, 'Page.navigate', { url: `${BASE}${path}` })
       for (let i = 0; i < 60; i += 1) {
-        await sleep(250)
+        await sleep(200)
         if (await evaluate(ws, `document.readyState === 'complete' && !!document.querySelector('header')`)) break
       }
-      await sleep(1000)
+      await sleep(900)
       console.log(`\n=== ${label} ${width}px  ${path}`)
 
-      const top = await evaluate(ws, STATE)
-      record('visible at the top of the page', top.onScreen === true, `opacity ${top.opacity}`)
+      let everVisible = false
+      let worst = null
 
-      await scrollBy(ws, 900)
-      const down = await evaluate(ws, STATE)
+      for (const y of STOPS) {
+        // Step rather than jump: html sets scroll-behavior: smooth, and a jump
+        // is still animating when a naive check reads the state.
+        await evaluate(ws, `window.scrollTo({ top: ${y}, behavior: 'auto' }); 'ok'`)
+        await sleep(600)
+        const s = await evaluate(ws, STATE)
+        if (s?.error) {
+          record(`state at ${y}px`, false, s.error)
+          continue
+        }
+        if (s.visible) everVisible = true
+        if (s.visible && s.covered > 0 && !worst) worst = { y, ...s }
+      }
+
       if (width === 390) {
-        record('steps aside while reading down', down.onScreen === false, `opacity ${down.opacity}`)
-        record('covers no text while reading down', down.coveredRuns === 0, `${down.coveredRuns} run(s)`)
-      } else {
-        record('stays put on desktop', down.onScreen === true, `opacity ${down.opacity}`)
-      }
-
-      await scrollBy(ws, -400)
-      const up = await evaluate(ws, STATE)
-      record('comes back when scrolling up', up.onScreen === true, `opacity ${up.opacity}`)
-
-      // html has scroll-behavior: smooth, so a jump animates. Wait for the
-      // scroll position to settle before reading the state, or the check lands
-      // mid-animation while the page is still moving down.
-      await evaluate(ws, `window.scrollTo(0, document.documentElement.scrollHeight); 'ok'`)
-      let stable = 0
-      let prev = -1
-      for (let i = 0; i < 40 && stable < 3; i += 1) {
-        await sleep(120)
-        const y = await evaluate(ws, `Math.round(window.scrollY)`)
-        stable = y === prev ? stable + 1 : 0
-        prev = y
-      }
-      await sleep(300)
-      const bottom = await evaluate(ws, STATE)
-      record('visible at the end of the page', bottom.onScreen === true, `opacity ${bottom.opacity}`)
-
-      // The realistic path: scroll down in steps until the footer is reached.
-      await evaluate(ws, `window.scrollTo(0, 0); 'ok'`)
-      await sleep(800)
-      for (let i = 0; i < 40; i += 1) {
-        const done = await evaluate(
-          ws,
-          `(() => { window.scrollBy(0, 500); const d = document.documentElement;
-            return window.scrollY + window.innerHeight >= d.scrollHeight - 4; })()`,
+        record(
+          'never visible on top of text',
+          !worst,
+          worst ? `at ${worst.y}px it covered "${worst.samples[0]}"` : 'all stops clean',
         )
-        await sleep(110)
-        if (done) break
+        record('still shows up somewhere on the page', everVisible)
+      } else {
+        record('stays visible on desktop', everVisible)
       }
-      await sleep(700)
-      const walked = await evaluate(ws, STATE)
-      record('visible after scrolling down to the footer', walked.onScreen === true, `opacity ${walked.opacity}`)
     }
   }
   ws.close()
@@ -184,7 +173,7 @@ try {
   try {
     rmSync(profile, { recursive: true, force: true })
   } catch {
-    /* fine */
+    /* a leftover temp directory is not worth failing an audit over */
   }
 }
 

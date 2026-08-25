@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { LINKS } from "@/lib/township";
 
@@ -46,27 +46,90 @@ type Variant = "floating" | "inline" | "header" | "hero";
  */
 function useTuckAwayWhileReading() {
   const [tucked, setTucked] = useState(false);
+  const ref = useRef<HTMLAnchorElement | null>(null);
 
   useEffect(() => {
+    const fab = ref.current;
+    if (!fab) return;
+
+    /**
+     * Where the button sits when it is not tucked. Read from the CSS offsets
+     * rather than from getBoundingClientRect, because once it has slid away
+     * its own rect is off-screen and would report that it covers nothing,
+     * which would bring it straight back and start a flicker.
+     */
+    const restingRect = () => {
+      const cs = getComputedStyle(fab);
+      const right = window.innerWidth - (parseFloat(cs.right) || 0);
+      const bottom = window.innerHeight - (parseFloat(cs.bottom) || 0);
+      return {
+        left: right - fab.offsetWidth,
+        right,
+        top: bottom - fab.offsetHeight,
+        bottom,
+      };
+    };
+
+    const overlaps = (a: DOMRect, b: ReturnType<typeof restingRect>) =>
+      Math.min(a.right, b.right) - Math.max(a.left, b.left) > 1 &&
+      Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top) > 1;
+
+    /**
+     * Is the button sitting on top of words right now? Sampled at the corners
+     * and the middle, and confirmed against the real painted rectangles of the
+     * text, so a gap between paragraphs does not count as a collision.
+     */
+    const coversText = () => {
+      const box = restingRect();
+      const points: [number, number][] = [
+        [box.left + 6, box.top + 6],
+        [box.right - 6, box.top + 6],
+        [box.left + 6, box.bottom - 6],
+        [box.right - 6, box.bottom - 6],
+        [(box.left + box.right) / 2, (box.top + box.bottom) / 2],
+      ];
+
+      for (const [x, y] of points) {
+        for (const el of document.elementsFromPoint(x, y)) {
+          if (el === fab || fab.contains(el)) continue;
+          if (el === document.body || el === document.documentElement) break;
+          for (const node of Array.from(el.childNodes)) {
+            if (node.nodeType !== Node.TEXT_NODE) continue;
+            if (!node.textContent?.trim()) continue;
+            const range = document.createRange();
+            range.selectNodeContents(node);
+            for (const rect of Array.from(range.getClientRects())) {
+              if (rect.width > 0 && rect.height > 0 && overlaps(rect, box)) {
+                return true;
+              }
+            }
+          }
+          // Only the topmost real element at this point is worth testing.
+          break;
+        }
+      }
+      return false;
+    };
+
     let last = window.scrollY;
     let frame = 0;
+    let settle: ReturnType<typeof setTimeout> | undefined;
+
+    const settleNow = () => setTucked(coversText());
 
     const measure = () => {
       frame = 0;
       const y = window.scrollY;
-      const doc = document.documentElement;
-      const atTop = y < 80;
-      const atBottom = y + window.innerHeight >= doc.scrollHeight - 140;
 
-      if (atTop || atBottom) {
-        setTucked(false);
-      } else if (y > last + 4) {
-        setTucked(true);
-      } else if (y < last - 4) {
-        setTucked(false);
-      }
+      // While the page is moving down, get out of the way in one movement
+      // rather than flickering in and out of every gap between paragraphs.
+      if (y > last + 4) setTucked(true);
+      else if (y < last - 4) setTucked(coversText());
 
       if (Math.abs(y - last) > 4) last = y;
+
+      clearTimeout(settle);
+      settle = setTimeout(settleNow, 180);
     };
 
     const onScroll = () => {
@@ -74,14 +137,18 @@ function useTuckAwayWhileReading() {
       frame = requestAnimationFrame(measure);
     };
 
+    settleNow();
     window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", settleNow);
     return () => {
       window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", settleNow);
+      clearTimeout(settle);
       if (frame) cancelAnimationFrame(frame);
     };
   }, []);
 
-  return tucked;
+  return { tucked, ref };
 }
 
 export function DonateButton({
@@ -98,7 +165,7 @@ export function DonateButton({
 }) {
   // Called before any early return: a hook below one is a crash every gate
   // misses, because the component only renders that branch on some pages.
-  const tucked = useTuckAwayWhileReading();
+  const { tucked, ref: floatingRef } = useTuckAwayWhileReading();
 
   const common = {
     href: LINKS.paypalDonate,
@@ -112,6 +179,7 @@ export function DonateButton({
     return (
       <a
         {...common}
+        ref={floatingRef}
         className={`group fixed bottom-6 right-6 z-30 flex h-[4.6rem] w-[4.6rem] flex-col items-center justify-center rounded-full bg-brand-green-deep text-white shadow-glow ring-[6px] ring-cream/70 transition-[transform,opacity] duration-500 ease-flow hover:-translate-y-1 hover:bg-brand-teal-dark focus-visible:translate-x-0 focus-visible:opacity-100 motion-reduce:transition-none sm:pointer-events-auto sm:h-[5.2rem] sm:w-[5.2rem] sm:translate-x-0 sm:opacity-100 ${
           tucked ? "pointer-events-none translate-x-[135%] opacity-0" : ""
         }`}
