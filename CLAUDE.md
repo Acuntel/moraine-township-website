@@ -76,6 +76,8 @@ Highland Park, Illinois. Replaces their Squarespace site at morainetownship.org.
    node scripts/axe-scan.mjs           # axe-core, 55 states, ~100 rules
    node scripts/keyboard-check.mjs     # focus visibility, dialog, reduced motion
    node scripts/reflow-check.mjs       # 1.4.10, 320px and 390px, three languages
+   node scripts/donate-button-check.mjs # the floating button, phone and desktop
+   node scripts/console-check.mjs      # 42 pages, exceptions and failed requests
    ```
 
    `reflow-check` measures the document against the viewport under real mobile
@@ -83,6 +85,17 @@ Highland Park, Illinois. Replaces their Squarespace site at morainetownship.org.
    it: a headless screenshot without device emulation ignores the viewport meta
    tag and crops the page, which looks exactly like an overflow that is not
    there.
+
+   `console-check` is the only thing here that would catch a page that renders
+   correct HTML and then throws in the browser. The HTML-based audits cannot
+   see a script that fails after hydration or an asset that 404s.
+
+   Outbound links to `lakecountyil.gov` and `travel.state.gov` answer **403 to
+   any automated request**, including headless Chrome, because they sit behind
+   Cloudflare bot protection. That is not a dead link, and a link checker that
+   reports it as one is wrong. Confirm by loading it in a normal browser. The
+   Assessor verified every outbound link by hand and called them the most
+   important thing on the site, so never retire one on a bot's say-so.
 
    `axe-scan` is the independent one. `a11y-audit.mjs` is ours and checks the
    fourteen failure modes we chose, from raw HTML, which is the site marking its

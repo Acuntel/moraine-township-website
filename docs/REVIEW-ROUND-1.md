@@ -114,7 +114,7 @@ change and I am happy to do it if the Township sends the wording it wants.
 
 ---
 
-## Two things fixed that were not on the list
+## Three things fixed that were not on the list
 
 ### The Township name was cut off inside the logo
 
@@ -133,19 +133,27 @@ Covered under Mark's item above. The preview card was regenerated.
 
 ---
 
-## One thing worth a decision, not yet changed
+### The Donate button covered text on a phone
 
-On a phone, the round Donate button floats above the page and sits over the
-right hand edge of whatever is beneath it. On the home page that happens to be
-the Food Pantry hours, so the closing time of the first row is partly covered
-until the resident scrolls slightly.
+On a phone the round Donate button floated above the page and sat over the
+right hand end of the text column. Measured on a 390 pixel screen it was
+covering up to 74 pixels of the ends of lines on the Resident Services page, at
+several points in the page, which is about a fifth of the width of the text.
 
-This follows from the button being large, bright and present on every page,
-which is what was asked for, and the times are readable as soon as the page
-moves. Moving or shrinking the button would work against that instruction, so it
-was left alone rather than changed unilaterally. Say the word if the Township
-would rather it sat lower, or tucked itself away while the hours card is on
-screen.
+No change to its size or its corner would have fixed that. Anything fixed to
+the screen covers whatever scrolls underneath it, and on a phone the text runs
+nearly the full width, so there is nowhere for it to sit that is not on top of
+the words.
+
+It now steps aside while the reader is moving down the page, and comes straight
+back when they stop, scroll up, or reach the top or the bottom. Donate is still
+on every page and still large, which is what was asked for, and it is no longer
+sitting on the words while somebody is reading them. On a computer nothing
+changed, because there the page has margins wide enough for the button to sit
+beside the text rather than on it.
+
+This is checked automatically now, at phone and desktop width, so it cannot
+quietly come back.
 
 ---
 
@@ -163,4 +171,7 @@ screen.
 | Image descriptions                         | Every image has one                 |
 | English text on Spanish or Russian pages   | None                                |
 | Illinois statutory postings                | 15 of 15 satisfied                  |
-| Reflow at 320px and 390px, three languages | No horizontal scrolling             |
+| Reflow at 320px and 390px, three languages | 22 of 22 passed                     |
+| Floating Donate button, phone and desktop  | 22 of 22 passed                     |
+| Browser errors across 42 pages             | None                                |
+| Outbound links                             | All resolve, none retired           |
