@@ -145,9 +145,11 @@ the screen covers whatever scrolls underneath it, and on a phone the text runs
 nearly the full width, so there is nowhere for it to sit that is not on top of
 the words.
 
-It now steps aside while the reader is moving down the page, and comes straight
-back when they stop, scroll up, or reach the top or the bottom. Donate is still
-on every page and still large, which is what was asked for, and it is no longer
+So it follows a rule instead: it is never shown on top of words. It slides out
+of the way while the reader is moving down the page, and when things settle it
+comes back wherever it is sitting clear, which on most pages is a gap between
+sections, a picture, or the top and bottom of the page. Donate is still on
+every page and still large, which is what was asked for, and it is no longer
 sitting on the words while somebody is reading them. On a computer nothing
 changed, because there the page has margins wide enough for the button to sit
 beside the text rather than on it.
