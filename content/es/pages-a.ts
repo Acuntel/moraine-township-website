@@ -33,7 +33,8 @@ export const home: Dictionary["home"] = {
   helpUsImageAlt:
     "Siete voluntarias de Moraine Township de pie en el almacén de la despensa, sosteniendo bolsas de regalo navideñas decoradas, con estantes de bolsas preparadas detrás de ellas, durante la colecta de regalos navideños.",
 
-  heroBadge: "Al servicio de Highland Park, Highwood, Lake Forest y Deerfield",
+  heroBadge:
+    "Al servicio de Highland Park, Highwood y partes de Lake Forest y Deerfield",
   heroCardHeading: "Horario de la despensa",
   heroCardFootnote:
     "Abierta a todos los residentes de Moraine Township que califican por ingresos.",
@@ -47,7 +48,7 @@ export const home: Dictionary["home"] = {
     "Transporte puerta a puerta",
     "Preparación gratuita de impuestos",
     "Ayuda de emergencia con renta y servicios",
-    "Pasaportes y notario",
+    "Pasaportes, notario y registro de votantes",
   ],
 
   impactEyebrow: "Nuestra comunidad",
@@ -57,14 +58,17 @@ export const home: Dictionary["home"] = {
   stats: [
     { value: "1850", label: "Al servicio de esta comunidad desde" },
     { value: "33,946", label: "Residentes en el Township" },
-    { value: "$175,000", label: "Otorgados en subvenciones comunitarias en 2025" },
-    { value: "15", unit: "+", label: "Agencias locales financiadas" },
+    {
+      value: "$275,000",
+      label: "Otorgados en subvenciones comunitarias en 2026",
+    },
+    { value: "23", label: "Agencias locales financiadas" },
   ],
 
   stepsEyebrow: "Cómo funciona",
   stepsHeading: "Recibir ayuda toma cuatro pasos",
   stepsSub:
-    "Hemos mantenido el proceso sencillo y respetuoso. Si algo no le queda claro, llame a la oficina y alguien se lo explicará.",
+    "Mantenemos el proceso sencillo y respetuoso. Si algo no le queda claro, llame a la oficina y alguien se lo explicará.",
   steps: [
     {
       title: "Verifique si califica",

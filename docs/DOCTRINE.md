@@ -345,25 +345,25 @@ The build is complete when all of the following are true:
 
 ## 8.1 Design language, and where it comes from
 
-The Supervisor asked to keep the feel of the approved mock: *"we very much liked
+The Supervisor asked to keep the feel of the approved mock: _"we very much liked
 your initial... we're going to just keep some of the animations and some of the
-coloring."* The first build read as too blocky against that mock, so the shell
+coloring."_ The first build read as too blocky against that mock, so the shell
 was rebuilt around what actually made the mock feel different:
 
-| Trait | Taken from |
-|---|---|
-| Warm cream ground `#FDFBF7`, alt `#F5F0E8`, warm brown-black text `#2A2520` | The mock. This is most of the softness, and it carries no brand conflict. |
-| Radii of 10 / 16 / 24 / 32px | The mock. The first build used tighter corners throughout. |
-| Layered warm shadows, `rgba(42,37,32,…)` | The mock. |
-| `cubic-bezier(.22, 1, .36, 1)` easing on every transition | The mock. The long tail-out is what reads as flowing. |
-| Fixed header that starts transparent over the hero and turns to frosted glass on scroll, shrinking as it goes | The mock. |
-| Nav underline that sweeps in from the left and out to the right | The mock. |
-| Merriweather serif for display headings | The mock. This is a deliberate departure from the Brand Kit's single-typeface rule, made because the client approved the mock. **Flag it for sign-off.** |
-| Centred eyebrow flanked by rules, above every section heading | The mock. |
-| Dark full-bleed band carrying figures, with an organic curved edge | The mock. |
-| Scrolling feature strip, numbered step cards, asymmetric bento grid with icon chips | The mock. |
-| Amber as the action colour | The mock, with accessible substitutions: `#D4882A` is 2.76:1 on cream so it is a fill only, `#A9661A` carries white text, `#F0C060` appears only on the dark band. |
-| Greens and teals | The Brand Kit, not the mock. The mock's `#1B6B3A` is not a Township colour; the dark band uses `#005A60`. |
+| Trait                                                                                                         | Taken from                                                                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Warm cream ground `#FDFBF7`, alt `#F5F0E8`, warm brown-black text `#2A2520`                                   | The mock. This is most of the softness, and it carries no brand conflict.                                                                                          |
+| Radii of 10 / 16 / 24 / 32px                                                                                  | The mock. The first build used tighter corners throughout.                                                                                                         |
+| Layered warm shadows, `rgba(42,37,32,…)`                                                                      | The mock.                                                                                                                                                          |
+| `cubic-bezier(.22, 1, .36, 1)` easing on every transition                                                     | The mock. The long tail-out is what reads as flowing.                                                                                                              |
+| Fixed header that starts transparent over the hero and turns to frosted glass on scroll, shrinking as it goes | The mock.                                                                                                                                                          |
+| Nav underline that sweeps in from the left and out to the right                                               | The mock.                                                                                                                                                          |
+| Merriweather serif for display headings                                                                       | The mock. This is a deliberate departure from the Brand Kit's single-typeface rule, made because the client approved the mock. **Flag it for sign-off.**           |
+| Centred eyebrow flanked by rules, above every section heading                                                 | The mock.                                                                                                                                                          |
+| Dark full-bleed band carrying figures, with an organic curved edge                                            | The mock.                                                                                                                                                          |
+| Scrolling feature strip, numbered step cards, asymmetric bento grid with icon chips                           | The mock.                                                                                                                                                          |
+| Amber as the action colour                                                                                    | The mock, with accessible substitutions: `#D4882A` is 2.76:1 on cream so it is a fill only, `#A9661A` carries white text, `#F0C060` appears only on the dark band. |
+| Greens and teals                                                                                              | The Brand Kit, not the mock. The mock's `#1B6B3A` is not a Township colour; the dark band uses `#005A60`.                                                          |
 
 The header is one row of eight links. Ten did not fit in Spanish or Russian,
 which is why the nav labels are short and why Board & Meetings and Programs are
@@ -377,12 +377,15 @@ Every number in the dark band is published by the Township itself. Nothing is
 estimated, and nothing is carried over from the mock, whose figures were
 placeholders:
 
-| Figure | Source |
-|---|---|
-| 1850 | Founding year, from the Township's history page |
-| 33,946 | Total population, from the Township's About Us page |
-| $175,000 | 2025 grant awards, from the Grant Program page |
-| 15+ | Count of named 2025 grantees on that page |
+| Figure   | Source                                                                                                    |
+| -------- | --------------------------------------------------------------------------------------------------------- |
+| 1850     | Founding year, from the Township's history page                                                           |
+| 33,946   | Total population, from the Township's About Us page                                                       |
+| $275,000 | 2026 grant awards, supplied by the Supervisor in the Draft 1 review doc (Aug 2026; was $175,000 for 2025) |
+| 23       | Count of 2026 funded agencies, same source (was 15+ for 2025)                                             |
+
+The grant figures change every year after the Board votes in April or May. The
+Supervisor asked that they be updated annually.
 
 ---
 
@@ -396,15 +399,15 @@ levies that Illinois law requires the Township to keep posted.
 241 of them have been migrated into this site's own storage and are linked from
 the pages where residents would look for them:
 
-| Where | What |
-|---|---|
-| Board & Meetings | 108 sets of Board minutes, grouped by year; posted agendas; the Decennial Committee report |
-| FOIA & Transparency | 14 budgets, 14 audits, 5 levies, plus treasurer, comptroller and compensation notices |
-| Food Pantry | The 2026-27 application in English, Spanish and Russian, plus the pantry flyer |
-| Resident Services | General Assistance applications in English and Spanish, and the VITA tax forms |
-| Programs | The 2026 grant application |
-| Get Involved | The volunteer application |
-| Cemeteries | 9 deeds, plats, surveys and research documents |
+| Where               | What                                                                                       |
+| ------------------- | ------------------------------------------------------------------------------------------ |
+| Board & Meetings    | 108 sets of Board minutes, grouped by year; posted agendas; the Decennial Committee report |
+| FOIA & Transparency | 14 budgets, 14 audits, 5 levies, plus treasurer, comptroller and compensation notices      |
+| Food Pantry         | The 2026-27 application in English, Spanish and Russian, plus the pantry flyer             |
+| Resident Services   | General Assistance applications in English and Spanish, and the VITA tax forms             |
+| Programs            | The 2026 grant application                                                                 |
+| Get Involved        | The volunteer application                                                                  |
+| Cemeteries          | 9 deeds, plats, surveys and research documents                                             |
 
 `lib/documents.json` maps every original URL to its new home. Each link states
 its format and file size before the reader opens it.

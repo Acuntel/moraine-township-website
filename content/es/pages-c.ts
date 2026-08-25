@@ -12,7 +12,7 @@ export const programs: Omit<Dictionary["programs"], "grantees"> = {
   grantsIntro: [
     "Moraine Township administra fondos para brindar servicios y apoyo receptivos, eficientes y compasivos a los residentes que lo necesitan. Cada año se otorgan subvenciones a diversas agencias sin fines de lucro que ofrecen programas o servicios no sectarios en beneficio de personas que viven o trabajan en Moraine Township.",
     "Los programas financiados deben complementar la misión de Moraine Township sin duplicar los servicios que el Township ya presta. Se da prioridad especial a las agencias que ayudan al Township a ofrecer una red de protección a sus residentes más vulnerables y económicamente desfavorecidos, incluidos los servicios para personas mayores, jóvenes y residentes con discapacidades. Las agencias sostenidas principalmente con fondos de los contribuyentes, o afiliadas de otro modo a un organismo recaudador, no son elegibles.",
-    "En 2025 el Township otorgó $175,000 en subvenciones. El apoyo financiero no puede darse por supuesto de un año a otro.",
+    "En 2026 el Township otorgó $275,000 en subvenciones. El apoyo financiero no puede darse por supuesto de un año a otro.",
   ],
 
   grantsCommitteeHeading: "Comité Asesor Ciudadano de Subvenciones",
@@ -21,7 +21,7 @@ export const programs: Omit<Dictionary["programs"], "grantees"> = {
 
   granteesHeading: "Beneficiarios recientes",
   granteesNote:
-    "Agencias que recibieron financiamiento del Programa de Subvenciones de Moraine Township en 2025. La lista de beneficiarios de 2026 se publicará después de la votación de la Junta.",
+    "Agencias que recibieron financiamiento del Programa de Subvenciones de Moraine Township en 2025. La lista de beneficiarios de 2026 se publicará próximamente.",
 
   latinoHeading: "Comité Asesor Latino",
   latinoBody: [
@@ -87,7 +87,7 @@ export const getInvolved: Dictionary["getInvolved"] = {
     },
     {
       title: "El huerto de la despensa",
-      body: "Cultivamos productos frescos para la despensa. Los voluntarios de jardinería son bienvenidos durante toda la temporada de cultivo.",
+      body: "Cultivamos productos frescos para la despensa y colaboramos con una granja privada local que dona una parte de su cosecha a la despensa. Los voluntarios de jardinería son bienvenidos durante toda la temporada de cultivo.",
     },
   ],
 

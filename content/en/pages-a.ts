@@ -33,7 +33,8 @@ export const home: Dictionary["home"] = {
   helpUsImageAlt:
     "Seven Moraine Township volunteers standing in the pantry storeroom holding decorated holiday gift bags, with shelves of packed bags behind them, during the Holiday Gift Drive.",
 
-  heroBadge: "Serving Highland Park, Highwood, Lake Forest and Deerfield",
+  heroBadge:
+    "Serving Highland Park, Highwood, and parts of Lake Forest and Deerfield",
   heroCardHeading: "Food Pantry hours",
   heroCardFootnote: "Open to all income-qualified Moraine Township residents.",
 
@@ -46,7 +47,7 @@ export const home: Dictionary["home"] = {
     "Door-to-door transportation",
     "Free tax preparation",
     "Emergency rent and utility help",
-    "Passports and notary",
+    "Passports, notary and voter registration",
   ],
 
   impactEyebrow: "Our community",
@@ -56,14 +57,16 @@ export const home: Dictionary["home"] = {
   stats: [
     { value: "1850", label: "Serving this community since" },
     { value: "33,946", label: "Residents in the Township" },
-    { value: "$175,000", label: "Awarded in community grants in 2025" },
-    { value: "15", unit: "+", label: "Local agencies funded" },
+    // Grant figures change every year after the Board votes in April/May.
+    // 2026 values supplied by the Supervisor in the Draft 1 review doc.
+    { value: "$275,000", label: "Awarded in community grants in 2026" },
+    { value: "23", label: "Local agencies funded" },
   ],
 
   stepsEyebrow: "How it works",
   stepsHeading: "Getting help takes four steps",
   stepsSub:
-    "We have kept the process straightforward and respectful. If anything here is unclear, call the office and someone will walk you through it.",
+    "We keep the process straightforward and respectful. If anything here is unclear, call the office and someone will walk you through it.",
   steps: [
     {
       title: "Check that you qualify",

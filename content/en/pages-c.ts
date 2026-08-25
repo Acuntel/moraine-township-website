@@ -12,7 +12,7 @@ export const programs: Omit<Dictionary["programs"], "grantees"> = {
   grantsIntro: [
     "Moraine Township administers funds to provide responsive, efficient and compassionate services and support for residents in need. Annual grants are made to a variety of nonprofit agencies providing non-sectarian programs or services for the benefit of people residing or working in Moraine Township.",
     "Programs funded must complement the mission of Moraine Township without duplicating services the Township already provides. Special priority goes to agencies helping the Township provide a safety net for its most vulnerable and economically disadvantaged residents, including services for the elderly, youth, and residents with disabilities. Agencies chiefly supported by taxpayer dollars, or otherwise affiliated with a taxing body, are not eligible.",
-    "In 2025 the Township awarded $175,000 in grants. Funding support cannot be presumed from year to year.",
+    "In 2026 the Township awarded $275,000 in grants. Funding support cannot be presumed from year to year.",
   ],
 
   grantsCommitteeHeading: "Citizen Grant Advisory Committee",
@@ -21,7 +21,7 @@ export const programs: Omit<Dictionary["programs"], "grantees"> = {
 
   granteesHeading: "Recent grantees",
   granteesNote:
-    "Agencies that received Moraine Township grant funding in 2025. The 2026 grantee list will be posted after the Board votes.",
+    "Agencies that received Moraine Township grant funding in 2025. The 2026 grantee list will be posted soon.",
 
   latinoHeading: "Latino Advisory Committee",
   latinoBody: [
@@ -87,7 +87,7 @@ export const getInvolved: Dictionary["getInvolved"] = {
     },
     {
       title: "The Food Pantry garden",
-      body: "We grow produce for the Food Pantry. Gardening volunteers are welcome through the growing season.",
+      body: "We grow produce for the Food Pantry, and we partner with a local private farm that donates a portion of its crops to the pantry. Gardening volunteers are welcome through the growing season.",
     },
   ],
 
