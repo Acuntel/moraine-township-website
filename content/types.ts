@@ -262,25 +262,15 @@ export interface Dictionary {
 
   assessor: PageMeta & {
     officeIntro: string;
-    servicesHeading: string;
-    servicesBody: string[];
-    deputyHeading: string;
-    deputyIntro: string;
-    deputyItems: string[];
-    mapHeading: string;
-    mapIntro: string;
-    mapImageAlt: string;
-    mapLongDescription: string;
-    mapWhyHeading: string;
-    mapWhyBody: string;
-    seniorHeading: string;
-    seniorSections: Section[];
-    otherExemptionsHeading: string;
-    otherExemptionsSections: Section[];
+    videoHeading: string;
+    videoIntro: string;
+    videoTitle: string;
+    videoPosterAlt: string;
+    videoPlayLabel: string;
+    videoLinkLabel: string;
+    resourcesHeading: string;
+    resourcesIntro: string;
     documentsHeading: string;
-    appealsHeading: string;
-    appealsIntro: string;
-    appealsSections: Section[];
   };
 
   transportation: PageMeta & {
