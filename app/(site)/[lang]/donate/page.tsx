@@ -6,6 +6,7 @@ import { buildMetadata } from "@/lib/metadata";
 import { TOWNSHIP } from "@/lib/township";
 import { Container, PageHeader } from "@/components/Page";
 import { DonateButton, WishListButton } from "@/components/DonateButton";
+import { CannotAccept } from "@/components/CannotAccept";
 
 export function generateStaticParams() {
   return LOCALES.map((lang) => ({ lang }));
@@ -29,8 +30,10 @@ export async function generateMetadata({
 /**
  * This page explains the giving options. It is not in the path of the donate
  * buttons: every one of those goes straight to PayPal in one click. Anyone who
- * arrives here from the footer or a search result still gets both paths, each
- * one click from this page.
+ * arrives here from the footer or a search result still gets both online
+ * paths, each one click from this page, and below them the two ways to give
+ * in person: mailing a check and dropping food off at the office. Those were
+ * added in the round 2 review, which renamed the options "Ways to Give".
  */
 export default function DonatePage({ params }: { params: { lang: string } }) {
   if (!isLocale(params.lang)) notFound();
@@ -99,23 +102,56 @@ export default function DonatePage({ params }: { params: { lang: string } }) {
               {t.wishListBody}
             </p>
 
-            <h3 className="mt-8 text-[1.05rem] font-semibold">
-              {t.inKindHeading}
-            </h3>
-            <p className="mt-3 leading-[1.72] text-ink-muted">{t.inKindBody}</p>
-            <address className="mt-4 not-italic font-medium text-brand-teal-dark">
-              {TOWNSHIP.address.street}
-              <br />
-              {TOWNSHIP.address.city}, {TOWNSHIP.address.state}{" "}
-              {TOWNSHIP.address.zip}
-            </address>
-
             <div className="mt-auto pt-8">
               <WishListButton
                 label={t.wishListCta}
                 externalNote={dict.common.externalLinkNote}
               />
             </div>
+          </div>
+        </section>
+
+        {/* The two ways to give in person. */}
+        <section className="grid gap-6 lg:grid-cols-2">
+          <div className="card flex flex-col p-9">
+            <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-green/10 text-brand-teal-dark">
+              <EnvelopeIcon className="h-5 w-5" />
+            </span>
+            <h2 className="mt-6 text-[1.55rem] font-semibold leading-snug">
+              {t.checkHeading}
+            </h2>
+            <p className="mt-4 leading-[1.72] text-ink-muted">{t.checkBody}</p>
+            {/* Laid out as it goes on the envelope. The payee is the Fund's
+                legal name, which is not a tax detail. */}
+            <address className="mt-4 not-italic font-medium text-brand-teal-dark">
+              {TOWNSHIP.charitableFund.legalName}
+              <br />
+              {TOWNSHIP.address.street}
+              <br />
+              {TOWNSHIP.address.city}, {TOWNSHIP.address.state}{" "}
+              {TOWNSHIP.address.zip}
+            </address>
+          </div>
+
+          <div className="card flex flex-col p-9">
+            <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-teal/10 text-brand-teal-dark">
+              <DoorIcon className="h-5 w-5" />
+            </span>
+            <h2 className="mt-6 text-[1.55rem] font-semibold leading-snug">
+              {t.inKindHeading}
+            </h2>
+            <p className="mt-4 leading-[1.72] text-ink-muted">{t.inKindBody}</p>
+            <address className="mt-4 not-italic font-medium text-brand-teal-dark">
+              {TOWNSHIP.address.street}
+              <br />
+              {TOWNSHIP.address.city}, {TOWNSHIP.address.state}{" "}
+              {TOWNSHIP.address.zip}
+            </address>
+            <CannotAccept
+              className="mt-7"
+              heading={dict.foodPantry.cannotAcceptHeading}
+              items={dict.foodPantry.cannotAccept}
+            />
           </div>
         </section>
 
@@ -142,6 +178,45 @@ function HeartIcon({ className = "" }: { className?: string }) {
       className={className}
     >
       <path d="M12 21s-7.5-4.7-9.6-9A5.6 5.6 0 0 1 12 6.3 5.6 5.6 0 0 1 21.6 12c-2.1 4.3-9.6 9-9.6 9z" />
+    </svg>
+  );
+}
+
+function EnvelopeIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.9"
+      aria-hidden="true"
+      className={className}
+    >
+      <rect x="3" y="5.5" width="18" height="13" rx="2" />
+      <path
+        d="M3.5 7l8.5 6 8.5-6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function DoorIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.9"
+      aria-hidden="true"
+      className={className}
+    >
+      <path
+        d="M4 21h16M6 21V4.5A1.5 1.5 0 0 1 7.5 3h9A1.5 1.5 0 0 1 18 4.5V21M14.5 12.5h.01"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }

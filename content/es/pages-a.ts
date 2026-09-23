@@ -3,12 +3,12 @@ import type { Dictionary } from "../types";
 export const home: Dictionary["home"] = {
   title: "Moraine Township, Highland Park, Illinois",
   description:
-    "Moraine Township presta servicios a los residentes de Highland Park, Highwood y partes de Lake Forest y Deerfield, con una despensa de alimentos, asistencia de emergencia, transporte puerta a puerta, tasación de propiedades y registro de votantes.",
+    "Moraine Township presta servicios a los residentes de Highwood, Fort Sheridan, la mayor parte de Highland Park y partes de Lake Forest y Deerfield, con una despensa de alimentos, asistencia de emergencia, transporte puerta a puerta, tasación de propiedades y registro de votantes.",
   h1: "Moraine Township",
   heroKicker: "Al servicio de nuestros vecinos desde 1850",
   heroHeadline: "Reciba una mano. Dé una mano.",
   heroSub:
-    "Moraine Township ofrece servicios receptivos, eficientes y compasivos para los residentes de Highland Park, Highwood y partes de Lake Forest y Deerfield.",
+    "Moraine Township ofrece servicios receptivos, eficientes y compasivos para los residentes de Highwood, Fort Sheridan, la mayor parte de Highland Park y partes de Lake Forest y Deerfield.",
   heroImageAlt:
     "Unos catorce miembros del personal y voluntarios de la despensa de alimentos de Moraine Township, de pie juntos a la entrada de la despensa, frente a una ventana con el logotipo de la despensa.",
   heroPrimaryCta: "¿Cómo podemos ayudarle?",
@@ -24,7 +24,7 @@ export const home: Dictionary["home"] = {
     "Muchos de nosotros atravesamos momentos difíciles a lo largo de la vida. Moraine Township ofrece una despensa de alimentos, asistencia general y de emergencia, ayuda con servicios públicos, preparación gratuita de impuestos, inscripción en seguros de salud, tramitación de pasaportes, registro de votantes y transporte puerta a puerta. Algunos servicios están abiertos a todos los residentes y otros son para quienes califican por ingresos.",
   helpYouCta: "Ver todos los servicios para residentes",
   helpYouImageAlt:
-    "Una vitrina refrigerada dentro de la despensa de alimentos de Moraine Township, surtida con galones de leche, cartones de huevos y cajas de productos frescos.",
+    "Voluntarios de la despensa de alimentos de Moraine Township, con mascarillas y gafetes colgados del cuello, de pie juntos en la despensa frente a estantes con cereal.",
 
   helpUsHeading: "¿Cómo puede ayudarnos?",
   helpUsBody:
@@ -34,7 +34,7 @@ export const home: Dictionary["home"] = {
     "Siete voluntarias de Moraine Township de pie en el almacén de la despensa, sosteniendo bolsas de regalo navideñas decoradas, con estantes de bolsas preparadas detrás de ellas, durante la colecta de regalos navideños.",
 
   heroBadge:
-    "Al servicio de Highland Park, Highwood y partes de Lake Forest y Deerfield",
+    "Al servicio de Highwood, Fort Sheridan, la mayor parte de Highland Park y partes de Lake Forest y Deerfield",
   heroCardHeading: "Horario de la despensa",
   heroCardFootnote:
     "Abierta a todos los residentes de Moraine Township que califican por ingresos.",
@@ -66,13 +66,13 @@ export const home: Dictionary["home"] = {
   ],
 
   stepsEyebrow: "Cómo funciona",
-  stepsHeading: "Recibir ayuda toma cuatro pasos",
+  stepsHeading: "Cuatro pasos para recibir ayuda",
   stepsSub:
     "Mantenemos el proceso sencillo y respetuoso. Si algo no le queda claro, llame a la oficina y alguien se lo explicará.",
   steps: [
     {
       title: "Verifique si califica",
-      body: "La mayoría de la ayuda está abierta a residentes de Moraine Township que califican por ingresos. ¿No sabe si vive dentro del límite? Llámenos y lo verificamos.",
+      body: "La mayor parte de la ayuda está disponible para los residentes de Moraine Township que califican por ingresos. ¿No sabe si vive dentro del límite? Llámenos y lo verificamos.",
     },
     {
       title: "Complete una solicitud",
@@ -84,7 +84,7 @@ export const home: Dictionary["home"] = {
     },
     {
       title: "Lleve a casa lo que necesita",
-      body: "Productos frescos, lácteos, carne, pan y alimentos no perecederos, además de artículos del hogar y de cuidado personal cuando están disponibles.",
+      body: "Quienes visitan la despensa reciben productos frescos, lácteos, carne, pan y alimentos no perecederos, y una vez al mes también reciben artículos para el hogar y productos de cuidado personal.",
     },
   ],
 
@@ -110,7 +110,7 @@ export const home: Dictionary["home"] = {
       id: "transportation",
       title: "Transporte puerta a puerta",
       blurb:
-        "Viajes accesibles para personas mayores y residentes con discapacidades, entre semana y con cita previa.",
+        "Ofrecemos viajes a bajo costo para residentes de 65 años o más y residentes con discapacidades, entre semana y con cita previa.",
       href: "/transportation",
     },
     {
@@ -144,10 +144,10 @@ export const home: Dictionary["home"] = {
   boardStripCta: "Ver reuniones y actas",
 };
 
-export const about: Dictionary["about"] = {
+export const about: Omit<Dictionary["about"], "officialPhotoAlts"> = {
   title: "Acerca de Moraine Township",
   description:
-    "Moraine Township es una unidad de gobierno de propósito especial fundada en 1850, que sirve a 33,946 residentes de Highland Park, Highwood y partes de Lake Forest y Deerfield.",
+    "Moraine Township es una unidad de gobierno de propósito especial fundada en 1850, que sirve a 33,946 residentes de Highwood, Fort Sheridan, la mayor parte de Highland Park y partes de Lake Forest y Deerfield.",
   h1: "Acerca de Moraine Township",
   intro:
     "Moraine Township es una unidad de gobierno de propósito especial que sirve a los residentes del sureste del condado de Lake. Esta página reúne nuestra misión, nuestra historia, nuestros límites y las personas que le atienden.",
@@ -170,12 +170,12 @@ export const about: Dictionary["about"] = {
   boundariesHeading: "Límites geográficos",
   boundariesBody: [
     "Ubicado en el sureste del condado de Lake, a lo largo de la costa del lago Michigan, Moraine Township y los municipios dentro de sus límites no son coextensivos. Con los años se incorporaron nuevos municipios, y los municipios existentes se anexaron y se expandieron hacia otros townships.",
-    "Moraine Township incluye la mayor parte de Highland Park, todo Highwood y partes del sureste de Lake Forest y del este de Deerfield. Como el límite no sigue las líneas municipales, dos vecinos en lados opuestos de la misma calle pueden estar en townships diferentes. Si no está seguro de si vive en Moraine Township, consulte el mapa de límites en la página del Tasador o llame a la oficina del Township.",
+    "Moraine Township incluye Highwood, Fort Sheridan, la mayor parte de Highland Park y partes de Lake Forest y Deerfield. Como el límite no sigue las líneas municipales, dos vecinos en lados opuestos de la misma calle pueden estar en townships diferentes. Si no está seguro de si vive en Moraine Township, llame a la oficina del Township y verificaremos su dirección.",
   ],
 
   demographicsHeading: "Población y demografía",
   demographicsNote:
-    "Las cifras siguientes provienen de los datos del Censo de los Estados Unidos para Moraine Township.",
+    "La población total proviene del Censo de 2020. Las demás cifras son estimaciones quinquenales de 2019-2023 de la Encuesta sobre la Comunidad Estadounidense (American Community Survey) de la Oficina del Censo de los Estados Unidos para Moraine Township.",
   demographicsLabels: {
     population: "Población total",
     medianIncome: "Ingreso familiar medio",
@@ -183,7 +183,7 @@ export const about: Dictionary["about"] = {
     employment: "Tasa de empleo",
     housingUnits: "Total de viviendas",
     withoutHealthcare: "Sin seguro médico",
-    lowIncome: "Ingreso familiar menor de $15,000",
+    belowPoverty: "Residentes por debajo del umbral de pobreza",
   },
 
   historyHeading: "Historia de Moraine Township",
@@ -253,41 +253,25 @@ export const services: Dictionary["services"] = {
 
   sections: [
     {
+      id: "health-insurance",
+      heading: "Inscripción en seguros de salud: ACA y Medicare",
+      body: [
+        "Moraine Township cuenta con consejeros capacitados y certificados que ayudan de forma confidencial a los residentes a explorar sus opciones de seguro de salud en el mercado estatal, Get Covered Illinois, y que asisten con la inscripción en Medicare mediante el Programa Estatal de Seguros de Salud.",
+        "Los consejeros trabajan individualmente con los residentes para comparar coberturas y costos, y para asegurar que reciban los subsidios de prima y las reducciones de costos compartidos a los que puedan tener derecho. Usted podría calificar para subsidios, gastos de bolsillo reducidos o Medicaid ampliado.",
+        "Este servicio es gratuito y no necesita ser residente de Moraine Township para recibir ayuda de nuestros consejeros. Llame a la oficina del Township para programar una cita.",
+      ],
+    },
+    {
       id: "transportation-summary",
       heading: "Transporte puerta a puerta",
       body: [
-        "Servicio de transporte accesible y confiable para personas mayores y residentes con discapacidades que ya no conducen. Los viajes médicos tienen prioridad, y los residentes también pueden programar viajes para diligencias, voluntariado y otras necesidades de la vida diaria.",
+        "Moraine Township ofrece un servicio de transporte económico y confiable para residentes de 65 años o más y residentes con discapacidades. Los viajes médicos tienen prioridad, y los residentes también pueden programar viajes para diligencias, voluntariado y otras necesidades de la vida diaria.",
       ],
       links: [
         {
           label: "Ver detalles y tarifas del transporte",
           href: "/transportation",
         },
-      ],
-    },
-    {
-      id: "voter-registration",
-      heading: "Registro de votantes",
-      body: [
-        "Regístrese para votar, o cambie su dirección de votación, en la oficina del Township durante el horario habitual. Traiga dos formas de identificación.",
-        "Debe ser ciudadano de los Estados Unidos, tener 18 años cumplidos para la próxima elección y ser residente del precinto electoral durante los 30 días previos a la elección. Un joven de 17 años puede registrarse si cumple años en la fecha de la próxima elección o antes. Por ley, el registro de votantes cierra 28 días antes de cada elección y se reanuda poco después.",
-      ],
-      bullets: [
-        "Licencia de conducir de Illinois o identificación estatal de Illinois",
-        "Identificación de empleado o de estudiante",
-        "Tarjeta de crédito o tarjeta del Seguro Social",
-        "Acta de nacimiento o pasaporte válido de los Estados Unidos",
-        "Factura de servicios públicos a nombre del solicitante, o correo con matasellos dirigido al solicitante",
-        "Tarjeta de asistencia pública, o un contrato de arrendamiento o alquiler",
-      ],
-    },
-    {
-      id: "health-insurance",
-      heading: "Inscripción en seguros de salud: ACA y Medicare",
-      body: [
-        "Moraine Township cuenta con consejeros capacitados y certificados que ayudan de forma confidencial a los residentes a explorar sus opciones de seguro de salud en el mercado federal a través de GetCoveredIllinois, y que asisten con la inscripción en Medicare mediante el Programa Estatal de Seguros de Salud.",
-        "Los consejeros trabajan individualmente con los residentes para comparar coberturas y costos, y para asegurar que reciban los subsidios de prima y las reducciones de costos compartidos a los que puedan tener derecho. Usted podría calificar para subsidios, gastos de bolsillo reducidos o Medicaid ampliado.",
-        "Este servicio es gratuito y no necesita ser residente de Moraine Township para usarlo. Llame a la oficina del Township para programar una cita.",
       ],
     },
     {
@@ -307,21 +291,61 @@ export const services: Dictionary["services"] = {
       ],
     },
     {
+      id: "voter-registration",
+      heading: "Registro de votantes",
+      body: [
+        "Regístrese para votar, o cambie su dirección de votación, en la oficina del Township durante el horario habitual. Traiga dos formas de identificación.",
+        "Debe ser ciudadano de los Estados Unidos, tener 18 años cumplidos para la próxima elección y ser residente del precinto electoral durante los 30 días previos a la elección. Un joven de 17 años puede registrarse si cumple años en la fecha de la próxima elección o antes. Por ley, el registro de votantes cierra 28 días antes de cada elección y se reanuda poco después.",
+      ],
+      bullets: [
+        "Licencia de conducir de Illinois o identificación estatal de Illinois",
+        "Identificación de empleado o de estudiante",
+        "Tarjeta de crédito o tarjeta del Seguro Social",
+        "Acta de nacimiento o pasaporte válido de los Estados Unidos",
+        "Factura de servicios públicos a nombre del solicitante, o correo con matasellos dirigido al solicitante",
+        "Tarjeta de asistencia pública, o un contrato de arrendamiento o alquiler",
+      ],
+    },
+    {
       id: "other-all",
       heading: "Otros servicios para todos los residentes",
       bullets: [
         "Tasador del Township: ayuda con exenciones, comprensión de su tasación y presentación de apelaciones",
         "Tarjetas de descuento de la RTA",
-        "Servicio gratuito de notario",
+        { label: "Servicio gratuito de notario", href: "#notary" },
+      ],
+    },
+    {
+      id: "notary",
+      heading: "Servicio de notario",
+      body: [
+        "Moraine Township ofrece servicio gratuito de notario a los residentes en la oficina del Township. No notarizamos escrituras de bienes raíces. Llame a la oficina del Township si tiene preguntas sobre un documento que necesite notarizar.",
       ],
     },
     {
       id: "assistance",
       heading: "Asistencia general y de emergencia",
       body: [
-        "La Asistencia General y la Asistencia de Emergencia son funciones reguladas por el estado de la Oficina del Supervisor. Los requisitos para la asistencia están regulados por la ley de Illinois. La información sobre los solicitantes de Asistencia General es estrictamente confidencial.",
-        "La Asistencia de Emergencia brinda a los residentes de Moraine Township ayuda para aliviar una circunstancia que pone en riesgo su vida o un gasto relacionado con el trabajo. Se anima a solicitarla a los residentes que atraviesan dificultades por una emergencia actual, como pérdida de ingresos, reducción de horas o enfermedad.",
-        "El programa de Asistencia General, exigido por el estado, brinda a los residentes de Moraine Township ayuda de hasta $1,800 para gastos básicos mensuales como renta, servicios públicos y alimentos. Puede ser elegible si está desempleado y buscando trabajo activamente, o si espera una decisión sobre una solicitud de discapacidad del Seguro Social. Los solicitantes deben cumplir los requisitos establecidos por el estado.",
+        "La Asistencia General y la Asistencia de Emergencia son funciones reguladas por el estado de la Oficina del Supervisor. Los requisitos para la asistencia están regulados por la ley federal y la ley de Illinois. La información sobre los solicitantes de Asistencia General es estrictamente confidencial.",
+      ],
+      subsections: [
+        {
+          id: "general-assistance",
+          heading: "Asistencia General",
+          body: [
+            "El programa de Asistencia General, exigido por el estado, brinda a los residentes de Moraine Township ayuda para gastos básicos mensuales como renta, servicios públicos y alimentos. Puede ser elegible si está desempleado y buscando trabajo activamente, o si espera una decisión sobre una solicitud de discapacidad del Seguro Social. Los solicitantes deben cumplir los requisitos establecidos por el estado.",
+          ],
+        },
+        {
+          id: "emergency-assistance",
+          heading: "Asistencia de Emergencia",
+          body: [
+            "La Asistencia de Emergencia brinda a los residentes de Moraine Township ayuda para aliviar una circunstancia que pone en riesgo su vida o un gasto relacionado con el trabajo. Se anima a solicitarla a los residentes que atraviesan dificultades por una emergencia actual, como pérdida de ingresos, reducción de horas o enfermedad.",
+            "La Asistencia de Emergencia es flexible. Si su situación no se parece a ninguno de los ejemplos anteriores, llámenos de todos modos y veremos juntos qué ayuda podría estar disponible.",
+          ],
+        },
+      ],
+      outro: [
         "Para conocer más sobre los programas y los requisitos, llame a la oficina del Township y pregunte por la trabajadora social.",
       ],
     },
@@ -358,51 +382,4 @@ export const services: Dictionary["services"] = {
       ],
     },
   ],
-};
-
-export const foodPantry: Dictionary["foodPantry"] = {
-  title: "Despensa de alimentos",
-  description:
-    "La despensa de alimentos de Moraine Township ofrece alimentos gratuitos a los residentes que califican por ingresos, tres días por semana. Las solicitudes están disponibles en inglés, español y ruso.",
-  h1: "Despensa de alimentos de Moraine Township",
-  intro: "Atendiendo la inseguridad alimentaria en nuestra comunidad.",
-
-  wishListHeading: "Compre de nuestra lista de deseos de Amazon",
-  wishListBody:
-    "La forma más rápida de ayudar es pedir directamente de nuestra lista de deseos de Amazon. Los artículos se envían directo a la despensa, la lista se mantiene actualizada con lo que realmente necesitamos y nada se desperdicia.",
-  wishListCta: "Abrir la lista de deseos de Amazon",
-
-  eligibilityHeading: "Quién es elegible",
-  eligibilityBody:
-    "Todos los residentes de Moraine Township que califican por ingresos pueden visitar la despensa de alimentos.",
-
-  applicationsHeading: "Solicitudes",
-  applicationsBody:
-    "Descargue y complete una solicitud antes de su primera visita. Las solicitudes están disponibles en inglés, español y ruso. Si necesita ayuda para completar el formulario, llame a la oficina del Township y le asistiremos.",
-
-  hoursHeading: "Horario de la despensa",
-  hoursRows: [
-    { day: "Lunes", time: "2:00 p.m. a 4:00 p.m." },
-    { day: "Martes", time: "10:00 a.m. a 12:00 p.m." },
-    { day: "Miércoles", time: "1:30 p.m. a 3:30 p.m." },
-  ],
-
-  receiveHeading: "Qué recibe",
-  receiveBody:
-    "Quienes visitan la despensa reciben productos frescos, lácteos, carne, pan y alimentos no perecederos. Los beneficiarios de SNAP también reciben artículos para el hogar y productos de cuidado personal cuando están disponibles.",
-
-  shoppingListHeading: "Artículos más necesitados",
-  shoppingListIntro:
-    "¿Quiere comprar para la despensa mientras hace las compras de su familia? Estos son los artículos que más necesitamos en este momento.",
-  shoppingListUpdated: "Actualizado",
-
-  dropOffHeading: "Dónde dejar las donaciones",
-  dropOffBody:
-    "Lleve donaciones de alimentos no perecederos sin abrir y sin vencer, y artículos esenciales para el hogar, a la oficina del Township en 800 Central Avenue, Highland Park, de lunes a viernes de 8:30 a.m. a 4:30 p.m.",
-
-  contactHeading: "Preguntas",
-  contactBody:
-    "Las preguntas sobre la despensa de alimentos de Moraine Township deben dirigirse a Gissele Valle, Coordinadora de Despensa y Transporte.",
-
-  volunteerCta: "Sea voluntario en la despensa",
 };

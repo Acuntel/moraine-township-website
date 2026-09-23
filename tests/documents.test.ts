@@ -4,10 +4,15 @@ import {
   DOCUMENT_COUNT,
   FORMS,
   UNAVAILABLE,
+  NOTICE_CATEGORIES,
   byCategory,
   fileSize,
   findDoc,
   groupedByYear,
+  newestFirst,
+  noticesBySubcategory,
+  sortDate,
+  type TownshipDocument,
 } from "@/lib/documents";
 import manifest from "@/lib/documents.json" with { type: "json" };
 
@@ -19,6 +24,8 @@ const ALL = manifest.migrated as Array<{
   year: number | null;
   bytes: number;
   ext: string;
+  date?: string;
+  subcategory?: string;
 }>;
 
 /**
@@ -74,12 +81,36 @@ describe("the manifest", () => {
   });
 
   test("every year is plausible", () => {
+    // The cemetery records and the 1840 survey plat are genuinely historical
+    // (the Mooney deed is from 1904). Everything else the Township posts is
+    // from this century, so a year outside it is a parsing mistake, like the
+    // term-end year 2029 that a compensation resolution once carried.
     for (const doc of ALL) {
       if (doc.year === null) continue;
+      const historical =
+        doc.category === "cemetery" || /Survey Plat/.test(doc.label);
       assert.ok(
-        doc.year >= 2000 && doc.year <= 2030,
+        doc.year >= (historical ? 1830 : 2000) && doc.year <= 2030,
         `${doc.label}: ${doc.year}`,
       );
+    }
+  });
+
+  test("labels follow one naming pattern, with no dashes as punctuation", () => {
+    // Sanela Abazovic asked in the round 2 review for consistent names. Ranges
+    // such as 2025-2029 use a hyphen; an en or em dash never appears.
+    for (const doc of ALL) {
+      assert.doesNotMatch(doc.label, /[\u2013\u2014]/, doc.label);
+    }
+    const labels = new Set(ALL.map((d) => d.label));
+    assert.equal(labels.size, ALL.length, "two documents share a label");
+  });
+
+  test("dates, where given, are real ISO dates", () => {
+    for (const doc of ALL) {
+      if (!doc.date) continue;
+      assert.match(doc.date, /^\d{4}-\d{2}-\d{2}$/, doc.label);
+      assert.ok(!Number.isNaN(Date.parse(doc.date)), doc.label);
     }
   });
 });
@@ -178,14 +209,46 @@ describe("helpers", () => {
     assert.equal(grouped, byCategory("minutes").length);
   });
 
-  test("groupedByYear sorts documents within a year", () => {
+  test("groupedByYear sorts documents within a year by date, newest first", () => {
+    // It used to sort by label, which put April before January once the
+    // labels carried month names.
     for (const group of groupedByYear("minutes")) {
-      const labels = group.docs.map((d) => d.label);
-      assert.deepEqual(
-        labels,
-        [...labels].sort((a, b) => a.localeCompare(b)),
-      );
+      const dates = group.docs.map(sortDate);
+      assert.deepEqual(dates, [...dates].sort().reverse(), group.year);
     }
+    const [latest] = groupedByYear("minutes");
+    assert.equal(latest.docs[0].label, "Board Meeting Minutes, June 17, 2026");
+  });
+
+  test("sortDate reads a date, a season or a year, in that order", () => {
+    const doc = (label: string, extra: Partial<TownshipDocument> = {}) =>
+      ({ label, year: 2020, ...extra }) as TownshipDocument;
+    assert.equal(sortDate(doc("Minutes, January 7, 2026")), "2026-01-07");
+    assert.equal(sortDate(doc("Township Newsletter, Fall 2006")), "2006-10-01");
+    assert.equal(sortDate(doc("Annual Budget, Fiscal Year 2019-2020")), "2020");
+    assert.equal(
+      sortDate(doc("Statement", { date: "2025-04-08" })),
+      "2025-04-08",
+    );
+    assert.equal(sortDate(doc("Undated map", { year: null })), "");
+  });
+
+  test("newestFirst puts undated documents last", () => {
+    const sorted = newestFirst(byCategory("cemetery"));
+    const dates = sorted.map(sortDate);
+    const firstUndated = dates.indexOf("");
+    if (firstUndated !== -1) {
+      assert.ok(dates.slice(firstUndated).every((d) => d === ""));
+    }
+    assert.equal(sorted.length, byCategory("cemetery").length);
+  });
+
+  test("every legal and public notice lands in exactly one group", () => {
+    // The notices list on /foia renders only the groups it knows. A notice
+    // without a known subcategory would silently vanish from the page.
+    const grouped = noticesBySubcategory().flatMap((g) => g.docs);
+    assert.equal(grouped.length, byCategory(...NOTICE_CATEGORIES).length);
+    assert.equal(new Set(grouped.map((d) => d.url)).size, grouped.length);
   });
 
   test("fileSize warns a phone user before they open a large scan", () => {

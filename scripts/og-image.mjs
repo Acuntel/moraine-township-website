@@ -69,9 +69,10 @@ const HTML = `<!doctype html>
     <div>
       <div class="name">Moraine Township</div>
       <div class="rule"></div>
-      <div class="tagline">A food pantry, emergency assistance, door to door
-        transportation and property assessment for residents of Highland Park,
-        Highwood, and parts of Lake Forest and Deerfield.</div>
+      <div class="tagline">A food pantry, emergency assistance, door-to-door
+        transportation, and property assessment for residents of Highwood,
+        Fort Sheridan, most of Highland Park, and parts of Lake Forest and
+        Deerfield.</div>
     </div>
     <div class="foot">
       <span>morainetownship.org</span><span class="dot"></span>

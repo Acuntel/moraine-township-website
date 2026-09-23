@@ -19,7 +19,12 @@ export interface Section {
   id: string;
   heading: string;
   body?: string[];
-  bullets?: string[];
+  /** Sub-headed parts under the section heading, each with its own anchor. */
+  subsections?: { id: string; heading: string; body: string[] }[];
+  /** Paragraphs that close the section, after any subsections. */
+  outro?: string[];
+  /** A bullet given as a LinkItem renders as a link to more detail. */
+  bullets?: (string | LinkItem)[];
   links?: LinkItem[];
 }
 
@@ -34,6 +39,26 @@ export interface PersonBio {
   id: string;
   bio: string;
 }
+
+/** The elected officials in lib/township.ts, by id. */
+export type OfficialId =
+  | "supervisor"
+  | "clerk"
+  | "assessor"
+  | "trustee-guerrero"
+  | "trustee-haggarty"
+  | "trustee-jacoby"
+  | "trustee-levin";
+
+/** Mirrors NOTICE_GROUPS in lib/documents.ts. */
+export type NoticeGroup =
+  | "treasurer"
+  | "comptroller"
+  | "financial-affairs"
+  | "officials-compensation"
+  | "compensation-disclosures"
+  | "resolutions"
+  | "foia-posting";
 
 export interface PageMeta {
   title: string;
@@ -111,6 +136,12 @@ export interface Dictionary {
     backToTop: string;
     externalLinkNote: string;
     pdfNote: string;
+    /**
+     * The count on a closed group of documents, such as "9 documents". {n} is
+     * the number; the form is chosen with Intl.PluralRules. Russian needs few
+     * and many; the other two languages repeat "other" there.
+     */
+    documentCount: { one: string; few: string; many: string; other: string };
     officeHours: string;
     hours: string;
     phone: string;
@@ -203,7 +234,7 @@ export interface Dictionary {
       employment: string;
       housingUnits: string;
       withoutHealthcare: string;
-      lowIncome: string;
+      belowPoverty: string;
     };
     historyHeading: string;
     historyBody: string[];
@@ -215,6 +246,8 @@ export interface Dictionary {
     staffIntro: string;
     readBio: string;
     noPhotoNote: string;
+    /** Each headshot described as it actually looks. See CLAUDE.md rule 3. */
+    officialPhotoAlts: Record<OfficialId, string>;
     roleDescriptions: Record<
       "supervisor" | "clerk" | "assessor" | "trustees",
       string
@@ -239,6 +272,8 @@ export interface Dictionary {
   };
 
   foodPantry: PageMeta & {
+    /** What the pantry is for, above the wish list. */
+    lead: string[];
     wishListHeading: string;
     wishListBody: string;
     wishListCta: string;
@@ -255,9 +290,13 @@ export interface Dictionary {
     shoppingListUpdated: string;
     dropOffHeading: string;
     dropOffBody: string;
+    /** Shown beside every drop-off instruction, here and on the Donate page. */
+    cannotAcceptHeading: string;
+    cannotAccept: string[];
     contactHeading: string;
     contactBody: string;
     volunteerCta: string;
+    imageAlt: string;
   };
 
   assessor: PageMeta & {
@@ -274,6 +313,8 @@ export interface Dictionary {
   };
 
   transportation: PageMeta & {
+    /** Leads into the ride line, near the top of the page. */
+    callLead: string;
     body: string[];
     detailsHeading: string;
     details: { label: string; value: string }[];
@@ -289,15 +330,11 @@ export interface Dictionary {
     agendaHeading: string;
     agendaIntro: string;
     agendaEmpty: string;
-    postedAgendasHeading: string;
-    decennialHeading: string;
     minutesHeading: string;
     minutesIntro: string;
     minutesCards: { id: string; heading: string; body: string }[];
     legalNoteHeading: string;
     legalNoteBody: string;
-    annualTownMeetingHeading: string;
-    annualTownMeetingBody: string;
   };
 
   cemeteries: PageMeta & {
@@ -354,6 +391,9 @@ export interface Dictionary {
     lead: string;
     /** Short line for the donate band that repeats across long pages. */
     bandBody: string;
+    /** One sentence in the band about the ways to give that are not online. */
+    bandOtherWays: string;
+    bandOtherWaysCta: string;
     optionsHeading: string;
     moneyHeading: string;
     moneyBody: string;
@@ -365,6 +405,8 @@ export interface Dictionary {
     wishListCta: string;
     inKindHeading: string;
     inKindBody: string;
+    checkHeading: string;
+    checkBody: string;
     fundNote: string;
   };
 
@@ -395,6 +437,8 @@ export interface Dictionary {
     financeHeading: string;
     financeIntro: string;
     financeGroups: { id: string; heading: string; note: string }[];
+    /** Headings for the groups inside Legal and Public Notices. */
+    noticeGroups: Record<NoticeGroup, string>;
     employeesLabel: string;
     employeesValue: string;
     newsletterHeading: string;

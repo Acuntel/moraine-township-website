@@ -42,21 +42,34 @@ export const TOWNSHIP = {
     administrator: "administrator@morainetownship.org",
     volunteer: "volunteer@morainetownship.org",
     ethics: "ethics@morainetownship.org",
+    // Elizabeth "Lizzy" Innes, supplied in the round 2 review.
+    assistant: "assistant@morainetownship.org",
   },
   geography: {
     squareMiles: 11.92,
     acres: 7627.7,
+    // Service area wording from Sanela Abazovic in the round 2 review, which
+    // added Fort Sheridan. Mark, Rachel and Sanela all flagged its absence.
     municipalities:
-      "most of Highland Park, all of Highwood, and parts of southeast Lake Forest and east Deerfield",
+      "Highwood, Fort Sheridan, most of Highland Park, and parts of Lake Forest and Deerfield",
   },
+  // Census Bureau figures for Moraine township (county subdivision GEOID
+  // 1709750364), rechecked in the round 2 review. Population is the 2020
+  // Decennial Census count. Everything else is the American Community Survey
+  // 2019-2023 five-year estimate, table DP03/DP02/DP04. Move them to a newer
+  // ACS vintage together, never one at a time, or the page mixes years.
   demographics: {
     population: 33946,
-    medianHouseholdIncome: 148066,
-    bachelorsOrHigher: "71.1%",
-    employmentRate: "63.8%",
-    housingUnits: 13812,
-    withoutHealthcare: "4.5%",
-    incomeUnder15k: "6%",
+    medianHouseholdIncome: 148066, // DP03_0062E
+    bachelorsOrHigher: "71.1%", // DP02_0068PE
+    employmentRate: "63.8%", // DP03_0004PE
+    housingUnits: 13812, // DP04_0001E
+    withoutHealthcare: "4.5%", // DP03_0099PE, no health insurance coverage
+    // DP03_0128PE, all people below the poverty level (margin of error 1.5).
+    // Replaces "household income under $15,000: 6%", which no ACS vintage
+    // reproduces. Rachel Jacoby asked for a $33,000 line, the HHS guideline
+    // for a family of four, but the Census publishes no such bracket.
+    belowPovertyLine: "5.3%",
   },
   charitableFund: {
     legalName: "Moraine Township Charitable Fund, Inc.",
@@ -110,10 +123,16 @@ export const LINKS = {
 /**
  * Elected officials, from /elected-officials as crawled 2026-08-13.
  *
- * TODO(client): the live site contradicts itself on the Assessor. Both
- * /assessments and /elected-officials name Thomas J. Healy (term 2022-2026),
- * while /mark-lindsay-bio still says Mark Lindsay has been Assessor since 2018.
- * Healy is used here because the two current pages agree. Confirm before launch.
+ * Headshots were added in the round 2 review at Rachel Jacoby's request, taken
+ * from each official's page on the old site (Tom Healy's from the photo-and-bio
+ * PDF he kept on the Assessor page). Each has a 240px copy beside it, named
+ * with a -240 suffix, for the srcset in components/AboutParts.tsx.
+ *
+ * The Assessor is Thomas J. Healy. The old site also carried a stale
+ * /mark-lindsay-bio page, but Nancy and Rosa's round 2 review gave Healy's
+ * term, which settles it. They asked for "2025-2029"; their note also says he
+ * was sworn in on 1/1/2026 for a term ending 12/31/2029, which would read
+ * 2026-2029. The reply to the Township flags that as a one-line change.
  */
 export const ELECTED_OFFICIALS = [
   {
@@ -124,7 +143,8 @@ export const ELECTED_OFFICIALS = [
     term: "2025-2029",
     email: TOWNSHIP.email.supervisor,
     phone: TOWNSHIP.phone.main,
-    hasPhoto: false,
+    hasPhoto: true,
+    photo: "/images/round2/official-supervisor.webp",
   },
   {
     id: "clerk",
@@ -134,17 +154,19 @@ export const ELECTED_OFFICIALS = [
     term: "2025-2029",
     email: TOWNSHIP.email.clerk,
     phone: TOWNSHIP.phone.main,
-    hasPhoto: false,
+    hasPhoto: true,
+    photo: "/images/round2/official-clerk.webp",
   },
   {
     id: "assessor",
     name: "Thomas J. Healy, CIAO",
     role: "Assessor",
     roleKey: "assessor" as const,
-    term: "2022-2026",
+    term: "2025-2029",
     email: TOWNSHIP.email.assessor,
     phone: TOWNSHIP.phone.assessor,
-    hasPhoto: false,
+    hasPhoto: true,
+    photo: "/images/round2/official-assessor.webp",
   },
   {
     id: "trustee-guerrero",
@@ -153,7 +175,8 @@ export const ELECTED_OFFICIALS = [
     roleKey: "trustee" as const,
     term: "2025-2029",
     email: "trusteeguerrero@morainetownship.org",
-    hasPhoto: false,
+    hasPhoto: true,
+    photo: "/images/round2/official-trustee-guerrero.webp",
   },
   {
     id: "trustee-haggarty",
@@ -162,7 +185,8 @@ export const ELECTED_OFFICIALS = [
     roleKey: "trustee" as const,
     term: "2025-2029",
     email: "trusteehaggarty@morainetownship.org",
-    hasPhoto: false,
+    hasPhoto: true,
+    photo: "/images/round2/official-trustee-haggarty.webp",
   },
   {
     id: "trustee-jacoby",
@@ -171,7 +195,8 @@ export const ELECTED_OFFICIALS = [
     roleKey: "trustee" as const,
     term: "2025-2029",
     email: "trusteejacoby@morainetownship.org",
-    hasPhoto: false,
+    hasPhoto: true,
+    photo: "/images/round2/official-trustee-jacoby.webp",
   },
   {
     id: "trustee-levin",
@@ -180,7 +205,8 @@ export const ELECTED_OFFICIALS = [
     roleKey: "trustee" as const,
     term: "2025-2029",
     email: "trusteelevin@morainetownship.org",
-    hasPhoto: false,
+    hasPhoto: true,
+    photo: "/images/round2/official-trustee-levin.webp",
   },
 ] as const;
 
@@ -216,6 +242,14 @@ export const STAFF = [
     roleKey: "officeStaff" as const,
     email: "staffdesk@morainetownship.org",
   },
+  {
+    // Added at her request in the round 2 review. Her title was not given and
+    // is not on the Township's current site, so she carries the generic role.
+    name: "Elizabeth “Lizzy” Innes",
+    role: "Office Staff",
+    roleKey: "officeStaff" as const,
+    email: TOWNSHIP.email.assistant,
+  },
 ] as const;
 
 /**
@@ -223,23 +257,22 @@ export const STAFF = [
  * lightly condensed. These are the bios "that they wrote", which the Supervisor
  * asked to carry over. They are the officials' own words about themselves, so
  * nothing here is invented or embellished.
- *
- * TODO(client): the Township has photographs of at least some officials. Once
- * supplied, add them beside these and drop the initials mark for those people.
+ * The officials' photographs are on ELECTED_OFFICIALS above. Staff asked not
+ * to have their images published, so they keep the initials mark.
  */
 export const OFFICIAL_BIOS: Record<string, string> = {
-  "supervisor":
-    "Nancy Chausow Shafer grew up in Highland Park and has lived here as an adult since 1990. She raised her two children here, and lives with her husband Arnie Shafer, a retired photographer. Nancy is an attorney and principal in the Highland Park firm Sage Counsel, LLC, concentrating in matrimonial law including litigation, mediation and collaboration, and accepting child representation and guardian ad litem appointments. She is a fellow of the American Academy of Matrimonial Lawyers and a frequent presenter and organizer at continuing legal education programs. Active in the Democratic party in Lake County, she has served as secretary of both the Tenth Congressional Democrats and the Moraine Township Democrats, and chaired the Election Protection committee of the Tenth Congressional Democrats.",
-  "clerk":
+  supervisor:
+    "Nancy Chausow Shafer grew up in Highland Park and has lived here as an adult since 1990. She raised her two children here, and lives with her husband Arnie Shafer, a retired photographer. Nancy is an attorney and principal in the Highland Park firm Sage Counsel, LLC, concentrating in matrimonial law including litigation, mediation, and collaboration, and accepting child representation and guardian ad litem appointments. She is a fellow of the American Academy of Matrimonial Lawyers and a frequent presenter and organizer at continuing legal education programs. Active in the Democratic party in Lake County, she has served as secretary of both the Tenth Congressional Democrats and the Moraine Township Democrats, and chaired the Election Protection committee of the Tenth Congressional Democrats.",
+  clerk:
     "Colleen Jenn hails from a large military family and has resided in Highland Park for 21 years. She graduated from Northwestern University and worked as Radiology Administrator of Northwestern Medicine. After retirement she wanted to help military veterans, and volunteered at the James Lovell Federal Healthcare Center for years, conducting art therapy and teaching piano. She is proud of her service to hospitalized veterans, and is glad to be part of the Moraine Township team of dedicated staff and volunteers.",
   "trustee-guerrero":
-    "Diana J. Guerrero grew up in Chicago's Pilsen neighborhood and has been a resident of Highland Park since 2016. She is Communications and Development Manager at the Highwood Library and Community Center, where she leads marketing, communications and grant development. With over 15 years of experience in marketing and a Bachelor's degree in Liberal Arts from Lake Forest College, Diana is deeply committed to community engagement and public service. She previously served on the Board of Trustees for the Highwood Library, and is involved in the Northwood Middle School Parent Teacher Organization and the Stewardship, Events and Development Committee and Finance Council of Christ Our Hope Parish. She was installed as Public Relations Chair on the board of Coalición Latinos Unidos de Lake County, and was honored as a Wintrust Latinx Community Leader in September 2024.",
+    "Diana J. Guerrero grew up in Chicago's Pilsen neighborhood and has been a resident of Highland Park since 2016. She is Communications and Development Manager at the Highwood Library and Community Center, where she leads marketing, communications, and grant development. With over 15 years of experience in marketing and a Bachelor's degree in Liberal Arts from Lake Forest College, Diana is deeply committed to community engagement and public service. She previously served on the Board of Trustees for the Highwood Library, and is involved in the Northwood Middle School Parent Teacher Organization and the Stewardship, Events and Development Committee and Finance Council of Christ Our Hope Parish. She was installed as Public Relations Chair on the board of Coalición Latinos Unidos de Lake County, and was honored as a Wintrust Latinx Community Leader in September 2024.",
   "trustee-haggarty":
     "Mark Haggarty has lived in Highland Park since 2013 with his wife Amy, a native Highland Parker, and their two children. He holds a B.A. in English from Kenyon College and an MBA from Loyola University Chicago. He has worked in the non-profit arena since 2002, and in 2018 founded the consultancy firm Spacebar Projects. His community service has focused on programs benefiting children and families, including extensive volunteering in the schools and with the Moraine Township food pantry before joining the Board as a trustee.",
   "trustee-jacoby":
     "Rachel Jacoby is a proud Highland Park resident. She graduated with Bachelor's degrees in Accountancy and Supply Chain Management from the University of Illinois, and from the Harvard Kennedy School with a Master's in Public Policy, concentrating in social and urban policy. Rachel works in the gun violence prevention movement and previously served as an English teacher on a Fulbright grant in Malaysia. She has served on the Moraine Township Grant Committee since 2024.",
   "trustee-levin":
-    "Allison Levin and her husband Brad have lived in Highland Park for over 30 years, raising their son and two daughters. Allison is a Managing Director at Fidelity Investments, with a BA in English Literature from Northwestern University and an MBA from the University of Chicago. Her passion has been elevating at-risk children and youth, including work with Citizen Schools of Illinois as a board member and classroom volunteer, and as board member and human resource chair for The Women's Treatment Center. At Fidelity she serves on several diversity, equity and inclusion task forces. Allison volunteers with the Township VITA program, helping prepare free income tax returns for low-income taxpayers.",
+    "Allison Levin and her husband Brad have lived in Highland Park for over 30 years, raising their son and two daughters. Allison is a Managing Director at Fidelity Investments, with a BA in English Literature from Northwestern University and an MBA from the University of Chicago. Her passion has been elevating at-risk children and youth, including work with Citizen Schools of Illinois as a board member and classroom volunteer, and as board member and human resource chair for The Women's Treatment Center. At Fidelity she serves on several diversity, equity, and inclusion task forces. Allison volunteers with the Township VITA program, helping prepare free income tax returns for low-income taxpayers.",
 };
 
 /** Ethics Commission, from /ethics. */

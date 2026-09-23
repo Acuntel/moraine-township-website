@@ -37,7 +37,20 @@ export default function TransportationPage({
 
   return (
     <>
-      <PageHeader locale={locale} dict={dict} title={t.h1} intro={t.intro} />
+      <PageHeader locale={locale} dict={dict} title={t.h1} intro={t.intro}>
+        {/* The ride line near the top as well as at the bottom, as Sanela
+            Abazovic asked in the round 2 review. */}
+        <p className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-3 text-[1.05rem] font-medium text-ink">
+          <span>{t.callLead}</span>
+          <a
+            href={`tel:${TOWNSHIP.phone.transportationHref}`}
+            className="inline-flex items-center gap-2 rounded-full bg-brand-teal-dark px-6 py-3 text-lg font-bold text-white transition hover:-translate-y-0.5 hover:bg-brand-teal"
+          >
+            <PhoneIcon className="h-4 w-4" />
+            {TOWNSHIP.phone.transportation}
+          </a>
+        </p>
+      </PageHeader>
 
       <Container className="space-y-12">
         <div className="grid gap-8 lg:grid-cols-2">
@@ -82,5 +95,18 @@ export default function TransportationPage({
         </Card>
       </Container>
     </>
+  );
+}
+
+function PhoneIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+      className={className}
+    >
+      <path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .7-.2 1l-2.3 2.2z" />
+    </svg>
   );
 }

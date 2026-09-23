@@ -88,7 +88,7 @@ export const SEED: SiteContent = {
     {
       id: "seed-senior-freeze",
       slug: "revised-senior-tax-freeze",
-      title: "Revised senior tax freeze",
+      title: "Revised Senior Tax Freeze",
       summary:
         "The senior tax freeze schedule has been revised for 2026. Contact the Assessor’s office at 847-432-2100 to confirm your exemption.",
       body: "The Moraine Township Assessor’s Office has posted a revised senior tax freeze schedule for 2026. If you are 65 or older, qualified for the Senior Homestead Exemption, and have a total household income of $65,000 or less, the assessed value of your property can be frozen. This exemption must be renewed annually. Call the Assessor’s Office at 847-432-2100 with any questions, or file online through the Lake County e-file system.",
@@ -110,23 +110,23 @@ export const SEED: SiteContent = {
     {
       id: "seed-pantry-hours",
       slug: "food-pantry-hours",
-      title: "Food Pantry open three days a week",
+      title: "Food Pantry Open Three Days a Week",
       summary:
-        "The Moraine Township Food Pantry is open Monday, Tuesday and Wednesday. All income-qualified Township residents are eligible.",
-      body: "The Moraine Township Food Pantry is open Monday from 2:00 to 4:00 p.m., Tuesday from 10:00 a.m. to noon, and Wednesday from 1:30 to 3:30 p.m. All income-qualified Moraine Township residents are eligible to visit. Applications are available in English, Spanish and Russian. Pantry visitors receive produce, dairy, meat, bread and shelf-stable food. Questions can go to Gissele Valle at 847-432-3240.",
+        "The Moraine Township Food Pantry is open Monday, Tuesday, and Wednesday. All income-qualified Township residents are eligible to visit and shop at the Food Pantry.",
+      body: "The Moraine Township Food Pantry is open Monday from 2:00 to 4:00 p.m., Tuesday from 10:00 a.m. to noon, and Wednesday from 1:30 to 3:30 p.m. All income-qualified Moraine Township residents are eligible to visit and shop at the Food Pantry. Applications are available in English, Spanish, and Russian. Pantry visitors receive produce, dairy, meat, bread, and shelf-stable food. Questions can go to Gissele Valle at 847-432-3240.",
       date: "2026-07-12",
       published: true,
       es: {
         title: "La despensa de alimentos abre tres días por semana",
         summary:
-          "La despensa de alimentos de Moraine Township abre lunes, martes y miércoles. Todos los residentes del Township que califican por ingresos son elegibles.",
-        body: "La despensa de alimentos de Moraine Township abre los lunes de 2:00 a 4:00 p.m., los martes de 10:00 a.m. a mediodía y los miércoles de 1:30 a 3:30 p.m. Todos los residentes de Moraine Township que califican por ingresos pueden visitarla. Las solicitudes están disponibles en inglés, español y ruso. Quienes visitan la despensa reciben productos frescos, lácteos, carne, pan y alimentos no perecederos. Para preguntas, llame a Gissele Valle al 847-432-3240.",
+          "La despensa de alimentos de Moraine Township abre lunes, martes y miércoles. Todos los residentes del Township que califican por ingresos pueden visitar la despensa y hacer sus compras allí.",
+        body: "La despensa de alimentos de Moraine Township abre los lunes de 2:00 a 4:00 p.m., los martes de 10:00 a.m. a mediodía y los miércoles de 1:30 a 3:30 p.m. Todos los residentes de Moraine Township que califican por ingresos pueden visitar la despensa y hacer sus compras allí. Las solicitudes están disponibles en inglés, español y ruso. Quienes visitan la despensa reciben productos frescos, lácteos, carne, pan y alimentos no perecederos. Para preguntas, llame a Gissele Valle al 847-432-3240.",
       },
       ru: {
         title: "Продовольственная кладовая работает три дня в неделю",
         summary:
-          "Продовольственная кладовая Moraine Township открыта в понедельник, вторник и среду. Право на посещение имеют все жители Township, соответствующие требованиям по доходу.",
-        body: "Продовольственная кладовая Moraine Township открыта в понедельник с 14:00 до 16:00, во вторник с 10:00 до 12:00 и в среду с 13:30 до 15:30. Посещать её могут все жители Moraine Township, соответствующие требованиям по доходу. Заявления доступны на английском, испанском и русском языках. Посетители получают овощи и фрукты, молочные продукты, мясо, хлеб и продукты длительного хранения. По вопросам звоните Жизель Валье по телефону 847-432-3240.",
+          "Продовольственная кладовая Moraine Township открыта в понедельник, вторник и среду. Посещать кладовую и выбирать в ней продукты могут все жители Township, соответствующие требованиям по доходу.",
+        body: "Продовольственная кладовая Moraine Township открыта в понедельник с 14:00 до 16:00, во вторник с 10:00 до 12:00 и в среду с 13:30 до 15:30. Посещать кладовую и выбирать в ней продукты могут все жители Moraine Township, соответствующие требованиям по доходу. Заявления доступны на английском, испанском и русском языках. Посетители получают овощи и фрукты, молочные продукты, мясо, хлеб и продукты длительного хранения. По вопросам звоните Жизель Валье по телефону 847-432-3240.",
       },
     },
   ],

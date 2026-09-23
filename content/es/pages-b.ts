@@ -1,5 +1,62 @@
 import type { Dictionary } from "../types";
 
+export const foodPantry: Omit<Dictionary["foodPantry"], "imageAlt"> = {
+  title: "Despensa de alimentos",
+  description:
+    "La despensa de alimentos de Moraine Township ofrece alimentos gratuitos a los residentes que califican por ingresos, tres días por semana. Las solicitudes están disponibles en inglés, español y ruso.",
+  h1: "Despensa de alimentos de Moraine Township",
+  intro:
+    "La despensa de alimentos de Moraine Township funciona casi por completo gracias a donaciones y voluntarios.",
+  lead: [
+    "El objetivo de la despensa de alimentos de Moraine Township es que ninguno de nuestros vecinos pase hambre. ¡Gracias por ayudarnos a combatir la inseguridad alimentaria en nuestra comunidad!",
+  ],
+
+  wishListHeading: "Compre de nuestra lista de deseos de Amazon",
+  wishListBody:
+    "La forma más rápida de ayudar es pedir directamente de nuestra lista de deseos de Amazon. Los artículos se envían directo a la despensa, la lista se mantiene actualizada con lo que realmente necesitamos y nada se desperdicia.",
+  wishListCta: "Abrir la lista de deseos de Amazon",
+
+  eligibilityHeading: "Quién es elegible",
+  eligibilityBody:
+    "Todos los residentes de Moraine Township que califican por ingresos pueden visitar la despensa de alimentos y hacer sus compras allí.",
+
+  applicationsHeading: "Solicitudes",
+  applicationsBody:
+    "Descargue y complete una solicitud antes de su primera visita. Las solicitudes están disponibles en inglés, español y ruso. Si necesita ayuda para completar el formulario, llame a la oficina del Township y le asistiremos.",
+
+  hoursHeading: "Horario de la despensa",
+  hoursRows: [
+    { day: "Lunes", time: "2:00 p.m. a 4:00 p.m." },
+    { day: "Martes", time: "10:00 a.m. a 12:00 p.m." },
+    { day: "Miércoles", time: "1:30 p.m. a 3:30 p.m." },
+  ],
+
+  receiveHeading: "Qué recibe",
+  receiveBody:
+    "Quienes visitan la despensa reciben productos frescos, lácteos, carne, pan y alimentos no perecederos. Además, todas las personas que compran en la despensa reciben artículos para el hogar y productos de cuidado personal una vez al mes.",
+
+  shoppingListHeading: "Artículos más necesitados",
+  shoppingListIntro:
+    "¿Quiere comprar para la despensa mientras hace las compras de su familia? Estos son los artículos que más necesitamos en este momento.",
+  shoppingListUpdated: "Actualizado",
+
+  dropOffHeading: "Dónde dejar las donaciones",
+  dropOffBody:
+    "Lleve donaciones de alimentos no perecederos sin abrir y sin vencer, y artículos esenciales para el hogar, a la oficina del Township en 800 Central Avenue, Highland Park, de lunes a viernes de 8:30 a.m. a 4:30 p.m.",
+  cannotAcceptHeading: "No podemos aceptar",
+  cannotAccept: [
+    "Alimentos vencidos",
+    "Alimentos abiertos",
+    "Artículos para el hogar abiertos",
+  ],
+
+  contactHeading: "Preguntas",
+  contactBody:
+    "Las preguntas sobre la despensa de alimentos de Moraine Township deben dirigirse a Gissele Valle, Coordinadora de Despensa y Transporte.",
+
+  volunteerCta: "Sea voluntario en la despensa",
+};
+
 export const assessor: Dictionary["assessor"] = {
   title: "Tasador",
   description:
@@ -31,17 +88,23 @@ export const assessor: Dictionary["assessor"] = {
 export const transportation: Dictionary["transportation"] = {
   title: "Transporte puerta a puerta",
   description:
-    "Moraine Township ofrece transporte puerta a puerta accesible para personas mayores y residentes con discapacidades, entre semana y con cita previa.",
+    "Moraine Township ofrece transporte puerta a puerta a bajo costo para residentes de 65 años o más y residentes con discapacidades, entre semana y con cita previa.",
   h1: "Transporte puerta a puerta",
-  intro: "Para personas mayores y residentes con discapacidades.",
+  intro: "Para residentes de 65 años o más y residentes con discapacidades.",
+  callLead: "Para programar un viaje, llame al",
 
   body: [
-    "El servicio de transporte accesible y confiable de Moraine Township garantiza que los residentes con discapacidades y las personas mayores que ya no conducen tengan acceso a atención médica y a otros viajes necesarios para su calidad de vida.",
+    "El servicio de transporte accesible y confiable de Moraine Township garantiza que los residentes con discapacidades y los residentes de 65 años o más que ya no conducen tengan acceso a atención médica y a otros viajes necesarios para su calidad de vida.",
     "Aunque los viajes médicos tienen prioridad, los residentes también pueden programar viajes para diligencias, voluntariado y otras necesidades de la vida diaria.",
   ],
 
   detailsHeading: "Cómo funciona el servicio",
   details: [
+    {
+      label: "Quién puede viajar",
+      value:
+        "Residentes de Moraine Township de 65 años o más y residentes con discapacidades.",
+    },
     {
       label: "Cuándo se programan los viajes",
       value: "Entre semana, de 8:30 a.m. a 4:00 p.m.",
@@ -49,17 +112,17 @@ export const transportation: Dictionary["transportation"] = {
     {
       label: "Hasta dónde llegamos",
       value:
-        "Hasta 15 millas más allá de los límites del Township, incluidos Evanston, el VA y Libertyville",
+        "Hasta 15 millas desde su casa, incluidos el hospital de veteranos (VA) y los centros médicos de Evanston y Libertyville.",
     },
-    { label: "Tarifa estándar", value: "$4 por trayecto" },
     {
-      label: "Tarifa para quienes califican por ingresos",
-      value: "$2 por trayecto",
+      label: "Tarifas",
+      value:
+        "$4 por trayecto. Quienes califican por ingresos pagan $2 por trayecto.",
     },
     {
       label: "Pasajeros en silla de ruedas",
       value:
-        "Un cuidador debe acompañar a los pasajeros en silla de ruedas, y los cuidadores viajan gratis",
+        "Un cuidador debe acompañar a los pasajeros en silla de ruedas, y los cuidadores viajan gratis.",
     },
   ],
 
@@ -70,42 +133,34 @@ export const transportation: Dictionary["transportation"] = {
     "Un hombre sostiene a una mujer mayor con andador mientras ella sube a la camioneta plateada de transporte puerta a puerta de Moraine Township, rotulada Moraine Door-to-Door con el teléfono 847-432-3000.",
 };
 
-export const boardMeetings: Omit<
-  Dictionary["boardMeetings"],
-  "minutesCards"
-> = {
-  title: "Junta y reuniones",
-  description:
-    "Agendas, calendario anual de reuniones ordinarias y actas aprobadas de la Junta de Síndicos de Moraine Township, publicadas conforme a la Ley de Reuniones Abiertas de Illinois.",
-  h1: "Junta de Síndicos: reuniones y actas",
-  intro:
-    "Moraine Township publica aquí su calendario de reuniones, las agendas y las actas aprobadas, según lo exige la Ley de Reuniones Abiertas de Illinois. Las reuniones de la Junta son abiertas al público y los residentes pueden asistir.",
+export const boardMeetings: Omit<Dictionary["boardMeetings"], "minutesCards"> =
+  {
+    title: "Junta y reuniones",
+    description:
+      "Agendas, calendario anual de reuniones ordinarias y actas aprobadas de la Junta de Síndicos de Moraine Township, publicadas conforme a la Ley de Reuniones Abiertas de Illinois.",
+    h1: "Junta de Síndicos: reuniones y actas",
+    intro:
+      "Moraine Township publica aquí su calendario de reuniones, las agendas y las actas aprobadas, según lo exige la Ley de Reuniones Abiertas de Illinois. Las reuniones de la Junta son abiertas al público y los residentes pueden asistir.",
 
-  scheduleHeading: "Calendario de reuniones ordinarias",
-  scheduleIntro:
-    "Calendario anual de reuniones ordinarias de la Junta de Síndicos. Las reuniones se celebran en la oficina del Township, 800 Central Avenue, Highland Park, salvo que un aviso indique lo contrario.",
-  adoptedScheduleHeading: "Calendario adoptado de reuniones ordinarias",
+    scheduleHeading: "Calendario de reuniones ordinarias",
+    scheduleIntro:
+      "Calendario anual de reuniones ordinarias de la Junta de Síndicos. Las reuniones se celebran en la oficina del Township, 800 Central Avenue, Highland Park, salvo que un aviso indique lo contrario.",
+    adoptedScheduleHeading: "Calendario adoptado de reuniones ordinarias",
 
-  agendaHeading: "Agenda de la próxima reunión",
-  agendaIntro:
-    "La agenda de cada reunión ordinaria se publica al menos 48 horas antes de la reunión y permanece disponible durante todo ese período, según lo exige 5 ILCS 120/2.02.",
-  agendaEmpty:
-    "No hay ninguna agenda publicada en este momento. La agenda de la próxima reunión ordinaria se publicará al menos 48 horas antes de la reunión.",
+    agendaHeading: "Agendas de las reuniones",
+    agendaIntro:
+      "La agenda de cada reunión ordinaria se publica al menos 48 horas antes de la reunión y permanece disponible durante todo ese período, según lo exige 5 ILCS 120/2.02.",
+    agendaEmpty:
+      "No hay ninguna agenda publicada en este momento. La agenda de la próxima reunión ordinaria se publicará al menos 48 horas antes de la reunión.",
 
-  postedAgendasHeading: "Agendas publicadas",
-  decennialHeading: "Informe del Comité Decenal",
-  minutesHeading: "Actas",
-  minutesIntro:
-    "Las actas aprobadas de las reuniones ordinarias se publican dentro de los 10 días posteriores a su aprobación y permanecen publicadas por al menos 60 días, según lo exige 5 ILCS 120/2.06. Las actas se archivan por año, y las actas de sesiones cerradas se publican una vez liberadas.",
+    minutesHeading: "Actas",
+    minutesIntro:
+      "Las actas aprobadas de las reuniones ordinarias se publican dentro de los 10 días posteriores a su aprobación y permanecen publicadas por al menos 60 días, según lo exige 5 ILCS 120/2.06. Las actas se archivan por año, y las actas de sesiones cerradas se publican una vez liberadas.",
 
-  legalNoteHeading: "Ley de Reuniones Abiertas",
-  legalNoteBody:
-    "Moraine Township cumple con la Ley de Reuniones Abiertas de Illinois, 5 ILCS 120. Si necesita una adaptación para asistir o participar en una reunión pública, comuníquese con la oficina del Township con anticipación y haremos los arreglos necesarios.",
-
-  annualTownMeetingHeading: "Reunión Anual del Pueblo",
-  annualTownMeetingBody:
-    "El Secretario convoca cada año la Reunión Anual del Pueblo. Las actas de estas reuniones y los informes del Supervisor se archivan por año.",
-};
+    legalNoteHeading: "Ley de Reuniones Abiertas",
+    legalNoteBody:
+      "Moraine Township cumple con la Ley de Reuniones Abiertas de Illinois, 5 ILCS 120. Si necesita una adaptación para asistir o participar en una reunión pública, comuníquese con la oficina del Township con anticipación y haremos los arreglos necesarios.",
+  };
 
 export const cemeteries: Dictionary["cemeteries"] = {
   title: "Cementerios",
@@ -135,7 +190,7 @@ export const cemeteries: Dictionary["cemeteries"] = {
   daggittLocation:
     "Esquina de Lake Cook Road y St. Johns Avenue, cerca de la estación Braeside de Metra",
   daggittBody: [
-    "Daggitt es el cementerio pionero, con lápidas que datan de 1845 y que cuentan la historia de los primeros colonos de la zona de Highland Park y Glencoe. Si la historia de Mooney es sobre católicos irlandeses, la de Daggitt es sobre colonos protestantes, metodistas ingleses y luteranos alemanes. Robert Daggitt, que llegó de Inglaterra a finales de la década de 1830, enterró aquí a tres de sus nueve hijos y más tarde permitió que los vecinos también usaran ese medio acre.",
+    "Daggitt es el cementerio pionero, con lápidas que datan de 1845 y que cuentan la historia de los primeros colonos de la zona de Highland Park y Glencoe. Si la historia de Mooney es sobre católicos irlandeses, la de Daggitt es sobre colonos protestantes: metodistas ingleses y luteranos alemanes. Robert Daggitt, que llegó de Inglaterra a finales de la década de 1830, enterró aquí a tres de sus nueve hijos y más tarde permitió que los vecinos también usaran ese medio acre.",
     "Para la década de 1970 el cementerio estaba abandonado y en mal estado. La Ciudad y el Distrito de Parques de Highland Park, historiadores locales y las sociedades históricas de Glencoe y Highland Park trabajaron con el Township para volver a dedicarlo en 1996. Tras décadas de abandono y vandalismo, en 2022 se completó un proyecto de tres años para limpiar y estabilizar las lápidas y agregar nueva información sobre los entierros, seguido de un proyecto de plantas para polinizadores. La Ciudad de Highland Park otorgó al Township su Premio de Preservación Histórica en 2024.",
     "Daggitt está cerrado a nuevos entierros y se conserva como sitio histórico.",
   ],

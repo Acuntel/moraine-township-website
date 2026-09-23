@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getDictionary } from "@/content";
-import { isLocale, LOCALES } from "@/lib/i18n";
+import { isLocale, localePath, LOCALES } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/metadata";
 import { LINKS, TOWNSHIP } from "@/lib/township";
 import { Container, PageHeader, SectionBlock } from "@/components/Page";
 import { DocumentList } from "@/components/DocumentList";
 import { byCategory } from "@/lib/documents";
-import { DonateBand } from "@/components/DonateButton";
+import type { LinkItem } from "@/content/types";
+import { DonateBand } from "@/components/DonateBand";
 
 export function generateStaticParams() {
   return LOCALES.map((lang) => ({ lang }));
@@ -29,13 +30,15 @@ export async function generateMetadata({
 }
 
 // The Township splits its own services this way, so the page keeps that split
-// rather than inventing a new taxonomy residents would have to learn.
+// rather than inventing a new taxonomy residents would have to learn. The
+// sections render in dictionary order, which the committee set in round 2.
 const ALL_RESIDENT_IDS = [
-  "transportation-summary",
-  "voter-registration",
   "health-insurance",
+  "transportation-summary",
   "passport",
+  "voter-registration",
   "other-all",
+  "notary",
 ];
 
 export default function ServicesPage({ params }: { params: { lang: string } }) {
@@ -44,10 +47,41 @@ export default function ServicesPage({ params }: { params: { lang: string } }) {
   const dict = getDictionary(locale);
   const t = dict.services;
 
-  const allResidents = t.sections.filter((s) =>
-    ALL_RESIDENT_IDS.includes(s.id),
-  );
-  const incomeQualified = t.sections.filter(
+  // Outbound links sit with the service they belong to. Before round 2 they
+  // were one list after the last section, which read as fine only while that
+  // section happened to be voter registration.
+  const outbound: Record<string, LinkItem[]> = {
+    passport: [
+      { label: dict.shared.links.passportForms, href: LINKS.travelState },
+    ],
+    "voter-registration": [
+      {
+        label: dict.shared.links.voterOnline,
+        href: LINKS.illinoisVoterRegistration,
+      },
+      {
+        label: dict.shared.links.voterStatus,
+        href: LINKS.lakeCountyVoterPower,
+      },
+      {
+        label: dict.shared.links.pollingPlaces,
+        href: LINKS.lakeCountyPollingPlaces,
+      },
+    ],
+    utilities: [
+      { label: dict.shared.links.comEd, href: LINKS.comEdAssistance },
+      { label: dict.shared.links.shareWarmth, href: LINKS.shareTheWarmth },
+    ],
+  };
+  const sections = t.sections.map((section) => {
+    const extra = outbound[section.id];
+    if (!extra) return section;
+    const links = extra.map((link) => ({ ...link, external: true }));
+    return { ...section, links: [...(section.links ?? []), ...links] };
+  });
+
+  const allResidents = sections.filter((s) => ALL_RESIDENT_IDS.includes(s.id));
+  const incomeQualified = sections.filter(
     (s) => !ALL_RESIDENT_IDS.includes(s.id),
   );
 
@@ -72,65 +106,6 @@ export default function ServicesPage({ params }: { params: { lang: string } }) {
               />
             ))}
           </div>
-
-          <ul className="mt-8 space-y-2">
-            <li>
-              <a
-                className="link"
-                href={LINKS.illinoisVoterRegistration}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {dict.shared.links.voterOnline}
-                <span className="sr-only">
-                  {" "}
-                  ({dict.common.externalLinkNote})
-                </span>
-              </a>
-            </li>
-            <li>
-              <a
-                className="link"
-                href={LINKS.lakeCountyVoterPower}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {dict.shared.links.voterStatus}
-                <span className="sr-only">
-                  {" "}
-                  ({dict.common.externalLinkNote})
-                </span>
-              </a>
-            </li>
-            <li>
-              <a
-                className="link"
-                href={LINKS.lakeCountyPollingPlaces}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {dict.shared.links.pollingPlaces}
-                <span className="sr-only">
-                  {" "}
-                  ({dict.common.externalLinkNote})
-                </span>
-              </a>
-            </li>
-            <li>
-              <a
-                className="link"
-                href={LINKS.travelState}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {dict.shared.links.passportForms}
-                <span className="sr-only">
-                  {" "}
-                  ({dict.common.externalLinkNote})
-                </span>
-              </a>
-            </li>
-          </ul>
         </div>
 
         <div className="rounded-2xl bg-surface-alt p-6 sm:p-10">
@@ -164,42 +139,16 @@ export default function ServicesPage({ params }: { params: { lang: string } }) {
               {t.formsNote}
             </p>
             <DocumentList
-              docs={byCategory("assistance", "taxprep", "passport", "benefits")}
+              docs={byCategory(
+                "assistance",
+                "taxprep",
+                "passport",
+                "benefits",
+              ).sort((a, b) => a.label.localeCompare(b.label))}
               pdfNote={dict.common.pdfNote}
-            externalNote={dict.common.externalLinkNote}
+              externalNote={dict.common.externalLinkNote}
             />
           </div>
-
-          <ul className="mt-8 space-y-2">
-            <li>
-              <a
-                className="link"
-                href={LINKS.comEdAssistance}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {dict.shared.links.comEd}
-                <span className="sr-only">
-                  {" "}
-                  ({dict.common.externalLinkNote})
-                </span>
-              </a>
-            </li>
-            <li>
-              <a
-                className="link"
-                href={LINKS.shareTheWarmth}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {dict.shared.links.shareWarmth}
-                <span className="sr-only">
-                  {" "}
-                  ({dict.common.externalLinkNote})
-                </span>
-              </a>
-            </li>
-          </ul>
         </div>
 
         <DonateBand
@@ -209,6 +158,9 @@ export default function ServicesPage({ params }: { params: { lang: string } }) {
           body={dict.donate.bandBody}
           wishListLabel={dict.donate.wishListCta}
           externalNote={dict.common.externalLinkNote}
+          otherWays={dict.donate.bandOtherWays}
+          otherWaysCta={dict.donate.bandOtherWaysCta}
+          otherWaysHref={localePath(locale, "/donate")}
         />
       </Container>
     </>

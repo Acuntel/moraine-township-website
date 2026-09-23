@@ -186,8 +186,9 @@ export function StepCards({
 }
 
 /**
- * Asymmetric bento grid. The mock varies card widths so the block reads as
- * composed rather than as a uniform table of boxes.
+ * Grid of icon cards, every card the same size at every breakpoint. The mock
+ * ran the first and fourth wide; Sanela Abazovic asked in the round 2 review
+ * for the six boxes to be sized evenly, so the grid no longer supports it.
  */
 export function BentoGrid({
   items,
@@ -198,11 +199,10 @@ export function BentoGrid({
     body: string;
     icon: ReactNode;
     href?: string;
-    wide?: boolean;
   }[];
 }) {
   return (
-    <ul className="mt-14 grid gap-5 md:grid-cols-3">
+    <ul className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {items.map((item) => {
         const inner = (
           <>
@@ -216,7 +216,7 @@ export function BentoGrid({
           </>
         );
         return (
-          <li key={item.id} className={item.wide ? "md:col-span-2" : ""}>
+          <li key={item.id}>
             {item.href ? (
               <a
                 href={item.href}

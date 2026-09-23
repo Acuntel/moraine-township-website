@@ -1,8 +1,21 @@
 import type { Dictionary } from "../types";
 import { common, footer, leadCapture, nav, notFound } from "./site";
-import { foiaEmployees, grantees, minutesCards, shared } from "./shared";
-import { about, foodPantry, home, services } from "./pages-a";
-import { assessor, boardMeetings, cemeteries, transportation } from "./pages-b";
+import {
+  foiaEmployees,
+  grantees,
+  minutesCards,
+  noticeGroups,
+  shared,
+} from "./shared";
+import { about, home, services } from "./pages-a";
+import { officialPhotoAlts, pantryImageAlt } from "./photos";
+import {
+  assessor,
+  boardMeetings,
+  cemeteries,
+  foodPantry,
+  transportation,
+} from "./pages-b";
 import {
   accessibility,
   contact,
@@ -22,9 +35,9 @@ export const en: Dictionary = {
   leadCapture,
   notFound,
   home,
-  about,
+  about: { ...about, officialPhotoAlts },
   services,
-  foodPantry,
+  foodPantry: { ...foodPantry, imageAlt: pantryImageAlt },
   assessor,
   transportation,
   boardMeetings: { ...boardMeetings, minutesCards },
@@ -33,7 +46,7 @@ export const en: Dictionary = {
   getInvolved,
   donate,
   thankYou,
-  foia: { ...foia, ...foiaEmployees },
+  foia: { ...foia, ...foiaEmployees, noticeGroups },
   contact,
   accessibility,
 };

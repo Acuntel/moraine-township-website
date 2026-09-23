@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
+import { paintedTextUnder } from "@/lib/painted-text";
 import { LINKS } from "@/lib/township";
 
 /**
@@ -70,46 +71,13 @@ function useTuckAwayWhileReading() {
       };
     };
 
-    const overlaps = (a: DOMRect, b: ReturnType<typeof restingRect>) =>
-      Math.min(a.right, b.right) - Math.max(a.left, b.left) > 1 &&
-      Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top) > 1;
-
     /**
-     * Is the button sitting on top of words right now? Sampled at the corners
-     * and the middle, and confirmed against the real painted rectangles of the
-     * text, so a gap between paragraphs does not count as a collision.
+     * Is the button sitting on top of words right now? Every painted line of
+     * text is compared with where the button rests, so a gap between
+     * paragraphs is not a collision and a line between two sample points is
+     * not missed. See lib/painted-text.ts.
      */
-    const coversText = () => {
-      const box = restingRect();
-      const points: [number, number][] = [
-        [box.left + 6, box.top + 6],
-        [box.right - 6, box.top + 6],
-        [box.left + 6, box.bottom - 6],
-        [box.right - 6, box.bottom - 6],
-        [(box.left + box.right) / 2, (box.top + box.bottom) / 2],
-      ];
-
-      for (const [x, y] of points) {
-        for (const el of document.elementsFromPoint(x, y)) {
-          if (el === fab || fab.contains(el)) continue;
-          if (el === document.body || el === document.documentElement) break;
-          for (const node of Array.from(el.childNodes)) {
-            if (node.nodeType !== Node.TEXT_NODE) continue;
-            if (!node.textContent?.trim()) continue;
-            const range = document.createRange();
-            range.selectNodeContents(node);
-            for (const rect of Array.from(range.getClientRects())) {
-              if (rect.width > 0 && rect.height > 0 && overlaps(rect, box)) {
-                return true;
-              }
-            }
-          }
-          // Only the topmost real element at this point is worth testing.
-          break;
-        }
-      }
-      return false;
-    };
+    const coversText = () => paintedTextUnder(restingRect(), fab);
 
     let last = window.scrollY;
     let frame = 0;
@@ -252,50 +220,6 @@ export function WishListButton({
       {label}
       <span className="sr-only"> ({externalNote})</span>
     </a>
-  );
-}
-
-/**
- * The band that repeats the ask at section breaks on long pages. Donate goes
- * straight to PayPal; the wish list sits beside it as an equal, separate path.
- */
-export function DonateBand({
-  label,
-  ariaLabel,
-  heading,
-  body,
-  wishListLabel,
-  externalNote,
-}: {
-  label: string;
-  ariaLabel: string;
-  heading: string;
-  body: string;
-  wishListLabel: string;
-  externalNote: string;
-}) {
-  return (
-    <aside className="overflow-hidden rounded-xl bg-brand-teal-dark px-6 py-14 text-white sm:px-12">
-      <div className="mx-auto max-w-prose text-center">
-        <h2 className="text-section font-semibold !text-white">{heading}</h2>
-        <p className="mx-auto mt-4 max-w-[38rem] text-[1.02rem] leading-[1.7] text-white/80">
-          {body}
-        </p>
-        <div className="mt-9 flex flex-wrap items-center justify-center gap-3.5">
-          <DonateButton
-            label={label}
-            ariaLabel={ariaLabel}
-            externalNote={externalNote}
-            variant="hero"
-          />
-          <WishListButton
-            label={wishListLabel}
-            externalNote={externalNote}
-            tone="light"
-          />
-        </div>
-      </div>
-    </aside>
   );
 }
 

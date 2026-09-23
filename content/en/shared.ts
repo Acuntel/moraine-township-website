@@ -3,12 +3,12 @@ import type { Dictionary } from "../types";
 export const shared: Dictionary["shared"] = {
   hours: "Monday to Friday, 8:30 a.m. to 4:30 p.m.",
   term: "Term",
-  squareMiles: "Square miles",
+  squareMiles: "Square Miles",
   acres: "Acres",
   untranslatedNote: "",
-  tagline: "Get a hand. Give a hand.",
+  tagline: "Get a Hand. Give a Hand.",
   foiaOfficerTitle: "FOIA Officer and Supervisor",
-  sourcesHeading: "Sources and acknowledgements",
+  sourcesHeading: "Sources and Acknowledgements",
   mapCredit:
     "Moraine Township, City and Village. Prepared by the Lake County GIS and Mapping Division, revised 2025.",
   roles: {
@@ -95,7 +95,7 @@ export const grantees: Dictionary["programs"]["grantees"] = [
   {
     name: "North Suburban Legal Aid Clinic",
     description:
-      "Legal assistance on housing, immigration and domestic violence.",
+      "Legal assistance on housing, immigration, and domestic violence.",
   },
   {
     name: "Omnis Rehabilitation",
@@ -121,12 +121,12 @@ export const grantees: Dictionary["programs"]["grantees"] = [
 export const minutesCards: Dictionary["boardMeetings"]["minutesCards"] = [
   {
     id: "regular-minutes",
-    heading: "Regular meeting minutes",
-    body: "Approved minutes of regular Board of Trustees meetings, archived by year.",
+    heading: "Board Meeting Minutes",
+    body: "Approved minutes of regular and special meetings of the Board of Trustees, archived by year.",
   },
   {
     id: "closed-session",
-    heading: "Closed session minutes",
+    heading: "Closed Session Minutes",
     body: "Closed session minutes are posted once the Board votes to release them.",
   },
   {
@@ -145,4 +145,18 @@ export const foiaEmployees = {
   employeesLabel: "Employees",
   employeesValue:
     "Full and part-time staff of the Supervisor’s and Assessor’s offices. The current headcount is available on request from the Township office.",
+};
+
+/**
+ * The groups inside Legal and Public Notices on /foia, named in the round 2
+ * review. Keys match NOTICE_GROUPS in lib/documents.ts.
+ */
+export const noticeGroups: Dictionary["foia"]["noticeGroups"] = {
+  treasurer: "Treasurer’s Reports",
+  comptroller: "Comptroller’s Reports",
+  "financial-affairs": "Statements of Financial Affairs",
+  "officials-compensation": "Elected Officials’ Compensation",
+  "compensation-disclosures": "Compensation Disclosures",
+  resolutions: "Resolutions and Ordinances",
+  "foia-posting": "Freedom of Information",
 };

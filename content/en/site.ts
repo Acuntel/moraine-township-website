@@ -20,7 +20,15 @@ export const common: Dictionary["common"] = {
   backToTop: "Back to top",
   externalLinkNote: "Opens in a new tab",
   pdfNote: "PDF document",
-  officeHours: "Office hours",
+  // English and Spanish never use few or many; they are here so all three
+  // dictionaries carry the same keys, which tests/content.test.ts requires.
+  documentCount: {
+    one: "1 document",
+    few: "{n} documents",
+    many: "{n} documents",
+    other: "{n} documents",
+  },
+  officeHours: "Office Hours",
   hours: "Hours",
   phone: "Phone",
   fax: "Fax",
@@ -44,7 +52,7 @@ export const nav: Dictionary["nav"] = [
 ];
 
 export const footer: Dictionary["footer"] = {
-  quickLinks: "Quick links",
+  quickLinks: "Quick Links",
   contactHeading: "Contact",
   legalHeading: "Transparency",
   accessibility: "Accessibility",
@@ -57,7 +65,7 @@ export const footer: Dictionary["footer"] = {
 };
 
 export const leadCapture: Dictionary["leadCapture"] = {
-  heading: "Did we miss your call?",
+  heading: "Did We Miss Your Call?",
   body: "If you called outside of office hours, leave your name and email and a staff member will follow up with you. This is optional, and you can keep using the website either way.",
   name: "Your name",
   email: "Your email",
@@ -69,8 +77,8 @@ export const leadCapture: Dictionary["leadCapture"] = {
 };
 
 export const notFound: Dictionary["notFound"] = {
-  title: "Page not found",
-  heading: "We could not find that page",
+  title: "Page Not Found",
+  heading: "We Could Not Find That Page",
   body: "The page you are looking for may have moved when we reorganized this website. You can start again from the home page, or call the Township office and we will help you find what you need.",
   cta: "Go to the home page",
 };

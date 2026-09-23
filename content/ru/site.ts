@@ -20,6 +20,12 @@ export const common: Dictionary["common"] = {
   backToTop: "Наверх",
   externalLinkNote: "Откроется в новой вкладке",
   pdfNote: "Документ PDF",
+  documentCount: {
+    one: "{n} документ",
+    few: "{n} документа",
+    many: "{n} документов",
+    other: "{n} документа",
+  },
   officeHours: "Часы работы офиса",
   hours: "Часы работы",
   phone: "Телефон",

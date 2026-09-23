@@ -12,6 +12,7 @@ import {
   TOWNSHIP,
 } from "@/lib/township";
 import { Card, Container, PageHeader, Paragraphs } from "@/components/Page";
+import { Avatar, Email, Headshot, Stat } from "@/components/AboutParts";
 
 export function generateStaticParams() {
   return LOCALES.map((lang) => ({ lang }));
@@ -124,8 +125,8 @@ export default function AboutPage({ params }: { params: { lang: string } }) {
               value={demo.withoutHealthcare}
             />
             <Stat
-              label={t.demographicsLabels.lowIncome}
-              value={demo.incomeUnder15k}
+              label={t.demographicsLabels.belowPoverty}
+              value={demo.belowPovertyLine}
             />
           </dl>
         </section>
@@ -153,8 +154,15 @@ export default function AboutPage({ params }: { params: { lang: string } }) {
             {ELECTED_OFFICIALS.map((person) => (
               <li key={person.id} id={person.id} className="scroll-mt-28">
                 <Card className="h-full">
-                  <div className="flex items-start gap-4">
-                    <Avatar name={person.name} />
+                  <div className="flex items-center gap-4">
+                    {person.hasPhoto ? (
+                      <Headshot
+                        src={person.photo}
+                        alt={t.officialPhotoAlts[person.id]}
+                      />
+                    ) : (
+                      <Avatar name={person.name} />
+                    )}
                     <div>
                       <h4 className="text-lg font-bold leading-tight">
                         {person.name}
@@ -182,7 +190,7 @@ export default function AboutPage({ params }: { params: { lang: string } }) {
                   ) : null}
                   <p className="mt-4 text-sm">
                     <a className="link" href={`mailto:${person.email}`}>
-                      {person.email}
+                      <Email address={person.email} />
                     </a>
                   </p>
                   {"phone" in person && person.phone ? (
@@ -199,7 +207,9 @@ export default function AboutPage({ params }: { params: { lang: string } }) {
               </li>
             ))}
           </ul>
-          <p className="mt-4 text-sm text-ink-muted">{t.noPhotoNote}</p>
+          {ELECTED_OFFICIALS.some((person) => !person.hasPhoto) ? (
+            <p className="mt-4 text-sm text-ink-muted">{t.noPhotoNote}</p>
+          ) : null}
 
           <h3 id="staff" className="mt-12 scroll-mt-28 text-xl font-bold">
             {t.staffHeading}
@@ -210,14 +220,14 @@ export default function AboutPage({ params }: { params: { lang: string } }) {
               <li key={person.email}>
                 <Card className="flex h-full items-start gap-4">
                   <Avatar name={person.name} />
-                  <div>
+                  <div className="min-w-0">
                     <h4 className="font-bold leading-tight">{person.name}</h4>
                     <p className="text-sm text-ink-muted">
                       {roleLabel(person.roleKey)}
                     </p>
                     <p className="mt-1 text-sm">
                       <a className="link" href={`mailto:${person.email}`}>
-                        {person.email}
+                        <Email address={person.email} />
                       </a>
                     </p>
                   </div>
@@ -225,6 +235,8 @@ export default function AboutPage({ params }: { params: { lang: string } }) {
               </li>
             ))}
           </ul>
+          {/* Staff asked not to have their photographs published. */}
+          <p className="mt-4 text-sm text-ink-muted">{t.noPhotoNote}</p>
         </section>
 
         <section id="financial" className="scroll-mt-32">
@@ -262,39 +274,5 @@ export default function AboutPage({ params }: { params: { lang: string } }) {
         </section>
       </Container>
     </>
-  );
-}
-
-function Stat({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="rounded-xl border border-brand-mint/60 bg-surface-alt p-4">
-      <dt className="text-sm font-semibold text-ink-muted">{label}</dt>
-      <dd className="mt-1 text-2xl font-bold text-brand-teal-dark">{value}</dd>
-    </div>
-  );
-}
-
-/**
- * Several officials and staff have asked not to have their photograph
- * published, so everyone gets the same initials mark. It keeps the directory
- * visually even instead of singling people out with an empty frame.
- */
-function Avatar({ name }: { name: string }) {
-  const initials = name
-    .replace(/,.*$/, "")
-    .split(/\s+/)
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((part) => part[0])
-    .join("")
-    .toUpperCase();
-
-  return (
-    <span
-      aria-hidden="true"
-      className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-green/15 text-base font-bold text-brand-teal-dark"
-    >
-      {initials}
-    </span>
   );
 }

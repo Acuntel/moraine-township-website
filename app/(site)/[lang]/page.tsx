@@ -5,8 +5,8 @@ import { getDictionary } from "@/content";
 import { isLocale, localePath, LOCALES } from "@/lib/i18n";
 import { TOWNSHIP } from "@/lib/township";
 import { localizedNews, publishedNews, readContent } from "@/lib/store";
-import { DonateBand } from "@/components/DonateButton";
-import { ReadAloud } from "@/components/ReadAloud";
+import { DonateBand } from "@/components/DonateBand";
+import { HomeHero } from "@/components/HomeHero";
 import {
   BentoGrid,
   SectionHeader,
@@ -54,104 +54,7 @@ export default async function HomePage({
 
   return (
     <>
-      {/* Hero: one photograph with text over it, as asked for, plus the badge
-          and the floating schedule card from the approved mock. The card shows
-          the real pantry hours rather than decoration. */}
-      <section className="relative isolate overflow-hidden bg-panel">
-        <div
-          className="absolute inset-0 -z-10 scale-105 bg-[url('/images/hero-pantry.webp')] bg-cover bg-center"
-          role="img"
-          aria-label={t.heroImageAlt}
-        />
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 -z-10 bg-gradient-to-br from-panel-deep/95 via-panel/85 to-brand-green-deep/75"
-        />
-        <div
-          aria-hidden="true"
-          className="absolute inset-x-0 top-0 -z-10 h-32 bg-gradient-to-b from-black/45 to-transparent"
-        />
-
-        <div className="container-page grid items-center gap-14 pb-28 pt-40 lg:grid-cols-[1.15fr_.85fr] lg:pb-32">
-          <div>
-            <p className="inline-flex animate-rise-in items-center gap-2.5 rounded-full border border-white/25 bg-white/10 px-4 py-2 text-[0.78rem] font-medium text-white/90 backdrop-blur-sm">
-              <span
-                aria-hidden="true"
-                className="h-1.5 w-1.5 rounded-full bg-amber-light"
-              />
-              {t.heroBadge}
-            </p>
-            <h1
-              className="mt-7 max-w-[15ch] animate-rise-in font-display text-hero !text-white"
-              style={{ animationDelay: "80ms" }}
-            >
-              {t.heroHeadline}
-            </h1>
-            <p
-              className="mt-6 max-w-[34rem] animate-rise-in text-[1.08rem] leading-[1.7] text-white/85"
-              style={{ animationDelay: "160ms" }}
-            >
-              {t.heroSub}
-            </p>
-
-            <div
-              className="mt-9 flex flex-wrap items-center gap-3.5 animate-rise-in"
-              style={{ animationDelay: "240ms" }}
-            >
-              <Link
-                href={localePath(locale, "/services")}
-                className="btn btn-accent px-8 py-4"
-              >
-                {t.heroPrimaryCta}
-              </Link>
-              <Link
-                href={localePath(locale, "/get-involved")}
-                className="btn btn-ghost-light px-8 py-4"
-              >
-                {t.heroSecondaryCta}
-              </Link>
-              <ReadAloud
-                locale={locale}
-                labelStart={dict.common.readAloud}
-                labelStop={dict.common.stopReading}
-                labelUnsupported={dict.common.readAloudUnsupported}
-                onDark
-              />
-            </div>
-          </div>
-
-          <div
-            className="animate-rise-in rounded-lg border border-white/20 bg-white/[0.09] p-7 backdrop-blur-md sm:p-8"
-            style={{ animationDelay: "320ms" }}
-          >
-            <p className="text-center text-[0.72rem] font-bold uppercase tracking-[0.16em] text-amber-light">
-              {t.heroCardHeading}
-            </p>
-            <dl className="mt-6 divide-y divide-white/15">
-              {dict.foodPantry.hoursRows.map((row) => (
-                <div
-                  key={row.day}
-                  className="flex items-baseline justify-between gap-4 py-3.5"
-                >
-                  <dt className="text-[0.95rem] font-semibold text-white">
-                    {row.day}
-                  </dt>
-                  <dd className="text-[0.92rem] text-white/80">{row.time}</dd>
-                </div>
-              ))}
-            </dl>
-            <p className="mt-5 text-[0.85rem] leading-[1.6] text-white/70">
-              {t.heroCardFootnote}
-            </p>
-            <Link
-              href={localePath(locale, "/food-pantry")}
-              className="btn mt-6 w-full bg-white py-3.5 text-[0.9rem] text-panel hover:bg-cream-alt"
-            >
-              {dict.foodPantry.title}
-            </Link>
-          </div>
-        </div>
-      </section>
+      <HomeHero locale={locale} dict={dict} />
 
       <TrustMarquee items={t.marquee} label={t.marqueeLabel} />
 
@@ -235,15 +138,12 @@ export default async function HomePage({
             sub={t.tilesSub}
           />
           <BentoGrid
-            items={t.tiles.map((tile, i) => ({
+            items={t.tiles.map((tile) => ({
               id: tile.id,
               title: tile.title,
               body: tile.blurb,
               href: localePath(locale, tile.href),
               icon: <TileIcon id={tile.id} className="h-5 w-5" />,
-              // First and fourth run wide, which is what stops the block
-              // reading as a uniform table of boxes.
-              wide: i === 0 || i === 3,
             }))}
           />
         </div>
@@ -263,7 +163,7 @@ export default async function HomePage({
             cta={t.helpYouCta}
             href={localePath(locale, "/services")}
             imageAlt={t.helpYouImageAlt}
-            image="/images/help-you.webp"
+            image="/images/round2/help-you.webp"
           />
           <TwoUp
             heading={t.helpUsHeading}
@@ -284,6 +184,9 @@ export default async function HomePage({
           body={dict.donate.bandBody}
           wishListLabel={dict.donate.wishListCta}
           externalNote={dict.common.externalLinkNote}
+          otherWays={dict.donate.bandOtherWays}
+          otherWaysCta={dict.donate.bandOtherWaysCta}
+          otherWaysHref={localePath(locale, "/donate")}
         />
       </section>
 

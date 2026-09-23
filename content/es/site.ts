@@ -20,6 +20,12 @@ export const common: Dictionary["common"] = {
   backToTop: "Volver arriba",
   externalLinkNote: "Se abre en una pestaña nueva",
   pdfNote: "Documento PDF",
+  documentCount: {
+    one: "1 documento",
+    few: "{n} documentos",
+    many: "{n} documentos",
+    other: "{n} documentos",
+  },
   officeHours: "Horario de oficina",
   hours: "Horario",
   phone: "Teléfono",
@@ -61,7 +67,7 @@ export const leadCapture: Dictionary["leadCapture"] = {
   body: "Si llamó fuera del horario de oficina, deje su nombre y su correo electrónico y un miembro del personal se comunicará con usted. Esto es opcional y puede seguir usando el sitio web de cualquier manera.",
   name: "Su nombre",
   email: "Su correo electrónico",
-  submit: "Pídanos que le llamemos",
+  submit: "Pídanos que nos comuniquemos con usted",
   success: "Gracias. Un miembro del personal se comunicará con usted.",
   error:
     "No pudimos enviar esa solicitud. Por favor llame a la oficina del Township al 847-432-3240 y le ayudaremos directamente.",

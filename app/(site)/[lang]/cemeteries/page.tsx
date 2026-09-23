@@ -7,7 +7,9 @@ import { buildMetadata } from "@/lib/metadata";
 import { TOWNSHIP } from "@/lib/township";
 import { Container, PageHeader, Paragraphs } from "@/components/Page";
 import { DocumentList } from "@/components/DocumentList";
-import { byCategory } from "@/lib/documents";
+import { DocGroup, documentCount } from "@/components/DocGroup";
+import { OpenOnHash } from "@/components/OpenOnHash";
+import { byCategory, newestFirst } from "@/lib/documents";
 import { photosFor } from "@/content/cemetery-images";
 
 export function generateStaticParams() {
@@ -127,14 +129,25 @@ export default function CemeteriesPage({
           </section>
         ))}
 
-        <section id="records" className="scroll-mt-32">
-          <h2 className="text-section font-semibold">{t.recordsHeading}</h2>
-          <p className="mt-3 max-w-prose text-ink-muted">{t.recordsNote}</p>
-          <DocumentList
-            docs={byCategory("cemetery")}
-            pdfNote={dict.common.pdfNote}
-            externalNote={dict.common.externalLinkNote}
-          />
+        {/* One button to open, not a wall of deeds and plats (round 2). */}
+        <section>
+          <DocGroup
+            id="records"
+            level={2}
+            title={t.recordsHeading}
+            count={documentCount(
+              dict.common.documentCount,
+              byCategory("cemetery").length,
+              locale,
+            )}
+            note={t.recordsNote}
+          >
+            <DocumentList
+              docs={newestFirst(byCategory("cemetery"))}
+              pdfNote={dict.common.pdfNote}
+              externalNote={dict.common.externalLinkNote}
+            />
+          </DocGroup>
         </section>
 
         <section className="rounded-lg bg-cream-alt p-7 sm:p-9">
@@ -157,6 +170,7 @@ export default function CemeteriesPage({
           </p>
         </section>
       </Container>
+      <OpenOnHash />
     </>
   );
 }

@@ -124,8 +124,8 @@ export const grantees: Dictionary["programs"]["grantees"] = [
 export const minutesCards: Dictionary["boardMeetings"]["minutesCards"] = [
   {
     id: "regular-minutes",
-    heading: "Actas de reuniones ordinarias",
-    body: "Actas aprobadas de las reuniones ordinarias de la Junta de Síndicos, archivadas por año.",
+    heading: "Actas de las reuniones de la Junta",
+    body: "Actas aprobadas de las reuniones ordinarias y extraordinarias de la Junta de Síndicos, archivadas por año.",
   },
   {
     id: "closed-session",
@@ -148,4 +148,18 @@ export const foiaEmployees = {
   employeesLabel: "Empleados",
   employeesValue:
     "Personal de tiempo completo y medio tiempo de las oficinas del Supervisor y del Tasador. El número actual de empleados está disponible a solicitud en la oficina del Township.",
+};
+
+/**
+ * Los grupos dentro de Avisos legales y públicos en /foia. Las claves
+ * coinciden con NOTICE_GROUPS en lib/documents.ts.
+ */
+export const noticeGroups: Dictionary["foia"]["noticeGroups"] = {
+  treasurer: "Informes del tesorero",
+  comptroller: "Informes del contralor",
+  "financial-affairs": "Declaraciones de situación financiera",
+  "officials-compensation": "Salarios de los funcionarios electos",
+  "compensation-disclosures": "Divulgación de compensaciones",
+  resolutions: "Resoluciones y ordenanzas",
+  "foia-posting": "Libertad de información",
 };

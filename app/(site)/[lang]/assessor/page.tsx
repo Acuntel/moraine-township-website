@@ -7,6 +7,8 @@ import { ELECTED_OFFICIALS, LINKS, TOWNSHIP } from "@/lib/township";
 import { Card, Container, PageHeader } from "@/components/Page";
 import { VideoEmbed } from "@/components/VideoEmbed";
 import { DocumentList } from "@/components/DocumentList";
+import { DocGroup, documentCount } from "@/components/DocGroup";
+import { OpenOnHash } from "@/components/OpenOnHash";
 import { byCategory } from "@/lib/documents";
 
 /*
@@ -17,15 +19,19 @@ import { byCategory } from "@/lib/documents";
 const APPEAL_TUTORIAL_VIDEO_ID = "sm45jCEb2mI";
 
 /*
-  Documents the Assessor struck from this page in the same review round. They
-  stay in the archive at lib/documents.json and in blob storage; they are just
-  no longer listed here.
+  The senior freeze press release, which the Assessor struck from this page in
+  the same review round. It stays in the archive at lib/documents.json and in
+  blob storage; it is just no longer listed here. Matched by original filename,
+  because the round 2 review renamed every document's label.
+
+  The other two he struck were never Assessor documents and have moved to
+  where the old site listed them: the compensation disclosure to Legal and
+  Public Notices on /foia, and the Alert One income limits to the forms on
+  /services.
 */
-const UNLISTED_DOCS = new Set([
-  "4 1 26 Disclosure",
-  "Alert 1 income req",
-  "Revised Press Release Senior Assessment Freeze 1 5 26 PDF",
-]);
+const UNLISTED_ORIGINALS = [
+  "Revised-Press-Release-Senior-Assessment-Freeze-1-5-26-PDF.pdf",
+];
 
 export function generateStaticParams() {
   return LOCALES.map((lang) => ({ lang }));
@@ -51,6 +57,11 @@ export default function AssessorPage({ params }: { params: { lang: string } }) {
   const locale = params.lang;
   const dict = getDictionary(locale);
   const t = dict.assessor;
+  // Kept in the order the Assessor reviewed them. Only the 1840 plat carries
+  // a date, so sorting by date would put it above his appeal instructions.
+  const documents = byCategory("assessorinfo").filter(
+    (doc) => !UNLISTED_ORIGINALS.some((name) => doc.original.endsWith(name)),
+  );
   const assessor = ELECTED_OFFICIALS.find((p) => p.id === "assessor");
 
   const resources = [
@@ -152,17 +163,26 @@ export default function AssessorPage({ params }: { params: { lang: string } }) {
           </ul>
         </section>
 
-        <section id="assessor-documents" className="scroll-mt-32">
-          <h2 className="text-section font-semibold">{t.documentsHeading}</h2>
-          <DocumentList
-            docs={byCategory("assessorinfo").filter(
-              (doc) => !UNLISTED_DOCS.has(doc.label),
+        <section>
+          <DocGroup
+            id="assessor-documents"
+            level={2}
+            title={t.documentsHeading}
+            count={documentCount(
+              dict.common.documentCount,
+              documents.length,
+              locale,
             )}
-            pdfNote={dict.common.pdfNote}
-            externalNote={dict.common.externalLinkNote}
-          />
+          >
+            <DocumentList
+              docs={documents}
+              pdfNote={dict.common.pdfNote}
+              externalNote={dict.common.externalLinkNote}
+            />
+          </DocGroup>
         </section>
       </Container>
+      <OpenOnHash />
     </>
   );
 }

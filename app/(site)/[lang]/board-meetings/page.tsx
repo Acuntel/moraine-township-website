@@ -7,7 +7,10 @@ import { TOWNSHIP } from "@/lib/township";
 import { readContent } from "@/lib/store";
 import { Card, Container, PageHeader } from "@/components/Page";
 import { DocumentArchive, DocumentList } from "@/components/DocumentList";
-import { byCategory, groupedByYear, FORMS } from "@/lib/documents";
+import { DocGroup, documentCount } from "@/components/DocGroup";
+import { OpenOnHash } from "@/components/OpenOnHash";
+import { byCategory, groupedByYear, newestFirst } from "@/lib/documents";
+import { formatMeetingDate, nextAgenda } from "@/lib/agendas";
 
 // This page renders admin-editable content, so it revalidates on save and
 // at worst every five minutes.
@@ -43,9 +46,21 @@ export default async function BoardMeetingsPage({
   const t = dict.boardMeetings;
   const content = await readContent();
 
-  const upcoming = [...content.agendas].sort((a, b) =>
-    a.meetingDate.localeCompare(b.meetingDate),
-  );
+  // Only the next meeting's agenda, as Nancy Chausow Shafer asked in the
+  // round 2 review. Past agendas stay in the archive but are not listed.
+  const agenda = nextAgenda(content.agendas);
+  const count = (n: number) =>
+    documentCount(dict.common.documentCount, n, locale);
+  const minutesGroups = groupedByYear("minutes");
+  const minutesTotal = minutesGroups.reduce((n, g) => n + g.docs.length, 0);
+  const archiveFor: Record<string, ReturnType<typeof byCategory>> = {
+    "annual-town-meeting": newestFirst(byCategory("annualmeeting")),
+    decennial: newestFirst(byCategory("decennial")),
+  };
+  const docNotes = {
+    pdfNote: dict.common.pdfNote,
+    externalNote: dict.common.externalLinkNote,
+  };
   const events = [...content.events].sort((a, b) =>
     a.date.localeCompare(b.date),
   );
@@ -55,73 +70,40 @@ export default async function BoardMeetingsPage({
       <PageHeader locale={locale} dict={dict} title={t.h1} intro={t.intro} />
 
       <Container className="space-y-14">
-        {/* Agendas are the statutory 48-hour posting under 5 ILCS 120/2.02,
-            so they lead the page. */}
+        {/* The agenda is the statutory 48-hour posting under 5 ILCS 120/2.02,
+            so it leads the page. */}
         <section id="agenda" className="scroll-mt-28">
           <h2 className="text-2xl font-bold sm:text-3xl">{t.agendaHeading}</h2>
           <p className="mt-2 max-w-prose text-ink-muted">{t.agendaIntro}</p>
 
-          {upcoming.length === 0 ? (
+          {agenda ? (
+            <Card className="mt-5 max-w-3xl">
+              <time
+                dateTime={agenda.meetingDate}
+                className="text-sm font-semibold uppercase tracking-wide text-brand-teal"
+              >
+                {formatMeetingDate(agenda.meetingDate, locale)}
+              </time>
+              <h3 className="mt-1 text-lg font-bold">{agenda.title}</h3>
+              {agenda.body ? (
+                <p className="mt-2 whitespace-pre-line text-ink-muted">
+                  {agenda.body}
+                </p>
+              ) : null}
+              {agenda.url ? (
+                <p className="mt-3">
+                  <a className="link font-semibold" href={agenda.url}>
+                    {agenda.title}
+                    <span className="sr-only"> ({dict.common.pdfNote})</span>
+                  </a>
+                </p>
+              ) : null}
+            </Card>
+          ) : (
             <p className="mt-5 rounded-xl border border-brand-mint/60 bg-surface-alt p-5 text-ink-muted">
               {t.agendaEmpty}
             </p>
-          ) : (
-            <ul className="mt-5 space-y-3">
-              {upcoming.map((agenda) => (
-                <li key={agenda.id}>
-                  <Card>
-                    <time
-                      dateTime={agenda.meetingDate}
-                      className="text-sm font-semibold uppercase tracking-wide text-brand-teal"
-                    >
-                      {agenda.meetingDate}
-                    </time>
-                    <h3 className="mt-1 text-lg font-bold">{agenda.title}</h3>
-                    {agenda.body ? (
-                      <p className="mt-2 whitespace-pre-line text-ink-muted">
-                        {agenda.body}
-                      </p>
-                    ) : null}
-                    {agenda.url ? (
-                      <p className="mt-3">
-                        <a className="link font-semibold" href={agenda.url}>
-                          {agenda.title}
-                          <span className="sr-only">
-                            {" "}
-                            ({dict.common.pdfNote})
-                          </span>
-                        </a>
-                      </p>
-                    ) : null}
-                  </Card>
-                </li>
-              ))}
-            </ul>
           )}
-        </section>
-
-        <section id="posted-agendas" className="scroll-mt-32">
-          <h2 className="text-section font-semibold">
-            {t.postedAgendasHeading}
-          </h2>
-          <DocumentList
-            docs={byCategory("agenda")}
-            pdfNote={dict.common.pdfNote}
-            externalNote={dict.common.externalLinkNote}
-            emptyNote={t.agendaEmpty}
-          />
-          {FORMS.decennial ? (
-            <div className="mt-8">
-              <h3 className="text-[1.15rem] font-semibold">
-                {t.decennialHeading}
-              </h3>
-              <DocumentList
-                docs={byCategory("decennial")}
-                pdfNote={dict.common.pdfNote}
-                externalNote={dict.common.externalLinkNote}
-              />
-            </div>
-          ) : null}
         </section>
 
         <section id="schedule" className="scroll-mt-28">
@@ -129,11 +111,10 @@ export default async function BoardMeetingsPage({
             {t.scheduleHeading}
           </h2>
           <p className="mt-2 max-w-prose text-ink-muted">{t.scheduleIntro}</p>
-          {events.length === 0 ? (
-            <p className="mt-5 rounded-xl border border-brand-mint/60 bg-surface-alt p-5 text-ink-muted">
-              {t.agendaEmpty}
-            </p>
-          ) : (
+          {/* With no dates entered in the admin, the adopted schedule below
+              stands on its own. This used to repeat the agenda's "no agenda
+              is posted" note here, which is not what this section is about. */}
+          {events.length === 0 ? null : (
             <ul className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {events.map((event) => (
                 <li key={event.id}>
@@ -182,36 +163,63 @@ export default async function BoardMeetingsPage({
           </div>
         </section>
 
+        {/* Each record type is a closed group the resident opens, as Sanela
+            Abazovic asked in the round 2 review. The ids are the anchors the
+            old Squarespace pages redirect to. */}
         <section id="minutes" className="scroll-mt-28">
           <h2 className="text-2xl font-bold sm:text-3xl">{t.minutesHeading}</h2>
           <p className="mt-2 max-w-prose text-ink-muted">{t.minutesIntro}</p>
-          <DocumentArchive
-            groups={groupedByYear("minutes")}
-            pdfNote={dict.common.pdfNote}
-            externalNote={dict.common.externalLinkNote}
-          />
-          <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            {t.minutesCards.map((card) => (
-              <Card key={card.id} id={card.id} className="scroll-mt-28">
-                <h3 className="text-lg font-bold">{card.heading}</h3>
-                <p className="mt-2 text-sm text-ink-muted">{card.body}</p>
-              </Card>
-            ))}
+          <div className="mt-6 space-y-4">
+            {t.minutesCards.map((card) => {
+              if (card.id === "regular-minutes") {
+                return (
+                  <DocGroup
+                    key={card.id}
+                    id={card.id}
+                    title={card.heading}
+                    count={count(minutesTotal)}
+                    note={card.body}
+                  >
+                    <DocumentArchive
+                      groups={minutesGroups}
+                      countLabel={count}
+                      {...docNotes}
+                    />
+                  </DocGroup>
+                );
+              }
+              const docs = archiveFor[card.id] ?? [];
+              // Closed session minutes have never been released, so there is
+              // nothing to open. The note says so instead of an empty box.
+              if (docs.length === 0) {
+                return (
+                  <div
+                    key={card.id}
+                    id={card.id}
+                    className="scroll-mt-28 rounded-lg border border-line bg-cream-alt px-5 py-4 sm:px-6"
+                  >
+                    <h3 className="text-[1.08rem] font-semibold leading-snug">
+                      {card.heading}
+                    </h3>
+                    <p className="mt-1 max-w-prose text-sm text-ink-muted">
+                      {card.body}
+                    </p>
+                  </div>
+                );
+              }
+              return (
+                <DocGroup
+                  key={card.id}
+                  id={card.id}
+                  title={card.heading}
+                  count={count(docs.length)}
+                  note={card.body}
+                >
+                  <DocumentList docs={docs} {...docNotes} />
+                </DocGroup>
+              );
+            })}
           </div>
-        </section>
-
-        <section id="annual-town-meeting-records" className="scroll-mt-32">
-          <h2 className="text-section font-semibold">
-            {t.annualTownMeetingHeading}
-          </h2>
-          <p className="mt-3 max-w-prose text-ink-muted">
-            {t.annualTownMeetingBody}
-          </p>
-          <DocumentList
-            docs={byCategory("annualmeeting")}
-            pdfNote={dict.common.pdfNote}
-            externalNote={dict.common.externalLinkNote}
-          />
         </section>
 
         <section className="rounded-2xl border-l-4 border-brand-green bg-surface-alt p-6">
@@ -227,6 +235,7 @@ export default async function BoardMeetingsPage({
           </p>
         </section>
       </Container>
+      <OpenOnHash />
     </>
   );
 }

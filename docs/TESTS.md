@@ -1,7 +1,7 @@
 # Tests
 
 ```bash
-npm test                       # 105 tests, no network, ~350ms
+npm test                       # 116 tests, no network, ~350ms
 npm run test:live              # + 18 smoke tests against the deployment
 node scripts/popup-check.mjs   # 12 checks, driven in a real browser
 npx tsc --noEmit               # the tests are typechecked with the site
@@ -32,7 +32,8 @@ tests import the exact files that ship, not a compiled copy that could drift.
 | `forms.test.ts`          | The contact form and the missed-call follow-up end to end, including every way they can fail. |
 | `admin-auth.test.ts`     | The password gate: forged cookies, extended expiries, and the unset-password case.            |
 | `i18n.test.ts`           | Routing between the three languages, including the `/en` regression described below.          |
-| `documents.test.ts`      | The 241-document archive and the statutory categories inside it.                              |
+| `documents.test.ts`      | The 241-document archive, the statutory categories inside it, and newest-first date order.   |
+| `agendas.test.ts`        | Which agenda the Board Meetings page shows: the next meeting's, by the Chicago calendar.      |
 | `content.test.ts`        | English, Spanish and Russian checked against each other, plus every image description.        |
 | `return-to-page.test.ts` | When the missed-call prompt and the donation thank-you are allowed to fire.                   |
 | `live.test.ts`           | The deployment itself. Skipped unless `RUN_LIVE_TESTS=1`.                                     |

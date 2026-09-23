@@ -117,8 +117,8 @@ export const grantees: Dictionary["programs"]["grantees"] = [
 export const minutesCards: Dictionary["boardMeetings"]["minutesCards"] = [
   {
     id: "regular-minutes",
-    heading: "Протоколы регулярных заседаний",
-    body: "Утверждённые протоколы регулярных заседаний Совета попечителей, в архиве по годам.",
+    heading: "Протоколы заседаний Совета",
+    body: "Утверждённые протоколы регулярных и внеочередных заседаний Совета попечителей, в архиве по годам.",
   },
   {
     id: "closed-session",
@@ -141,4 +141,18 @@ export const foiaEmployees = {
   employeesLabel: "Сотрудники",
   employeesValue:
     "Штатные и совместители офисов Супервайзера и Оценщика. Текущую численность можно запросить в офисе Township.",
+};
+
+/**
+ * Группы внутри раздела официальных и публичных уведомлений на /foia. Ключи
+ * совпадают с NOTICE_GROUPS в lib/documents.ts.
+ */
+export const noticeGroups: Dictionary["foia"]["noticeGroups"] = {
+  treasurer: "Отчёты казначея",
+  comptroller: "Отчёты контролёра",
+  "financial-affairs": "Отчёты о финансовом положении",
+  "officials-compensation": "Оклады выборных должностных лиц",
+  "compensation-disclosures": "Раскрытие сведений о вознаграждении",
+  resolutions: "Резолюции и постановления",
+  "foia-posting": "Свобода информации",
 };

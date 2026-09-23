@@ -52,7 +52,9 @@ const ROUTES = [
  */
 const ALLOWED = [
   /^[\d\s.,:%$()+-]*$/,
-  /^[\w.+-]+@[\w.-]+$/,
+  // An address, or the half of one before the break the About page allows
+  // after the @ so a long address can wrap on a phone.
+  /^[\w.+-]+@([\w.-]+)?$/,
   /morainetownship|moraine township|highland park|highwood|lake forest|deerfield/i,
   /^\d{3}-\d{3}-\d{4}$/,
   /ilcs|cfr|wcag|foia|snap|tanf|liheap|vita|rta|paypal|amazon|comed|medicare|medicaid|irs|ada|aca|ship|cims|metra|pads|hp\/rfts/i,
@@ -63,7 +65,7 @@ const ALLOWED = [
   /^(english application|solicitud en español|заявление на русском языке)$/i,
   /^\d+ [A-Z][a-z]+ (Avenue|Street|Road|Drive)$/,
   /jewish child|safe place|backpack|enriched living/i,
-  /charitable fund|26-4269258|travel\.state\.gov|voter power|north shore gas|tyler|healy|shafer|jenn|guerrero|haggarty|jacoby|levin|contreras|valle|abazovic|hoffman|machabanski|adelman|greene|gordon/i,
+  /charitable fund|26-4269258|travel\.state\.gov|voter power|north shore gas|tyler|healy|shafer|jenn|guerrero|haggarty|jacoby|levin|contreras|valle|abazovic|hoffman|machabanski|innes|adelman|greene|gordon/i,
 ]
 
 function allowed(text) {

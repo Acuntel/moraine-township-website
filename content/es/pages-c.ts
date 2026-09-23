@@ -62,7 +62,7 @@ export const getInvolved: Dictionary["getInvolved"] = {
       body: "Sea voluntario en un turno de dos horas el primer fin de semana de diciembre en Sunset Foods para recaudar fondos para la despensa. Se necesitan muchos voluntarios para cubrir todos los turnos del evento de tres días.",
     },
     {
-      title: "Colecta de alimentos de los trabajadores postales",
+      title: "Colecta de alimentos de los carteros",
       body: "El segundo sábado de mayo se necesitan muchos voluntarios para descargar y clasificar los alimentos donados.",
     },
     {
@@ -79,7 +79,7 @@ export const getInvolved: Dictionary["getInvolved"] = {
     },
     {
       title: "Ayuda con la inscripción en seguros de salud",
-      body: "Capacítese en línea con los Centros de Servicios de Medicare y Medicaid durante septiembre y octubre, y luego ayude a residentes sin seguro médico a inscribirse en el mercado federal durante el período de inscripción abierta.",
+      body: "Capacítese en línea con los Centros de Servicios de Medicare y Medicaid durante septiembre y octubre, y luego ayude a residentes sin seguro médico a inscribirse en el mercado estatal, Get Covered Illinois, durante el período de inscripción abierta.",
     },
     {
       title: "Comités asesores de ciudadanos",
@@ -109,7 +109,10 @@ export const donate: Dictionary["donate"] = {
 
   bandBody:
     "Cada dólar vuelve a los residentes de este Township, a través de la despensa de alimentos y de la ayuda de emergencia con renta, servicios públicos y gastos médicos. Done dinero, o envíe alimentos directamente desde nuestra lista de deseos.",
-  optionsHeading: "Dos formas de dar",
+  bandOtherWays:
+    "También puede dejar alimentos en la oficina del Township o enviar un cheque por correo.",
+  bandOtherWaysCta: "Ver todas las formas de donar",
+  optionsHeading: "Formas de donar",
 
   moneyHeading: "Done dinero",
   moneyBody:
@@ -132,6 +135,10 @@ export const donate: Dictionary["donate"] = {
   inKindHeading: "Entregue donaciones en persona",
   inKindBody:
     "Lleve alimentos no perecederos sin abrir y sin vencer, y artículos esenciales para el hogar, a la oficina del Township de lunes a viernes de 8:30 a.m. a 4:30 p.m.",
+
+  checkHeading: "Envíe un cheque por correo",
+  checkBody:
+    "Haga su cheque a nombre de Moraine Township Charitable Fund, Inc. y envíelo por correo a 800 Central Avenue, Highland Park, IL 60035.",
 
   fundNote:
     "Moraine Township Charitable Fund, Inc. es una organización 501(c)(3) distinta de Moraine Township. Las donaciones se hacen al Fondo.",
@@ -161,7 +168,7 @@ export const thankYou: Dictionary["thankYou"] = {
 
 export const foia: Omit<
   Dictionary["foia"],
-  "employeesLabel" | "employeesValue"
+  "employeesLabel" | "employeesValue" | "noticeGroups"
 > = {
   title: "FOIA y transparencia",
   description:
@@ -225,7 +232,7 @@ export const foia: Omit<
 
   financeHeading: "Registros financieros y legales",
   financeIntro:
-    "El Township publica sus presupuestos, auditorías, gravámenes y avisos públicos. Los documentos oficiales se publican como PDF firmados. Si necesita cualquiera de esta información en otro formato, comuníquese con la oficina del Township y se la proporcionaremos.",
+    "El Township publica sus presupuestos, auditorías, gravámenes y avisos públicos. Los documentos oficiales se publican como PDF firmados. Si necesita alguna parte de esta información en otro formato, comuníquese con la oficina del Township y se la proporcionaremos.",
   financeGroups: [
     {
       id: "budget",
@@ -240,7 +247,7 @@ export const foia: Omit<
     {
       id: "levy",
       heading: "Gravamen fiscal",
-      note: "Ordenanzas anuales del gravamen fiscal, por año fiscal.",
+      note: "Ordenanzas anuales del gravamen fiscal, por año tributario.",
     },
     {
       id: "notices",
@@ -329,7 +336,7 @@ export const accessibility: Dictionary["accessibility"] = {
     "Todas las páginas pueden manejarse solo con el teclado, y el elemento enfocado siempre es visible.",
     "Un enlace para saltar permite a quienes usan teclado o lector de pantalla ir directo al contenido principal.",
     "Las imágenes que transmiten información tienen textos alternativos que describen esa información, no el nombre del archivo.",
-    "El mapa de límites del Township tiene una descripción completa en texto, y todas las páginas pueden leerse en voz alta en inglés, español o ruso.",
+    "Todas las páginas pueden leerse en voz alta en inglés, español o ruso.",
     "Los colores del texto y de la interfaz cumplen o superan las relaciones de contraste exigidas en el Nivel AA.",
     "Los encabezados, las regiones y las etiquetas de formulario están marcados para que los lectores de pantalla puedan recorrer la estructura de la página.",
     "El movimiento y las animaciones se reducen automáticamente si su dispositivo está configurado para preferir menos movimiento.",

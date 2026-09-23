@@ -48,7 +48,7 @@ Highland Park, Illinois. Replaces their Squarespace site at morainetownship.org.
    Illinois law, not a nicety.
 
    ```bash
-   npm test                              # 94 tests, no network needed
+   npm test                              # 116 tests, no network needed
    npx tsc --noEmit                      # the tests are typechecked too
    node scripts/contrast.mjs             # 28 measured colour pairs
    node scripts/a11y-audit.mjs           # 12 WCAG criteria x 54 pages

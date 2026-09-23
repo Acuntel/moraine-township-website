@@ -38,6 +38,13 @@ const config: Config = {
           alt: "#F5F0E8",
           deep: "#EFE7DA",
         },
+        // Tinted panels (income-qualified services, notes, callouts). Twelve
+        // components used bg-surface-alt before this token existed, so Tailwind
+        // generated nothing and the panels rendered untinted. Same value as
+        // cream-alt, whose text pairs contrast.mjs already measures.
+        surface: {
+          alt: "#F5F0E8",
+        },
         ink: {
           DEFAULT: "#2A2520",
           muted: "#6B6156",

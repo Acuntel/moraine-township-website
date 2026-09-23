@@ -73,7 +73,7 @@ describe("dictionary parity", () => {
     for (const locale of LOCALES) {
       for (const [key, value] of Object.entries(FLAT[locale])) {
         // Case-sensitive on purpose. "todo" is an ordinary Spanish word
-        // meaning "all of", as in "todo Highwood" on the About page.
+        // meaning "all", as in "todo lo posible" on the Assessor page.
         assert.doesNotMatch(
           value,
           /\b(TODO|FIXME|TBD)\b|\bLorem ipsum\b/,

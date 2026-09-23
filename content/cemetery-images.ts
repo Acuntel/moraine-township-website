@@ -47,7 +47,7 @@ export const CEMETERY_PHOTOS: CemeteryPhoto[] = [
     src: "/images/cem-mooney2.webp",
     cemetery: "mooney",
     alt: {
-      en: "A wide view across the mown lawn of Mooney Cemetery, with rows of flat and upright grave markers, small American flags placed beside several of them, mature trees along the boundary and a clear blue sky.",
+      en: "A wide view across the mown lawn of Mooney Cemetery, with rows of flat and upright grave markers, small American flags placed beside several of them, mature trees along the boundary, and a clear blue sky.",
       es: "Vista amplia del césped cortado del cementerio Mooney, con filas de lápidas planas y verticales, pequeñas banderas estadounidenses junto a varias de ellas, árboles maduros en el límite y un cielo azul despejado.",
       ru: "Широкий вид на подстриженный газон кладбища Муни: ряды плоских и вертикальных надгробий, у некоторых из них небольшие американские флаги, по краю участка старые деревья, ясное синее небо.",
     },
@@ -62,7 +62,7 @@ export const CEMETERY_PHOTOS: CemeteryPhoto[] = [
     src: "/images/cem-raingarden.webp",
     cemetery: "mooney",
     alt: {
-      en: "One of the two rain gardens at Mooney Cemetery in full bloom, planted with tall native grasses and purple, yellow and red wildflowers beside a gravel path, with grave markers and woodland behind.",
+      en: "One of the two rain gardens at Mooney Cemetery in full bloom, planted with tall native grasses and purple, yellow, and red wildflowers beside a gravel path, with grave markers and woodland behind.",
       es: "Uno de los dos jardines de lluvia del cementerio Mooney en plena floración, plantado con pastos nativos altos y flores silvestres moradas, amarillas y rojas junto a un camino de grava, con lápidas y arboleda detrás.",
       ru: "Один из двух дождевых садов на кладбище Муни в полном цвету: высокие местные травы и фиолетовые, жёлтые и красные полевые цветы у гравийной дорожки, позади надгробия и лес.",
     },
@@ -77,7 +77,7 @@ export const CEMETERY_PHOTOS: CemeteryPhoto[] = [
     src: "/images/cem-manfredini.webp",
     cemetery: "mooney",
     alt: {
-      en: "A polished granite family marker carved with the name Manfredini at Mooney Cemetery, set behind a planting of roses, red and pink flowers and low evergreen shrubs, with a small American flag among them.",
+      en: "A polished granite family marker carved with the name Manfredini at Mooney Cemetery, set behind a planting of roses, red and pink flowers, and low evergreen shrubs, with a small American flag among them.",
       es: "Una lápida familiar de granito pulido con el apellido Manfredini en el cementerio Mooney, colocada detrás de un macizo de rosas, flores rojas y rosadas y arbustos perennes bajos, con una pequeña bandera estadounidense entre ellos.",
       ru: "Семейное надгробие из полированного гранита с фамилией Manfredini на кладбище Муни, за клумбой с розами, красными и розовыми цветами и низкими вечнозелёными кустами, среди них небольшой американский флаг.",
     },
@@ -108,7 +108,7 @@ export const CEMETERY_PHOTOS: CemeteryPhoto[] = [
     src: "/images/cem-hessler.webp",
     cemetery: "daggitt",
     alt: {
-      en: "A tall white marble obelisk, the Hessler monument, carved with a shield emblem and standing among smaller upright headstones at Daggitt Cemetery, with an iron fence, orange daylilies and a road beyond.",
+      en: "A tall white marble obelisk, the Hessler monument, carved with a shield emblem and standing among smaller upright headstones at Daggitt Cemetery, with an iron fence, orange daylilies, and a road beyond.",
       es: "Un alto obelisco de mármol blanco, el monumento Hessler, tallado con un emblema de escudo y erguido entre lápidas más pequeñas en el cementerio Daggitt, con una reja de hierro, lirios anaranjados y una calle al fondo.",
       ru: "Высокий обелиск из белого мрамора, памятник Хесслеров, с резным гербовым щитом, стоящий среди меньших надгробий на кладбище Дэггитт; за ним кованая ограда, оранжевые лилейники и дорога.",
     },
@@ -150,7 +150,7 @@ export const DAGGITT_RESTORATION: CemeteryPhoto[] = [
       ru: "То же надгробие, отреставрированное и вновь установленное вертикально в свежей земле у кованой ограды кладбища; резной голубь и немецкая надпись с именем Маргареты, жены Георга Рудольфа, снова читаются.",
     },
     caption: {
-      en: "After: cleaned, repaired with epoxy and reset on a restored base.",
+      en: "After: cleaned, repaired with epoxy, and reset on a restored base.",
       es: "Después: limpiada, reparada con epoxi y recolocada sobre una base restaurada.",
       ru: "После: очищено, склеено эпоксидной смолой и установлено на восстановленное основание.",
     },

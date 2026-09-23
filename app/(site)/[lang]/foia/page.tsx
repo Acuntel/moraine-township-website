@@ -5,8 +5,14 @@ import { isLocale, LOCALES } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/metadata";
 import { TOWNSHIP } from "@/lib/township";
 import { Card, Container, PageHeader, Paragraphs } from "@/components/Page";
-import { DocumentArchive, DocumentList } from "@/components/DocumentList";
-import { byCategory, groupedByYear } from "@/lib/documents";
+import { DocumentList } from "@/components/DocumentList";
+import { DocGroup, documentCount } from "@/components/DocGroup";
+import { OpenOnHash } from "@/components/OpenOnHash";
+import {
+  byCategory,
+  newestFirst,
+  noticesBySubcategory,
+} from "@/lib/documents";
 
 export function generateStaticParams() {
   return LOCALES.map((lang) => ({ lang }));
@@ -32,6 +38,12 @@ export default function FoiaPage({ params }: { params: { lang: string } }) {
   const locale = params.lang;
   const dict = getDictionary(locale);
   const t = dict.foia;
+  const count = (n: number) =>
+    documentCount(dict.common.documentCount, n, locale);
+  const docNotes = {
+    pdfNote: dict.common.pdfNote,
+    externalNote: dict.common.externalLinkNote,
+  };
 
   return (
     <>
@@ -110,45 +122,70 @@ export default function FoiaPage({ params }: { params: { lang: string } }) {
         <section id="financial" className="scroll-mt-28">
           <h2 className="text-2xl font-bold sm:text-3xl">{t.financeHeading}</h2>
           <p className="mt-2 max-w-prose text-ink-muted">{t.financeIntro}</p>
-          <div className="mt-8 space-y-10">
-            {t.financeGroups.map((group) => (
-              <div key={group.id} id={group.id} className="scroll-mt-32">
-                <h3 className="text-[1.15rem] font-semibold">{group.heading}</h3>
-                <p className="mt-1.5 max-w-prose text-sm text-ink-muted">
-                  {group.note}
-                </p>
-                {group.id === "notices" ? (
-                  <DocumentList
-                    docs={byCategory("notices", "treasurer", "comptroller", "foia")}
-                    pdfNote={dict.common.pdfNote}
-            externalNote={dict.common.externalLinkNote}
-                  />
-                ) : (
-                  <DocumentArchive
-                    groups={groupedByYear(group.id)}
-                    pdfNote={dict.common.pdfNote}
-            externalNote={dict.common.externalLinkNote}
-                  />
-                )}
-              </div>
-            ))}
+          {/* Each record type opens on a click (round 2 review). The links are
+              all in the page source either way, which is what the Illinois
+              compliance audit counts. */}
+          <div className="mt-8 space-y-4">
+            {t.financeGroups.map((group) => {
+              if (group.id !== "notices") {
+                const docs = newestFirst(byCategory(group.id));
+                return (
+                  <DocGroup
+                    key={group.id}
+                    id={group.id}
+                    title={group.heading}
+                    count={count(docs.length)}
+                    note={group.note}
+                  >
+                    <DocumentList docs={docs} {...docNotes} />
+                  </DocGroup>
+                );
+              }
+              const notices = noticesBySubcategory();
+              return (
+                <div
+                  key={group.id}
+                  id={group.id}
+                  className="scroll-mt-28 rounded-lg border border-line bg-cream-alt p-5 sm:p-6"
+                >
+                  <h3 className="text-[1.15rem] font-semibold">
+                    {group.heading}
+                  </h3>
+                  <p className="mt-1.5 max-w-prose text-sm text-ink-muted">
+                    {group.note}
+                  </p>
+                  <div className="mt-4 space-y-3">
+                    {notices.map((notice) => (
+                      <DocGroup
+                        key={notice.id}
+                        id={notice.id}
+                        level={4}
+                        title={t.noticeGroups[notice.id]}
+                        count={count(notice.docs.length)}
+                      >
+                        <DocumentList docs={notice.docs} {...docNotes} />
+                      </DocGroup>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </section>
 
-        <section id="newsletters" className="scroll-mt-32">
-          <details className="rounded-md border border-line bg-white px-5 py-4">
-            <summary className="cursor-pointer font-semibold text-brand-teal-dark">
-              {t.newsletterHeading}
-            </summary>
-            <p className="mt-3 max-w-prose text-sm text-ink-muted">
-              {t.newsletterNote}
-            </p>
+        <section>
+          <DocGroup
+            id="newsletters"
+            level={2}
+            title={t.newsletterHeading}
+            count={count(byCategory("newsletter").length)}
+            note={t.newsletterNote}
+          >
             <DocumentList
-              docs={byCategory("newsletter")}
-              pdfNote={dict.common.pdfNote}
-              externalNote={dict.common.externalLinkNote}
+              docs={newestFirst(byCategory("newsletter"))}
+              {...docNotes}
             />
-          </details>
+          </DocGroup>
         </section>
 
         <section id="compensation" className="scroll-mt-28">
@@ -160,6 +197,7 @@ export default function FoiaPage({ params }: { params: { lang: string } }) {
           </p>
         </section>
       </Container>
+      <OpenOnHash />
     </>
   );
 }

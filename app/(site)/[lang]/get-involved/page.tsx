@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getDictionary } from "@/content";
-import { isLocale, LOCALES } from "@/lib/i18n";
+import { isLocale, localePath, LOCALES } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/metadata";
 import { LINKS, TOWNSHIP } from "@/lib/township";
 import { Card, Container, PageHeader } from "@/components/Page";
 import { readContent } from "@/lib/store";
 import { DocumentList } from "@/components/DocumentList";
 import { byCategory } from "@/lib/documents";
-import { DonateBand } from "@/components/DonateButton";
+import { DonateBand } from "@/components/DonateBand";
 
 // This page renders admin-editable content, so it revalidates on save and
 // at worst every five minutes.
@@ -102,6 +102,9 @@ export default async function GetInvolvedPage({
           body={dict.donate.bandBody}
           wishListLabel={dict.donate.wishListCta}
           externalNote={dict.common.externalLinkNote}
+          otherWays={dict.donate.bandOtherWays}
+          otherWaysCta={dict.donate.bandOtherWaysCta}
+          otherWaysHref={localePath(locale, "/donate")}
         />
 
         {photos.length > 0 ? (

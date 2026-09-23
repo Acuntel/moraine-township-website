@@ -24,7 +24,16 @@ const BASE = (process.argv[2] ?? 'https://moraine-food-pantry.vercel.app').repla
 const PORT = 9367
 
 const PAGES = ['/services', '/food-pantry', '/about', '/ru/services']
-const STOPS = [0, 300, 700, 1100, 1600, 2200]
+/**
+ * Every STEP px from the top to the bottom of each page. This used to be six
+ * fixed stops down to 2200px, which quietly pinned the page layout: when the
+ * committee's review moved the three long health insurance paragraphs to the
+ * top of /services, every one of those stops landed on text, and the check
+ * could neither see the button come back further down nor see it land on a
+ * voter registration link at 2600px. Sweeping the whole page tests the rule
+ * as written, wherever the reader stops.
+ */
+const STEP = 300
 
 const profile = mkdtempSync(join(tmpdir(), 'moraine-donate-'))
 const chrome = execFile(CHROME, [
@@ -60,7 +69,15 @@ async function evaluate(ws, expression) {
   return res.result?.value
 }
 
-/** Is it visible, and if so how many runs of text is it covering? */
+/**
+ * Is it visible, and if so how many runs of text is it covering?
+ *
+ * Only painted text counts. A screen reader note is clipped to one pixel and
+ * the body of a closed <details> is not drawn at all, but both still report
+ * line boxes, so a raw rectangle test calls the button "on top of" words no
+ * sighted reader can see. The overlap is cut down to what every clipping
+ * ancestor lets through, and hidden elements are skipped, before it counts.
+ */
 const STATE = `
   (() => {
     const fab = document.querySelector('a[href*="paypal"].fixed');
@@ -81,9 +98,18 @@ const STATE = `
         range.selectNodeContents(node);
         for (const r of range.getClientRects()) {
           if (r.width === 0 || r.height === 0) continue;
-          const ox = Math.min(r.right, f.right) - Math.max(r.left, f.left);
-          const oy = Math.min(r.bottom, f.bottom) - Math.max(r.top, f.top);
-          if (ox > 1 && oy > 1) {
+          let x0 = Math.max(r.left, f.left), x1 = Math.min(r.right, f.right);
+          let y0 = Math.max(r.top, f.top), y1 = Math.min(r.bottom, f.bottom);
+          if (x1 - x0 <= 1 || y1 - y0 <= 1) continue;
+          if (!el.checkVisibility({ checkOpacity: true, checkVisibilityCSS: true })) break;
+          for (let a = el; a && a !== document.documentElement; a = a.parentElement) {
+            const s = getComputedStyle(a);
+            if (s.overflowX === 'visible' && s.overflowY === 'visible' && s.clip === 'auto') continue;
+            const c = a.getBoundingClientRect();
+            x0 = Math.max(x0, c.left); x1 = Math.min(x1, c.right);
+            y0 = Math.max(y0, c.top); y1 = Math.min(y1, c.bottom);
+          }
+          if (x1 - x0 > 1 && y1 - y0 > 1) {
             covered += 1;
             if (samples.length < 2) samples.push(node.textContent.trim().slice(0, 40));
             break;
@@ -140,7 +166,12 @@ try {
       let everVisible = false
       let worst = null
 
-      for (const y of STOPS) {
+      const height = await evaluate(ws, 'document.documentElement.scrollHeight')
+      const stops = []
+      for (let y = 0; y < height; y += STEP) stops.push(y)
+      stops.push(height)
+
+      for (const y of stops) {
         // Step rather than jump: html sets scroll-behavior: smooth, and a jump
         // is still animating when a naive check reads the state.
         await evaluate(ws, `window.scrollTo({ top: ${y}, behavior: 'auto' }); 'ok'`)
@@ -160,7 +191,7 @@ try {
           !worst,
           worst ? `at ${worst.y}px it covered "${worst.samples[0]}"` : 'all stops clean',
         )
-        record('still shows up somewhere on the page', everVisible)
+        record('still shows up somewhere on the page', everVisible, `${stops.length} stops to ${height}px`)
       } else {
         record('stays visible on desktop', everVisible)
       }
