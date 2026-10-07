@@ -465,3 +465,25 @@ they can stay retired, or tell us where you want them:
 
 The 34 documents that were already broken on the old site are listed in
 `BROKEN-SOURCE-DOCUMENTS.md`, for the Township to supply or retire.
+
+## Verification run after the October 7 changes
+
+Run against the live site after deploying.
+
+| Check                                      | Result                                  |
+| ------------------------------------------ | --------------------------------------- |
+| Unit and integration tests                 | 120 of 120 passed                       |
+| Live tests against the deployment          | 140 of 140 passed                       |
+| TypeScript                                 | Clean                                   |
+| Colour contrast                            | All measured pairs meet WCAG 2.1 AA     |
+| Structural accessibility audit, 54 pages   | No issues                               |
+| axe-core, about 100 rules, 55 states       | No WCAG 2.1 A or AA violations          |
+| Keyboard and focus                         | 10 of 10 passed                         |
+| Image descriptions                         | Every image has one                     |
+| English text on Spanish or Russian pages   | None that is not marked as English      |
+| Illinois statutory postings                | 16 of 16 satisfied (IMRF link added)    |
+| Reflow at 320px and 390px, three languages | 22 of 22 passed                         |
+| Floating Donate button, phone and desktop  | 12 of 12 passed                         |
+| Popups (missed call, donation thank-you)   | 12 of 12 passed                         |
+| Browser errors across 42 pages             | None                                    |
+| Legacy Squarespace URLs                    | All 65 redirect correctly               |
