@@ -91,7 +91,7 @@ const en: HistorySet = {
         ],
       },
       {
-        heading: "Neglect, and Rescue",
+        heading: "Neglect and Rescue",
         body: [
           "English heritage family descendants, including Joseph Daggitt’s great-niece Rose Dennis Booth of Glencoe, attempted to maintain the property but could not keep up with the vandalism. Interviewed at 79 in 1974, she said her father Charles Dennis had deeded the grounds to the City of Highland Park in 1941, to remain permanently a cemetery or revert to a public park. No such records were found, according to March 1987 news reporting. Mrs. Booth died in 1984 and was, as far as we know, the last person buried at Daggitt. No marker with her name has been found. The cemetery is closed to new burials.",
           "Decades of neglect and vandalism, Halloween nights of mayhem, theft of marble markers for baking use, and nature’s destruction of inscriptions on soft stone make tracing many family histories difficult or impossible.",
@@ -151,7 +151,7 @@ const ru: HistorySet = {
     location:
       "Лейк-Кук-роуд и Сент-Джонс-авеню, рядом со станцией Braeside линии Metra, Хайленд-Парк",
     intro:
-      "Кладбище Дэггитт, также известное как Грейс и иногда как Брейсайд, оставалось заброшенным до тех пор, пока в 1996 году Township не взял его под свою опеку. Если история Муни связана с ирландскими католиками, то история Дэггитта, это история протестантских поселенцев: английских методистов и немецких лютеран.",
+      "Кладбище Дэггитт, также известное как Грейс и иногда как Брейсайд, оставалось заброшенным до тех пор, пока в 1996 году Township не взял его под свою опеку. Если история Муни связана с ирландскими католиками, то история Дэггитта связана с протестантскими поселенцами: английскими методистами и немецкими лютеранами.",
   },
 };
 

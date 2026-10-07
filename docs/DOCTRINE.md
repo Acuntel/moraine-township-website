@@ -262,17 +262,20 @@ Verified against primary sources, not memory.
 
 ### 5.2 Illinois statutory posting requirements the site must satisfy
 
-| Requirement                                                                                                                                                                                             | Citation             | Where it lives                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- | --------------------------------- |
-| Annual schedule of regular meetings posted                                                                                                                                                              | 5 ILCS 120/2.02(a)   | `/board-meetings`                 |
-| Notice of all governing body meetings                                                                                                                                                                   | 5 ILCS 120/2.02(b)   | `/board-meetings`                 |
-| Agenda posted at least 48 hours before, continuously available for the full 48-hour period                                                                                                              | 5 ILCS 120/2.02      | `/board-meetings`, admin-editable |
-| Minutes posted within 10 days of approval, remain posted at least 60 days                                                                                                                               | 5 ILCS 120/2.06(b)   | `/board-meetings`                 |
-| FOIA: purpose summary, functional subdivisions (block diagram), operating budget total, office count and locations, employee headcount, advisory bodies, request procedure, FOIA officer, address, fees | 5 ILCS 140/4         | `/foia`                           |
-| Employee compensation disclosure ($75k / $150k thresholds, IMRF participants)                                                                                                                           | 5 ILCS 120/7.3       | `/foia`                           |
-| IMRF employer data link                                                                                                                                                                                 | 40 ILCS 5/7-135.5(b) | `/foia`                           |
-| Public mechanism for contact, e.g. an email address                                                                                                                                                     | 50 ILCS 205/20       | Global footer + `/contact`        |
-| Tax levy notice where increase exceeds 5%                                                                                                                                                               | 35 ILCS 200/18-75    | `/foia`                           |
+| Requirement | Citation | Where it lives |
+| --- | --- | --- |
+| Annual schedule of regular meetings given as public notice; on the website it stays posted until a new schedule is approved | 5 ILCS 120/2.02(a), (b) | `/board-meetings` |
+| Notice of all governing body meetings posted on the website | 5 ILCS 120/2.02(b) | `/board-meetings` |
+| Regular meeting agenda posted at least 48 hours before, and kept on the website until the meeting concludes | 5 ILCS 120/2.02(a), (c) | `/board-meetings`, admin-editable |
+| Minutes posted within 10 days of approval, remain posted at least 60 days | 5 ILCS 120/2.06(b) | `/board-meetings` |
+| FOIA public body description: purpose, block diagram of functional subdivisions, total operating budget, number and location of offices, approximate number of full and part-time employees, and the identification **and membership** of advisory and policy bodies | 5 ILCS 140/4(a) | `/foia#public-body` |
+| FOIA request methods, FOIA officer, address, and fees | 5 ILCS 140/4(b), 140/6 | `/foia` |
+| Total compensation over $75,000 posted within 6 business days after budget approval; packages of $150,000 or more posted at least 6 days before approval | 5 ILCS 120/7.3 | `/foia#compensation` |
+| Link to IMRF's employer cost and participation information (7-105 defines "municipality" to include a township) | 40 ILCS 5/7-135.5(b) | `/foia#imrf` |
+| Public mechanism for contact, e.g. an email address, linked from the home page | 50 ILCS 205/20 | Global footer + `/contact` |
+| Truth in Taxation notice, only when a levy estimate exceeds 105% of the prior year's extension: newspaper always; website for at least 30 consecutive days, at or near the top of the home page | 35 ILCS 200/18-70, 18-75 | Home page, when triggered. Not triggered for tax year 2025 (the levy certificate checks "did not exceed a 5% increase") |
+
+Every Open Meetings Act website duty in 2.02 and 2.06(b), and the 18-75 website notice, applies to "a public body that has a website that the full-time staff of the public body maintains." Township staff will edit this site through the admin panel, so treat those duties as applying. Verified against the ilga.gov text on 2026-10-07; the 18-75 row previously sat on `/foia` and cited only 18-75, which misplaced both the trigger and the place it must appear.
 
 The Township already posts most of this. The build's job is to keep it posted, make it findable, and make it accessible. Where the current site satisfies a requirement only via PDF, an HTML landing summary is added alongside the PDF so the information is available in an accessible format.
 
@@ -391,21 +394,21 @@ Supervisor asked that they be updated annually.
 
 ## 8.2 The document archive, and why it had to move
 
-All 275 documents linked from the Township's site were served by Squarespace at
+All 281 documents linked from the Township's site were served by Squarespace at
 `morainetownship.org/s/*`. The day DNS points at this site, every one of those
 URLs stops resolving, taking with it the meeting minutes, budgets, audits and
 levies that Illinois law requires the Township to keep posted.
 
-241 of them have been migrated into this site's own storage and are linked from
+247 of them have been migrated into this site's own storage and are linked from
 the pages where residents would look for them:
 
 | Where               | What                                                                                       |
 | ------------------- | ------------------------------------------------------------------------------------------ |
-| Board & Meetings    | 108 sets of Board minutes, grouped by year; posted agendas; the Decennial Committee report |
-| FOIA & Transparency | 14 budgets, 14 audits, 5 levies, plus treasurer, comptroller and compensation notices      |
+| Board & Meetings    | 104 sets of Board minutes and 14 Annual Town Meeting records, by year; the next agenda; the Decennial Committee report |
+| FOIA & Transparency | 14 budgets, 17 audits, 5 levies, plus treasurer, comptroller and compensation notices      |
 | Food Pantry         | The 2026-27 application in English, Spanish and Russian, plus the pantry flyer             |
 | Resident Services   | General Assistance applications in English and Spanish, and the VITA tax forms             |
-| Programs            | The 2026 grant application                                                                 |
+| Programs            | The 2026 grant application, and Community Mental Health Board vacancy notices              |
 | Get Involved        | The volunteer application                                                                  |
 | Cemeteries          | 9 deeds, plats, surveys and research documents                                             |
 

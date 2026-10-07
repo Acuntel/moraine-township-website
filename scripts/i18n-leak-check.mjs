@@ -36,6 +36,8 @@ const ROUTES = [
   '/transportation',
   '/board-meetings',
   '/cemeteries',
+  '/cemeteries/mooney',
+  '/cemeteries/daggitt',
   '/programs',
   '/get-involved',
   '/donate',
@@ -68,14 +70,70 @@ const ALLOWED = [
   /charitable fund|26-4269258|travel\.state\.gov|voter power|north shore gas|tyler|healy|shafer|jenn|guerrero|haggarty|jacoby|levin|contreras|valle|abazovic|hoffman|machabanski|innes|adelman|greene|gordon/i,
 ]
 
+/**
+ * The patterns above name people and places, so on their own they would wave
+ * through any paragraph that mentions one: a whole English bio passed because
+ * it contained "Jenn". A name excuses a short label, never a sentence.
+ */
+const SHORT_LABEL = 80
+
+/**
+ * Members of the Township's boards and committees, listed on /foia. A person's
+ * name is the same in every language, so it is read from the roster itself
+ * rather than added here by hand, where a new member would show up as a leak.
+ */
+const ROSTER_NAMES = new Set(
+  [...readFileSync(new URL('../lib/bodies.ts', import.meta.url), 'utf8').matchAll(/name: "([^"]+)"/g)].map(
+    (m) => m[1],
+  ),
+)
+
 function allowed(text) {
   if (DOCUMENT_LABELS.has(text.trim())) return true
+  if (ROSTER_NAMES.has(text.trim())) return true
+  if (text.length > SHORT_LABEL) return false
   return ALLOWED.some((re) => re.test(text))
+}
+
+/**
+ * English that is meant to be English: the officials' own bios and the
+ * archival cemetery histories. The page marks those blocks lang="en", which a
+ * screen reader needs anyway (WCAG 3.1.2), so the check trusts the markup and
+ * drops the block. Anything English that is not marked still counts as a leak.
+ */
+const VOID_TAGS = new Set(['area', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'source', 'track', 'wbr'])
+
+function withoutMarkedEnglish(html) {
+  let out = html
+  for (;;) {
+    const open = /<([a-z][a-z0-9]*)\b[^>]*\slang="en"[^>]*>/i.exec(out)
+    if (!open) return out
+    const tag = open[1].toLowerCase()
+    // A void element has no content to drop; removing "to its close tag"
+    // would silently delete the rest of the page and pass everything.
+    if (VOID_TAGS.has(tag) || open[0].endsWith('/>')) {
+      out = out.slice(0, open.index) + out.slice(open.index + open[0].length)
+      continue
+    }
+    const tagRe = new RegExp(`<(/?)${tag}\\b[^>]*>`, 'gi')
+    tagRe.lastIndex = open.index + open[0].length
+    let depth = 1
+    let end = out.length
+    for (let m; (m = tagRe.exec(out)); ) {
+      depth += m[1] ? -1 : 1
+      if (depth === 0) {
+        end = m.index + m[0].length
+        break
+      }
+    }
+    if (depth !== 0) throw new Error(`unclosed <${tag} lang="en"> in the page`)
+    out = out.slice(0, open.index) + out.slice(end)
+  }
 }
 
 /** Pull visible text nodes, skipping script/style and screen-reader-only spans. */
 function visibleText(html) {
-  const body = html.slice(html.indexOf('<body'))
+  const body = withoutMarkedEnglish(html.slice(html.indexOf('<body')))
   const stripped = body
     .replace(/<script[\s\S]*?<\/script>/gi, '')
     .replace(/<style[\s\S]*?<\/style>/gi, '')

@@ -47,12 +47,21 @@ describe("dictionary parity", () => {
   }
 
   /**
-   * One string is deliberately empty. `untranslatedNote` is the line shown
-   * above a news item that has not been translated yet ("this entry is only
-   * available in English for now"). On the English pages there is nothing to
-   * say, and an empty value is how that renders as nothing at all.
+   * Three strings are deliberately empty in English. `untranslatedNote` is the
+   * line shown above a news item that has not been translated yet ("this entry
+   * is only available in English for now"); `bioInEnglishNote` and
+   * `historyInEnglishNote` say the same of the officials' bios and the archival
+   * cemetery histories. On the English pages there is nothing to say, and an
+   * empty value is how that renders as nothing at all.
    */
-  const INTENTIONALLY_EMPTY = new Set(["en.shared.untranslatedNote"]);
+  const ENGLISH_ONLY_NOTES = [
+    "shared.untranslatedNote",
+    "shared.bioInEnglishNote",
+    "shared.historyInEnglishNote",
+  ];
+  const INTENTIONALLY_EMPTY = new Set(
+    ENGLISH_ONLY_NOTES.map((key) => `en.${key}`),
+  );
 
   test("no dictionary contains an accidentally empty string", () => {
     for (const locale of LOCALES) {
@@ -63,10 +72,12 @@ describe("dictionary parity", () => {
     }
   });
 
-  test("the note about untranslated entries exists in both other languages", () => {
-    // The English blank only makes sense if es and ru actually carry the text.
-    assert.ok(FLAT.es["shared.untranslatedNote"].trim().length > 0);
-    assert.ok(FLAT.ru["shared.untranslatedNote"].trim().length > 0);
+  test("the notes about English-only content exist in both other languages", () => {
+    // The English blanks only make sense if es and ru actually carry the text.
+    for (const key of ENGLISH_ONLY_NOTES) {
+      assert.ok(FLAT.es[key].trim().length > 0, `es.${key} is empty`);
+      assert.ok(FLAT.ru[key].trim().length > 0, `ru.${key} is empty`);
+    }
   });
 
   test("no dictionary contains an untouched placeholder", () => {

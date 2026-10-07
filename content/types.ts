@@ -60,6 +60,47 @@ export type NoticeGroup =
   | "resolutions"
   | "foia-posting";
 
+/** The boards, commissions and committees on /foia; rosters in lib/bodies.ts. */
+export type BodyId = "board" | "mentalHealth" | "ethics" | "grants" | "latino";
+
+export type MemberRole =
+  | "supervisor"
+  | "trustee"
+  | "trusteeWoman"
+  | "clerkNonVoting"
+  | "chair"
+  | "secretary"
+  | "trusteeLiaison"
+  | "administrator"
+  | "termEnds"
+  | "cityCouncilLiaison"
+  | "staffLiaison"
+  | "district113Liaison";
+
+/** One box of the FOIA block diagram, rendered as a nested list. */
+export interface OrgNode {
+  label: string;
+  detail?: string;
+  children?: OrgNode[];
+}
+
+/**
+ * The parts of the FOIA page that 5 ILCS 140/4(a) asks for beyond the request
+ * procedure. They live in content/{lang}/foia-body.ts so pages-c stays short.
+ */
+export type FoiaBodyKey =
+  | "orgHeading"
+  | "orgIntro"
+  | "orgChart"
+  | "membershipHeading"
+  | "membershipIntro"
+  | "bodyNames"
+  | "bodyNotes"
+  | "memberRoles"
+  | "imrfHeading"
+  | "imrfBody"
+  | "imrfLink";
+
 export interface PageMeta {
   title: string;
   description: string;
@@ -82,6 +123,19 @@ export interface Dictionary {
     acres: string;
     /** Empty for English; shown when an item has no translation. */
     untranslatedNote: string;
+    /**
+     * Empty for English. The officials' bios are their own words and stay in
+     * English, so the Spanish and Russian pages say so instead of passing them
+     * off silently (WCAG 3.1.2 also needs them marked lang="en").
+     */
+    bioInEnglishNote: string;
+    /**
+     * Empty for English. The detailed cemetery histories quote deeds and
+     * newspapers and stay in English on purpose; see content/histories.ts.
+     */
+    historyInEnglishNote: string;
+    /** Announced for the few records that are Word files, not PDFs. */
+    wordNote: string;
     tagline: string;
     foiaOfficerTitle: string;
     sourcesHeading: string;
@@ -91,6 +145,8 @@ export interface Dictionary {
       clerk: string;
       assessor: string;
       trustee: string;
+      /** Spanish marks gender on the title (Síndica); en and ru do not. */
+      trusteeWoman: string;
       caseworker: string;
       coordinator: string;
       administrator: string;
@@ -373,6 +429,19 @@ export interface Dictionary {
     mentalHealthHeading: string;
     mentalHealthBody: string;
     mentalHealthCta: string;
+    /**
+     * The Board's vacancy notice, in HTML because a call for applicants that
+     * exists only as a PDF breaks the Supervisor's no-PDF-only rule. Shown
+     * until CMHB_OPENING.closes; see content/{lang}/cmhb-opening.ts.
+     */
+    cmhbOpening: {
+      heading: string;
+      intro: string;
+      terms: string;
+      listLead: string;
+      items: string[];
+      contact: string;
+    };
   };
 
   getInvolved: PageMeta & {
@@ -441,6 +510,19 @@ export interface Dictionary {
     noticeGroups: Record<NoticeGroup, string>;
     employeesLabel: string;
     employeesValue: string;
+    orgHeading: string;
+    orgIntro: string;
+    orgChart: OrgNode[];
+    membershipHeading: string;
+    membershipIntro: string;
+    bodyNames: Record<BodyId, string>;
+    /** A line under a body's name, such as the date its roster was published. */
+    bodyNotes: Record<BodyId, string>;
+    /** "{year}" is replaced with the member's year, for termEnds. */
+    memberRoles: Record<MemberRole, string>;
+    imrfHeading: string;
+    imrfBody: string;
+    imrfLink: string;
     newsletterHeading: string;
     newsletterNote: string;
     compensationHeading: string;

@@ -128,7 +128,7 @@ export const home: Dictionary["home"] = {
       id: "services",
       title: "Resident Services",
       blurb:
-        "Passports, voter registration, health insurance enrollment, free tax preparation, notary service, and RTA discount cards.",
+        "Health insurance enrollment, passports, free tax preparation, notary service, RTA discount cards, and voter registration.",
       href: "/services",
     },
     {
@@ -210,7 +210,7 @@ export const about: Omit<Dictionary["about"], "officialPhotoAlts"> = {
   staffIntro:
     "Our staff answer questions, take applications, and connect residents with the right program. The general office line is answered during business hours.",
   readBio: "Read Biography",
-  noPhotoNote: "Photograph not published.",
+  noPhotoNote: "Staff photographs are not published, at the staff's request.",
 
   roleDescriptions: {
     supervisor:

@@ -57,7 +57,7 @@ export const footer: Dictionary["footer"] = {
   legalHeading: "Transparency",
   accessibility: "Accessibility",
   accessibilityHref: "/accessibility",
-  foia: "FOIA and transparency",
+  foia: "FOIA and Transparency",
   admin: "admin",
   rights: "Moraine Township, Highland Park, Illinois. Established 1850.",
   mentalHealthBoard: "Community Mental Health Board",

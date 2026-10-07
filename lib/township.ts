@@ -83,6 +83,9 @@ export const LINKS = {
   amazonWishList:
     "https://www.amazon.com/registries/gl/guest-view/S4X71MVWVUDS",
   mentalHealthBoard: "https://www.morainetownshipmentalhealthboard.org",
+  // 40 ILCS 5/7-135.5(b): every IMRF employer with a website links here.
+  imrfEmployerInfo:
+    "https://www.imrf.org/en/about-imrf/transparency/employer-cost-and-participation-information",
   townshipsOfIllinois: "https://www.toi.org",
   volunteerApplication:
     "https://docs.google.com/forms/d/e/1FAIpQLSfM0eTApOq8e22Z9EiG13B6BOAASieTXfFQwUvsSR-fSKDBPQ/viewform?usp=sharing",
@@ -172,7 +175,7 @@ export const ELECTED_OFFICIALS = [
     id: "trustee-guerrero",
     name: "Diana Guerrero",
     role: "Trustee",
-    roleKey: "trustee" as const,
+    roleKey: "trusteeWoman" as const,
     term: "2025-2029",
     email: "trusteeguerrero@morainetownship.org",
     hasPhoto: true,
@@ -192,7 +195,7 @@ export const ELECTED_OFFICIALS = [
     id: "trustee-jacoby",
     name: "Rachel Jacoby",
     role: "Trustee",
-    roleKey: "trustee" as const,
+    roleKey: "trusteeWoman" as const,
     term: "2025-2029",
     email: "trusteejacoby@morainetownship.org",
     hasPhoto: true,
@@ -202,7 +205,7 @@ export const ELECTED_OFFICIALS = [
     id: "trustee-levin",
     name: "Allison Levin",
     role: "Trustee",
-    roleKey: "trustee" as const,
+    roleKey: "trusteeWoman" as const,
     term: "2025-2029",
     email: "trusteelevin@morainetownship.org",
     hasPhoto: true,

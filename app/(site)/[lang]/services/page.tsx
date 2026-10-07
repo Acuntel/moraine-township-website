@@ -102,6 +102,7 @@ export default function ServicesPage({ params }: { params: { lang: string } }) {
               <SectionBlock
                 key={section.id}
                 section={section}
+                locale={locale}
                 externalNote={dict.common.externalLinkNote}
               />
             ))}
@@ -128,6 +129,7 @@ export default function ServicesPage({ params }: { params: { lang: string } }) {
               <SectionBlock
                 key={section.id}
                 section={section}
+                locale={locale}
                 externalNote={dict.common.externalLinkNote}
               />
             ))}
@@ -146,6 +148,7 @@ export default function ServicesPage({ params }: { params: { lang: string } }) {
                 "benefits",
               ).sort((a, b) => a.label.localeCompare(b.label))}
               pdfNote={dict.common.pdfNote}
+              wordNote={dict.shared.wordNote}
               externalNote={dict.common.externalLinkNote}
             />
           </div>

@@ -110,7 +110,7 @@ describe("the document archive", { skip }, () => {
 
   test("the statutory postings are downloadable", async () => {
     // A sample from each category Illinois requires the Township to keep
-    // posted. Checking all 241 on every run would be slow and no more useful.
+    // posted. Checking all 247 on every run would be slow and no more useful.
     const sample = [
       "minutes",
       "budget",

@@ -1,6 +1,9 @@
-import type { Dictionary } from "../types";
+import type { Dictionary, FoiaBodyKey } from "../types";
 
-export const programs: Omit<Dictionary["programs"], "grantees"> = {
+export const programs: Omit<
+  Dictionary["programs"],
+  "grantees" | "cmhbOpening"
+> = {
   title: "Programs",
   description:
     "The Moraine Township Grant Program funds local nonprofit agencies serving Township residents. The Latino Advisory Committee connects the Township with our Latino community.",
@@ -48,7 +51,7 @@ export const getInvolved: Dictionary["getInvolved"] = {
 
   topAskHeading: "The One Thing We Need Most",
   topAskBody:
-    "Regular weekly volunteers at the Food Pantry. Sorting, shelving, cleaning up, and assisting shoppers is the work that keeps the pantry open three days a week. Minimum volunteer age is 16. If you can commit to one shift a week, that is the single most useful thing you can give us.",
+    "We most need regular weekly volunteers at the Food Pantry. Sorting, shelving, cleaning up, and assisting shoppers is the work that keeps the pantry open three days a week. Minimum volunteer age is 16. If you can commit to one shift a week, that is the single most useful thing you can give us.",
   topAskCta: "Complete a volunteer application",
 
   waysHeading: "Other Ways to Help",
@@ -169,7 +172,7 @@ export const thankYou: Dictionary["thankYou"] = {
 
 export const foia: Omit<
   Dictionary["foia"],
-  "employeesLabel" | "employeesValue" | "noticeGroups"
+  "employeesLabel" | "employeesValue" | "noticeGroups" | FoiaBodyKey
 > = {
   title: "FOIA and Transparency",
   description:
@@ -202,32 +205,27 @@ export const foia: Omit<
     {
       label: "Purpose",
       value:
-        "Moraine Township is a special purpose unit of local government that administers funds to provide responsive, efficient, and compassionate services and support for residents in need, and that carries out general assistance, property assessment, election and record-keeping, and cemetery functions required by Illinois law.",
-    },
-    {
-      label: "Functional Subdivisions",
-      value:
-        "Office of the Supervisor, which includes General and Emergency Assistance, the Food Pantry, resident services, and transportation. Office of the Clerk, which includes records, meetings, public notices, and voter registration. Office of the Assessor, which includes property assessment and exemptions. Cemetery operations for Mooney and Daggitt cemeteries.",
+        "Moraine Township administers funds to provide responsive, efficient, and compassionate services and support for residents in need. Its core priorities are accurate assessments of Township properties, the administration of General and Emergency Assistance for Township residents, and a safety net for vulnerable residents.",
     },
     {
       label: "Governing Body",
       value:
-        "Board of Trustees, composed of the Supervisor, four elected Trustees, and the Clerk as a non-voting member.",
+        "The governing body is the Township Board, made up of the Supervisor and four elected Trustees. The Clerk serves as clerk of the Board and does not vote. The members are listed below.",
     },
     {
-      label: "Advisory Bodies",
+      label: "Other Boards and Committees",
       value:
-        "Ethics Commission, Citizen Grant Advisory Committee, Latino Advisory Committee, and ad hoc committees as appointed.",
+        "The Township's other boards and committees are the Community Mental Health Board, the Ethics Commission, the Citizen Grant Advisory Committee, the Latino Advisory Committee, and any ad hoc committees that are appointed. The members are listed below.",
     },
     {
       label: "Offices",
       value:
-        "One office, located at 800 Central Avenue, Highland Park, Illinois 60035.",
+        "The Township has one office, at 800 Central Avenue, Highland Park, Illinois 60035, which it shares with the Food Pantry. The Township also maintains Daggitt Cemetery at 425 Lake Cook Road and Mooney Cemetery at 1079 Ridge Road, both in Highland Park.",
     },
     {
       label: "Operating Budget",
       value:
-        "The total operating budget is set annually in the Township budget and appropriation ordinance, published in the budget documents below.",
+        "For the fiscal year from April 1, 2026, to March 31, 2027, the Township Board adopted total appropriations of $3,666,310 on April 22, 2026, in Ordinance No. 04222026. Of that, $3,041,310 is for operating expenses, and $625,000 is budgeted from reserves for contingencies and one-time expenses. By fund, the appropriations are $1,452,325 for the Township Corporate Fund, $679,471 for the General Assistance Fund, $85,000 for the Capital Maintenance Fund, and $1,449,514 for the Community Mental Health Fund. The full ordinance is under Budget and Appropriation below.",
     },
   ],
 

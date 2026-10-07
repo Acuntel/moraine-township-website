@@ -202,7 +202,7 @@ export function BentoGrid({
   }[];
 }) {
   return (
-    <ul className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    <ul className="mt-14 grid auto-rows-fr gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {items.map((item) => {
         const inner = (
           <>

@@ -124,7 +124,7 @@ export const home: Dictionary["home"] = {
       id: "services",
       title: "Servicios para residentes",
       blurb:
-        "Pasaportes, registro de votantes, inscripción en seguros de salud, preparación gratuita de impuestos, servicio de notario y tarjetas de descuento de la RTA.",
+        "Inscripción en seguros de salud, pasaportes, preparación gratuita de impuestos, servicio de notario, tarjetas de descuento de la RTA y registro de votantes.",
       href: "/services",
     },
     {
@@ -178,8 +178,8 @@ export const about: Omit<Dictionary["about"], "officialPhotoAlts"> = {
     "La población total proviene del Censo de 2020. Las demás cifras son estimaciones quinquenales de 2019-2023 de la Encuesta sobre la Comunidad Estadounidense (American Community Survey) de la Oficina del Censo de los Estados Unidos para Moraine Township.",
   demographicsLabels: {
     population: "Población total",
-    medianIncome: "Ingreso familiar medio",
-    bachelors: "Título universitario o superior",
+    medianIncome: "Ingreso mediano del hogar",
+    bachelors: "Licenciatura o superior",
     employment: "Tasa de empleo",
     housingUnits: "Total de viviendas",
     withoutHealthcare: "Sin seguro médico",
@@ -206,7 +206,8 @@ export const about: Omit<Dictionary["about"], "officialPhotoAlts"> = {
   staffIntro:
     "Nuestro personal responde preguntas, recibe solicitudes y conecta a los residentes con el programa adecuado. La línea general se atiende durante el horario de oficina.",
   readBio: "Leer biografía",
-  noPhotoNote: "Fotografía no publicada.",
+  noPhotoNote:
+    "Las fotografías del personal no se publican, a petición de los propios empleados.",
 
   roleDescriptions: {
     supervisor:
@@ -227,7 +228,7 @@ export const about: Omit<Dictionary["about"], "officialPhotoAlts"> = {
   ethicsBody:
     "La conducta de los funcionarios electos y del personal de Moraine Township se rige por la Ordenanza de Ética del Township, supervisada por una Comisión de Ética independiente. Si tiene preguntas o inquietudes, dirija sus comentarios a la Comisión de Ética.",
   ethicsCommissionHeading: "Miembros de la Comisión de Ética",
-  termExpires: "Mandato vence en",
+  termExpires: "Su mandato vence en",
 };
 
 export const services: Dictionary["services"] = {
@@ -326,7 +327,7 @@ export const services: Dictionary["services"] = {
       id: "assistance",
       heading: "Asistencia general y de emergencia",
       body: [
-        "La Asistencia General y la Asistencia de Emergencia son funciones reguladas por el estado de la Oficina del Supervisor. Los requisitos para la asistencia están regulados por la ley federal y la ley de Illinois. La información sobre los solicitantes de Asistencia General es estrictamente confidencial.",
+        "La Asistencia General y la Asistencia de Emergencia son funciones de la Oficina del Supervisor reguladas por el estado. Los requisitos para la asistencia están regulados por la ley federal y la ley de Illinois. La información sobre los solicitantes de Asistencia General es estrictamente confidencial.",
       ],
       subsections: [
         {

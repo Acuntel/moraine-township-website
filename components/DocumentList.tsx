@@ -1,19 +1,27 @@
 import { fileSize, type TownshipDocument } from "@/lib/documents";
 
+function isWord(doc: TownshipDocument): boolean {
+  return doc.ext === "doc" || doc.ext === "docx";
+}
+
 /**
  * Renders a set of documents as links. Format and size are announced to screen
  * readers, so nobody discovers a 12 MB scan after tapping it and everyone knows
  * in advance that a link opens a PDF in a new tab. The visible "PDF, size"
  * column came off in the round 2 review, at Sanela Abazovic's request.
+ * A handful of records are Word files, and announcing those as PDFs would be
+ * telling a screen reader user something false, so the note follows the file.
  */
 export function DocumentList({
   docs,
   pdfNote,
+  wordNote,
   externalNote,
   emptyNote,
 }: {
   docs: TownshipDocument[];
   pdfNote: string;
+  wordNote: string;
   externalNote: string;
   emptyNote?: string;
 }) {
@@ -46,11 +54,18 @@ export function DocumentList({
               />
               <path d="M14 3v5h5M9 13h6M9 17h4" strokeLinecap="round" />
             </svg>
-            <span className="text-brand-teal underline decoration-brand-teal/30 underline-offset-4 group-hover:text-brand-teal-dark">
+            {/* Labels are the English names of records of the Township, on
+                every page, so they are marked English for screen readers
+                (WCAG 3.1.2). On the English pages this changes nothing. */}
+            <span
+              lang="en"
+              className="text-brand-teal underline decoration-brand-teal/30 underline-offset-4 group-hover:text-brand-teal-dark"
+            >
               {doc.label}
             </span>
             <span className="sr-only">
-              ({pdfNote}, {fileSize(doc.bytes)}, {externalNote})
+              ({isWord(doc) ? wordNote : pdfNote}, {fileSize(doc.bytes)},{" "}
+              {externalNote})
             </span>
           </a>
         </li>
@@ -67,12 +82,14 @@ export function DocumentList({
 export function DocumentArchive({
   groups,
   pdfNote,
+  wordNote,
   externalNote,
   countLabel,
   emptyNote,
 }: {
   groups: { year: string; docs: TownshipDocument[] }[];
   pdfNote: string;
+  wordNote: string;
   externalNote: string;
   countLabel: (count: number) => string;
   emptyNote?: string;
@@ -114,6 +131,7 @@ export function DocumentArchive({
             <DocumentList
               docs={group.docs}
               pdfNote={pdfNote}
+              wordNote={wordNote}
               externalNote={externalNote}
             />
           </div>

@@ -3,11 +3,12 @@ import { notFound } from "next/navigation";
 import { getDictionary } from "@/content";
 import { isLocale, LOCALES } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/metadata";
-import { TOWNSHIP } from "@/lib/township";
+import { LINKS, TOWNSHIP } from "@/lib/township";
 import { Card, Container, PageHeader, Paragraphs } from "@/components/Page";
 import { DocumentList } from "@/components/DocumentList";
 import { DocGroup, documentCount } from "@/components/DocGroup";
 import { OpenOnHash } from "@/components/OpenOnHash";
+import { BodyRosters, OrgChart } from "@/components/PublicBody";
 import {
   byCategory,
   newestFirst,
@@ -42,6 +43,7 @@ export default function FoiaPage({ params }: { params: { lang: string } }) {
     documentCount(dict.common.documentCount, n, locale);
   const docNotes = {
     pdfNote: dict.common.pdfNote,
+    wordNote: dict.shared.wordNote,
     externalNote: dict.common.externalLinkNote,
   };
 
@@ -117,6 +119,21 @@ export default function FoiaPage({ params }: { params: { lang: string } }) {
               <dd className="mt-1 text-ink-muted">{t.employeesValue}</dd>
             </div>
           </dl>
+          <div className="mt-10 max-w-prose">
+            <h3 className="text-xl font-bold">{t.orgHeading}</h3>
+            <p className="mt-2 text-ink-muted">{t.orgIntro}</p>
+            <OrgChart nodes={t.orgChart} />
+          </div>
+        </section>
+
+        <section id="boards" className="scroll-mt-28">
+          <h2 className="text-2xl font-bold sm:text-3xl">
+            {t.membershipHeading}
+          </h2>
+          <p className="mt-2 max-w-prose text-ink-muted">
+            {t.membershipIntro}
+          </p>
+          <BodyRosters t={t} />
         </section>
 
         <section id="financial" className="scroll-mt-28">
@@ -194,6 +211,22 @@ export default function FoiaPage({ params }: { params: { lang: string } }) {
           </h2>
           <p className="mt-3 max-w-prose text-ink-muted">
             {t.compensationBody}
+          </p>
+        </section>
+
+        <section id="imrf" className="scroll-mt-28">
+          <h2 className="text-2xl font-bold sm:text-3xl">{t.imrfHeading}</h2>
+          <p className="mt-3 max-w-prose text-ink-muted">{t.imrfBody}</p>
+          <p className="mt-4">
+            <a
+              className="link font-semibold"
+              href={LINKS.imrfEmployerInfo}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {t.imrfLink}
+              <span className="sr-only"> ({dict.common.externalLinkNote})</span>
+            </a>
           </p>
         </section>
       </Container>

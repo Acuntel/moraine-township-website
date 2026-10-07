@@ -54,15 +54,30 @@ const CHECKS = [
     test: (html, docs) => [...docs].filter((d) => /minute/i.test(d)).length >= 20,
   },
   {
+    // The words alone are not the posting. Until October 2026 this passed on
+    // "operating budget" and "employee" while the page gave neither a figure
+    // nor a headcount, and named the advisory bodies without their members.
     cite: '5 ILCS 140/4',
-    what: 'FOIA: purpose, functional subdivisions, budget, offices, staff, advisory bodies',
+    what: 'FOIA: purpose, block diagram, budget total, offices, headcount, body membership',
     path: '/foia',
     test: (html) =>
       /purpose/i.test(html) &&
-      /subdivision/i.test(html) &&
+      /functional subdivisions/i.test(html) &&
       /operating budget/i.test(html) &&
-      /advisory/i.test(html) &&
-      /employee/i.test(html),
+      /total appropriations of \$[\d,]{7,}/i.test(html) &&
+      /\d+ full-time|five full-time|full-time employees/i.test(html) &&
+      /id="boards"/.test(html) &&
+      ['board', 'mentalHealth', 'ethics', 'grants', 'latino'].every((id) =>
+        html.includes(`id="body-${id}"`),
+      ) &&
+      /Nancy Chausow Shafer/.test(html) &&
+      /John Ropiequet/.test(html),
+  },
+  {
+    cite: '40 ILCS 5/7-135.5(b)',
+    what: 'Link to IMRF employer cost and participation information',
+    path: '/foia',
+    test: (html) => /imrf\.org\/[^"]*employer-cost-and-participation/i.test(html),
   },
   {
     cite: '5 ILCS 140/3, /6',

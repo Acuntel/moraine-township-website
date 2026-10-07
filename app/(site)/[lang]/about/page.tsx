@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getDictionary } from "@/content";
-import { isLocale, localePath, LOCALES } from "@/lib/i18n";
+import { isLocale, localePath, LOCALES, LOCALE_TAGS } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/metadata";
 import {
   ELECTED_OFFICIALS,
@@ -39,7 +39,16 @@ export default function AboutPage({ params }: { params: { lang: string } }) {
   const dict = getDictionary(locale);
   const t = dict.about;
   const demo = TOWNSHIP.demographics;
-  const number = new Intl.NumberFormat(locale);
+  // es-US, not plain "es": the Spanish site is read in Illinois, where
+  // "$148.066" reads as a hundred and forty-eight dollars. Russian keeps its
+  // own decimal comma, which is what a Russian reader expects.
+  const number = new Intl.NumberFormat(LOCALE_TAGS[locale]);
+  const percent = new Intl.NumberFormat(LOCALE_TAGS[locale], {
+    style: "percent",
+    minimumFractionDigits: 1,
+    maximumFractionDigits: 1,
+  });
+  const pct = (value: string) => percent.format(parseFloat(value) / 100);
 
   const roleLabel = (key: keyof typeof dict.shared.roles) =>
     dict.shared.roles[key];
@@ -83,7 +92,7 @@ export default function AboutPage({ params }: { params: { lang: string } }) {
           <dl className="mt-6 grid max-w-lg grid-cols-2 gap-4">
             <Stat
               label={dict.shared.squareMiles}
-              value={String(TOWNSHIP.geography.squareMiles)}
+              value={number.format(TOWNSHIP.geography.squareMiles)}
             />
             <Stat
               label={dict.shared.acres}
@@ -110,11 +119,11 @@ export default function AboutPage({ params }: { params: { lang: string } }) {
             />
             <Stat
               label={t.demographicsLabels.bachelors}
-              value={demo.bachelorsOrHigher}
+              value={pct(demo.bachelorsOrHigher)}
             />
             <Stat
               label={t.demographicsLabels.employment}
-              value={demo.employmentRate}
+              value={pct(demo.employmentRate)}
             />
             <Stat
               label={t.demographicsLabels.housingUnits}
@@ -122,11 +131,11 @@ export default function AboutPage({ params }: { params: { lang: string } }) {
             />
             <Stat
               label={t.demographicsLabels.withoutHealthcare}
-              value={demo.withoutHealthcare}
+              value={pct(demo.withoutHealthcare)}
             />
             <Stat
               label={t.demographicsLabels.belowPoverty}
-              value={demo.belowPovertyLine}
+              value={pct(demo.belowPovertyLine)}
             />
           </dl>
         </section>
@@ -183,7 +192,15 @@ export default function AboutPage({ params }: { params: { lang: string } }) {
                       <summary className="cursor-pointer text-sm font-semibold text-brand-teal">
                         {t.readBio}
                       </summary>
-                      <p className="mt-2 text-sm leading-[1.7] text-ink-muted">
+                      {dict.shared.bioInEnglishNote ? (
+                        <p className="mt-2 text-sm italic text-ink-muted">
+                          {dict.shared.bioInEnglishNote}
+                        </p>
+                      ) : null}
+                      <p
+                        lang={locale === "en" ? undefined : "en"}
+                        className="mt-2 text-sm leading-[1.7] text-ink-muted"
+                      >
                         {OFFICIAL_BIOS[person.id]}
                       </p>
                     </details>
@@ -207,9 +224,6 @@ export default function AboutPage({ params }: { params: { lang: string } }) {
               </li>
             ))}
           </ul>
-          {ELECTED_OFFICIALS.some((person) => !person.hasPhoto) ? (
-            <p className="mt-4 text-sm text-ink-muted">{t.noPhotoNote}</p>
-          ) : null}
 
           <h3 id="staff" className="mt-12 scroll-mt-28 text-xl font-bold">
             {t.staffHeading}

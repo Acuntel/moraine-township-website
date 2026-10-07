@@ -1,0 +1,98 @@
+{
+  "crawled": "2026-10-07",
+  "baseline": "2026-08-13 crawl in site.json plus lib/documents.json",
+  "method": "Every page in site.json, urls.txt and the live sitemap.xml (71 pages), 1 request per second, Chrome user agent. Every /s/ link was then checked with HEAD; the Squarespace redirect target carries the upload time in milliseconds, which is how new and replaced files were told apart.",
+  "pages_new_in_live_sitemap": [
+    "/factsandstats",
+    "/food-pantry-shopping-list-copy",
+    "/holiday-gift-drive-sponsorship-form",
+    "/home-impact",
+    "/letter-carrier-food-drive-pictures",
+    "/mental-health-board-foia",
+    "/new-page-2",
+    "/new-page-84",
+    "/residentsurvey"
+  ],
+  "new_documents": [
+    {
+      "original": "https://www.morainetownship.org/s/2026_08_05_Moraine_Township_Regular_Board_Meeting_Minutes.pdf",
+      "uploaded_to_squarespace": "2026-08-17T19:53:23.973000+00:00",
+      "linked_from": [
+        "/board-of-trustee-regular-meeting-minutes"
+      ],
+      "migrated_to": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2026_08_05_moraine_township_regular_board_meeting_minutes.pdf",
+      "label": "Board Meeting Minutes, August 5, 2026",
+      "category": "minutes",
+      "verified_from_document": "Title page: \"Minutes of Regular Board Meeting, August 5, 2026\"."
+    },
+    {
+      "original": "https://www.morainetownship.org/s/Moraine-Township-Final-Audit-Report-FYE-3-31-26.pdf",
+      "uploaded_to_squarespace": "2026-08-23T15:54:29.009000+00:00",
+      "linked_from": [
+        "/audit"
+      ],
+      "migrated_to": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/moraine-township-final-audit-report-fye-3-31-26.pdf",
+      "label": "Audited Annual Financial Report, Fiscal Year 2025-2026",
+      "category": "audit",
+      "verified_from_document": "Annual Financial Report for the fiscal year ended March 31, 2026; independent auditor's report dated July 30, 2026."
+    },
+    {
+      "original": "https://www.morainetownship.org/s/Comptroller-Report-Final-Moraine-Township-FY3-31-26.pdf",
+      "uploaded_to_squarespace": "2026-09-03T14:42:08.346000+00:00",
+      "linked_from": [
+        "/comptrollers-report"
+      ],
+      "migrated_to": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/comptroller-report-final-moraine-township-fy3-31-26.pdf",
+      "label": "Comptroller's Annual Financial Report, Fiscal Year 2025-2026",
+      "category": "comptroller",
+      "verified_from_document": "\"FY 2026 Annual Financial Report\", fiscal year end 3/31/2026, Comptroller Connect copy dated 9/2/2026."
+    },
+    {
+      "original": "https://www.morainetownship.org/s/2026_09_09_Moraine_Board_Agenda.pdf",
+      "uploaded_to_squarespace": "2026-09-04T20:28:51.696000+00:00",
+      "linked_from": [
+        "/",
+        "/clerk",
+        "/home-impact"
+      ],
+      "migrated_to": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2026_09_09_moraine_board_agenda.pdf",
+      "label": "Board Meeting Agenda, September 9, 2026",
+      "category": "agenda",
+      "verified_from_document": "Board of Trustees agenda, Wednesday, September 9, 2026, 4:00 p.m."
+    },
+    {
+      "original": "https://www.morainetownship.org/s/2026_8_19_Moraine_Board_Agenda_REVISED-4tx8.pdf",
+      "uploaded_to_squarespace": "2026-09-04T20:30:31.140000+00:00",
+      "linked_from": [
+        "/board-of-trustee-regular-meeting-minutes"
+      ],
+      "migrated_to": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2026_8_19_moraine_board_agenda_revised-4tx8.pdf",
+      "label": "Board Meeting Agenda, August 19, 2026",
+      "category": "agenda",
+      "verified_from_document": "Board of Trustees agenda, Wednesday, August 19, 2026, 4:00 p.m. The old site links it as \"Minutes of August 19, 2026\", which is a mislabel; the August 19 minutes are not posted."
+    },
+    {
+      "original": "https://www.morainetownship.org/s/Board-Replacement-CMHB-application.pdf",
+      "uploaded_to_squarespace": "2026-09-30T18:09:56.730000+00:00",
+      "linked_from": [
+        "/",
+        "/home-impact"
+      ],
+      "migrated_to": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/board-replacement-cmhb-application.pdf",
+      "label": "Community Mental Health Board Member Opening, Applications Due October 26, 2026",
+      "category": "mentalhealth",
+      "verified_from_document": "Vacancy notice for a two-year CMHB term; materials due October 26, 2026."
+    }
+  ],
+  "no_longer_linked": [
+    "https://www.morainetownship.org/s/2026_08_05_Moraine_Board_Agenda.pdf"
+  ],
+  "images_not_documents": "Seven /s/ links are photographs (cemetery history, volunteer photos, pantry logo). All were uploaded years before the baseline crawl and are outside the document archive.",
+  "still_404": "All 24 linked files that answer 404 are already listed in lib/documents.json under unavailable. None has come back.",
+  "not_posted_on_old_site": [
+    "Minutes of July 15, 2026 (approved at the August 5 meeting)",
+    "Minutes of August 19, 2026 (approved at the September 9 meeting)",
+    "Minutes of September 9, 2026, and of September 23, 2026 if that scheduled meeting was held",
+    "Agendas for October 7 and October 21, 2026 (on 2026-10-07 the old site still offers the September 9 agenda as the next meeting)"
+  ]
+}

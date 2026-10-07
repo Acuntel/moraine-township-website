@@ -314,3 +314,154 @@ prefers the alternatives, we can change them sitewide.
 | Popups (missed call, donation thank-you)   | 12 of 12 passed                     |
 | Browser errors across 42 pages             | None                                |
 | Legacy Squarespace URLs                    | All 65 redirect correctly           |
+
+---
+
+# Follow-up, October 7, 2026
+
+We checked every one of the review comments against the live site again, in
+English, Spanish, and Russian. All of them are live, apart from the items still
+waiting on the Township (listed below). The check also turned up two places
+where this reply above was not accurate, a few small errors, and some new
+documents on the old site. All of it is fixed and live now.
+
+## Two corrections to the reply above
+
+1. **The six "What We Provide" boxes.** We wrote that they were "the same size
+   on every screen". They were the same width but not the same height. They
+   are now the same height too, on phones, tablets, and computers, in all
+   three languages.
+2. **"English text on Spanish or Russian pages: None."** That was not quite
+   true. The elected officials' bios and the detailed cemetery histories stay
+   in English on purpose, because they are the officials' own words and
+   quotations from historic deeds and newspapers. But the Spanish and Russian
+   pages did not say so, and screen readers read that English with Spanish or
+   Russian pronunciation. Each of those passages is now marked as English, so
+   a screen reader switches voice, and a short note above it explains why it
+   is in English. Our automated check missed this, and it has been fixed so it
+   cannot miss it again.
+
+## Also fixed
+
+- The Spanish and Russian Services pages linked to the English Transportation
+  page. They now link to the Spanish and Russian pages.
+- Five older Supervisor's Statements are Word files, and screen readers
+  announced them as PDFs. They are now announced as Word documents.
+- The footer link "FOIA and transparency" is now "FOIA and Transparency".
+- The Resident Services box on the home page now lists health insurance
+  enrollment first and voter registration last, matching the Services page.
+- The note under the staff list now reads "Staff photographs are not
+  published, at the staff's request." It used to be a fragment.
+- In Spanish, Diana Guerrero, Rachel Jacoby, and Allison Levin are now
+  "Síndica".
+- Numbers on the About page now follow one style in each language. In
+  Spanish, "$148.066" could be read as about $148, so it now reads $148,066,
+  matching the rest of the Spanish site.
+- About a dozen Russian sentences used a comma where a dash had been removed,
+  which is not correct Russian. They were rewritten.
+- The Daggitt history heading "Neglect, and Rescue" lost its stray comma.
+
+## New documents from the old site
+
+Staff have kept posting on the old Squarespace site. These six documents were
+posted there after our August 13 copy, and they are now on the new site too:
+
+- Board Meeting Minutes, August 5, 2026
+- Audited Annual Financial Report, Fiscal Year 2025-2026
+- Comptroller's Annual Financial Report, Fiscal Year 2025-2026
+- Board Meeting Agendas for August 19 and September 9, 2026 (kept on file;
+  only the next meeting's agenda is shown)
+- The Community Mental Health Board member opening, with applications due
+  October 26, 2026. It is on the Programs page, in the Mental Health Board
+  section, written out on the page as well as linked, since a notice that
+  exists only as a PDF breaks the Supervisor's no-PDF-only rule. It comes down
+  by itself after October 26.
+
+**Please fix one thing in that notice.** Its "PLEASE UPLOAD DOCUMENTS HERE"
+link is broken: it points to the words themselves, not to an upload page, so
+nobody can apply through it. Until it is fixed, the Programs page tells
+applicants to contact Supervisor Nancy Chausow Shafer at
+super@morainetownship.org or 847-432-3240, the contact the notice gives.
+
+That answers three of the missing records in question 8 above. Still missing:
+the September 17, 2025 minutes, the full 2015 Comptroller report, and a tax
+year 2023 levy ordinance. The minutes of July 15, August 19, and September 9,
+2026 have not been posted anywhere yet. One more thing on the old site: its
+"Minutes of August 19, 2026" link opens that meeting's agenda.
+
+**Agendas.** Neither site has the agenda for October 7 or October 21. Until the
+domain moves to the new site, the old site is the official posting, so the
+October 21 agenda needs to go up there by 4:00 p.m. on Monday, October 19.
+Once the new site is live, staff enter it in the admin panel instead.
+
+## FOIA page: the description of the Township
+
+Section 4 of the Illinois Freedom of Information Act (5 ILCS 140/4) requires
+the website to show more than the page had. It now includes:
+
+- **A block diagram** of the Township's offices and functions, as an outline.
+- **The operating budget total.** Total appropriations of $3,666,310 for the
+  fiscal year that began April 1, 2026, from Ordinance No. 04222026, with the
+  split by fund.
+- **The approximate number of employees**, from the Township's own Annual FOIA
+  Posting of January 8, 2026.
+- **The members of each board, commission, and committee**: the Township
+  Board, the Community Mental Health Board, the Ethics Commission, the Citizen
+  Grant Advisory Committee, and the Latino Advisory Committee. The law asks
+  for the members, not only the names of the bodies.
+- **A link to the Illinois Municipal Retirement Fund's information about the
+  Township**, which Illinois law (40 ILCS 5/7-135.5) requires of every IMRF
+  employer with a website.
+
+The "Purpose" line now uses the mission statement and core priorities from
+the Township's own Annual FOIA Posting.
+
+Everything above comes from the Township's published records, so please check
+these points:
+
+1. **Part-time staff.** The January posting says "Part Time: 4 (Supervisor's
+   office equivalent to 1.16 FTE; 4 van drivers: equivalent to 1 FTE". How
+   many part-time employees are there? Is the Mental Health Board case manager
+   counted among the five full-time employees?
+2. **Latino Advisory Committee.** Every member's term in the January posting
+   ended June 30, 2026. The page says so and asks residents to call. Please
+   send the current list.
+3. **Citizen Grant Advisory Committee.** The Programs page says three Board
+   members serve as liaisons, but the January posting names only Trustee
+   Haggarty. Which is right?
+4. **Ad hoc committees.** The page mentions "ad hoc committees as appointed".
+   If any are active, the law asks for their members too.
+5. **Budget total.** The ordinance says $3,666,310 and the summary sheet says
+   $3,666,311, which looks like rounding. The page uses the ordinance figure.
+6. **The Annual FOIA Posting PDF** still shows the fiscal year 2024 budget. An
+   updated copy would help.
+7. **Compensation disclosure.** The law says it must be posted within six
+   business days after the budget is approved. The posted disclosure is dated
+   April 1, 2026, and the budget was adopted April 22, 2026. Please confirm
+   that it was posted (or re-posted) after April 22.
+8. **Tax levy notices.** If a future levy is more than 5 percent above the
+   year before, the notice must also go on the home page for at least 30 days
+   (35 ILCS 200/18-75). The tax year 2025 levy did not need one. Who should
+   post it if one is ever needed?
+
+## Links from the old site that are not on the new one
+
+The contract asks for every link from the old site to be kept, or retired with
+the Township's agreement. These eight are not on the new site. Please confirm
+they can stay retired, or tell us where you want them:
+
+- The Census Bureau's general profile page (data.census.gov). The About page
+  names its Census sources instead.
+- Lake County Elections (lakecountyil.gov/163/Elections), and Lake County's
+  early voting locations for a past election (document 13400). The Voter
+  Registration section links to the Illinois State Board of Elections and Lake
+  County Voter Power instead.
+- Lake County's Moraine precinct map and township map (morapcts.pdf and
+  cmoracity.pdf), from the old Election Information page.
+- The IRS tax-preparation intake form, in English and Spanish (Form 13614-C),
+  from the old VITA page.
+- Family Law Software (familylawsoftware.com), which was a link inside the
+  Supervisor's bio.
+
+The 34 documents that were already broken on the old site are listed in
+`BROKEN-SOURCE-DOCUMENTS.md`, for the Township to supply or retire.

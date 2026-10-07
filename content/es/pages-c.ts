@@ -1,6 +1,9 @@
-import type { Dictionary } from "../types";
+import type { Dictionary, FoiaBodyKey } from "../types";
 
-export const programs: Omit<Dictionary["programs"], "grantees"> = {
+export const programs: Omit<
+  Dictionary["programs"],
+  "grantees" | "cmhbOpening"
+> = {
   title: "Programas",
   description:
     "El Programa de Subvenciones de Moraine Township financia agencias locales sin fines de lucro que sirven a los residentes. El Comité Asesor Latino conecta al Township con nuestra comunidad latina.",
@@ -48,14 +51,14 @@ export const getInvolved: Dictionary["getInvolved"] = {
 
   topAskHeading: "Lo que más necesitamos",
   topAskBody:
-    "Voluntarios semanales regulares en la despensa de alimentos. Clasificar, acomodar en estantes, limpiar y ayudar a quienes vienen a comprar es el trabajo que mantiene la despensa abierta tres días por semana. La edad mínima para ser voluntario es 16 años. Si puede comprometerse a un turno por semana, eso es lo más útil que puede darnos.",
+    "Necesitamos voluntarios regulares que ayuden cada semana en la despensa de alimentos. Clasificar, acomodar en estantes, limpiar y ayudar a quienes vienen a comprar es el trabajo que mantiene la despensa abierta tres días por semana. La edad mínima para ser voluntario es 16 años. Si puede comprometerse a un turno por semana, eso es lo más útil que puede darnos.",
   topAskCta: "Complete una solicitud de voluntariado",
 
   waysHeading: "Otras formas de ayudar",
   ways: [
     {
       title: "Turnos en la despensa y recogida de alimentos",
-      body: "Clasificar, acomodar, limpiar, ayudar a quienes vienen a comprar y recoger donaciones de alimentos en tiendas de la zona. Necesitamos suplentes y voluntarios ocasionales para eventos especiales, además de ayuda semanal regular.",
+      body: "Clasifique, acomode, limpie, ayude a quienes vienen a comprar y recoja donaciones de alimentos en tiendas de la zona. Necesitamos suplentes y voluntarios ocasionales para eventos especiales, además de ayuda semanal regular.",
     },
     {
       title: "Recaudación en Sunset Foods",
@@ -168,7 +171,7 @@ export const thankYou: Dictionary["thankYou"] = {
 
 export const foia: Omit<
   Dictionary["foia"],
-  "employeesLabel" | "employeesValue" | "noticeGroups"
+  "employeesLabel" | "employeesValue" | "noticeGroups" | FoiaBodyKey
 > = {
   title: "FOIA y transparencia",
   description:
@@ -201,32 +204,27 @@ export const foia: Omit<
     {
       label: "Propósito",
       value:
-        "Moraine Township es una unidad de gobierno local de propósito especial que administra fondos para brindar servicios y apoyo receptivos, eficientes y compasivos a los residentes que lo necesitan, y que cumple las funciones de asistencia general, tasación de propiedades, elecciones, registro documental y administración de cementerios que exige la ley de Illinois.",
-    },
-    {
-      label: "Subdivisiones funcionales",
-      value:
-        "Oficina del Supervisor, que incluye Asistencia General y de Emergencia, la despensa de alimentos, los servicios a residentes y el transporte. Oficina del Secretario, que incluye registros, reuniones, avisos públicos y registro de votantes. Oficina del Tasador, que incluye la tasación de propiedades y las exenciones. Operación de los cementerios Mooney y Daggitt.",
+        "Moraine Township administra fondos para brindar servicios y apoyo receptivos, eficientes y compasivos a los residentes que lo necesitan. Sus prioridades principales son la tasación precisa de las propiedades del Township, la administración de la Asistencia General y de Emergencia para los residentes del Township y una red de protección para los residentes vulnerables.",
     },
     {
       label: "Órgano de gobierno",
       value:
-        "Junta de Síndicos, compuesta por el Supervisor, cuatro Síndicos electos y el Secretario como miembro sin voto.",
+        "El órgano de gobierno es la Junta de Síndicos, formada por la Supervisora y cuatro síndicos electos. La Secretaria actúa como secretaria de la Junta y no vota. Los miembros se indican más abajo.",
     },
     {
-      label: "Órganos asesores",
+      label: "Otras juntas y comités",
       value:
-        "Comisión de Ética, Comité Asesor Ciudadano de Subvenciones, Comité Asesor Latino y comités especiales según se designen.",
+        "Las demás juntas y comités del Township son la Junta Comunitaria de Salud Mental, la Comisión de Ética, el Comité Asesor Ciudadano de Subvenciones, el Comité Asesor Latino y los comités especiales que se designen. Los miembros se indican más abajo.",
     },
     {
       label: "Oficinas",
       value:
-        "Una oficina, ubicada en 800 Central Avenue, Highland Park, Illinois 60035.",
+        "El Township tiene una oficina, en 800 Central Avenue, Highland Park, Illinois 60035, que comparte con la despensa de alimentos. El Township también mantiene el cementerio Daggitt, en 425 Lake Cook Road, y el cementerio Mooney, en 1079 Ridge Road, ambos en Highland Park.",
     },
     {
       label: "Presupuesto operativo",
       value:
-        "El presupuesto operativo total se fija cada año en el presupuesto y la ordenanza de asignaciones del Township, publicados en los documentos presupuestarios siguientes.",
+        "Para el año fiscal del 1 de abril de 2026 al 31 de marzo de 2027, la Junta de Síndicos adoptó el 22 de abril de 2026, mediante la Ordenanza n.º 04222026, asignaciones totales de $3,666,310. De esa cantidad, $3,041,310 corresponden a gastos operativos y $625,000 se cubren con las reservas para imprevistos y gastos extraordinarios. Por fondo, las asignaciones son $1,452,325 para el Fondo Corporativo del Township, $679,471 para el Fondo de Asistencia General, $85,000 para el Fondo de Mantenimiento de Capital y $1,449,514 para el Fondo Comunitario de Salud Mental. La ordenanza completa está en Presupuesto y asignaciones, más abajo.",
     },
   ],
 

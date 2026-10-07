@@ -177,6 +177,7 @@ export default function AssessorPage({ params }: { params: { lang: string } }) {
             <DocumentList
               docs={documents}
               pdfNote={dict.common.pdfNote}
+              wordNote={dict.shared.wordNote}
               externalNote={dict.common.externalLinkNote}
             />
           </DocGroup>

@@ -126,6 +126,15 @@
       "ext": "pdf"
     },
     {
+      "original": "https://www.morainetownship.org/s/Board-Replacement-CMHB-application.pdf",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/board-replacement-cmhb-application.pdf",
+      "label": "Community Mental Health Board Member Opening, Applications Due October 26, 2026",
+      "category": "mentalhealth",
+      "year": 2026,
+      "bytes": 92004,
+      "ext": "pdf"
+    },
+    {
       "original": "https://www.morainetownship.org/s/2026-SUPERVISOR-STATEMENT-OF-FINANCIAL-AFFAIRS.pdf",
       "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2026-supervisor-statement-of-financial-affairs.pdf",
       "label": "Supervisor's Statement of Financial Affairs, Fiscal Year 2025-2026",
@@ -167,12 +176,40 @@
       "ext": "pdf"
     },
     {
+      "original": "https://www.morainetownship.org/s/2026_08_05_Moraine_Township_Regular_Board_Meeting_Minutes.pdf",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2026_08_05_moraine_township_regular_board_meeting_minutes.pdf",
+      "label": "Board Meeting Minutes, August 5, 2026",
+      "category": "minutes",
+      "year": 2026,
+      "date": "2026-08-05",
+      "bytes": 147199,
+      "ext": "pdf"
+    },
+    {
       "original": "https://www.morainetownship.org/s/2026_08_05_Moraine_Board_Agenda.pdf",
       "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2026_08_05_moraine_board_agenda.pdf",
       "label": "Board Meeting Agenda, August 5, 2026",
       "category": "agenda",
       "year": 2026,
       "bytes": 187308,
+      "ext": "pdf"
+    },
+    {
+      "original": "https://www.morainetownship.org/s/2026_8_19_Moraine_Board_Agenda_REVISED-4tx8.pdf",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2026_8_19_moraine_board_agenda_revised-4tx8.pdf",
+      "label": "Board Meeting Agenda, August 19, 2026",
+      "category": "agenda",
+      "year": 2026,
+      "bytes": 149593,
+      "ext": "pdf"
+    },
+    {
+      "original": "https://www.morainetownship.org/s/2026_09_09_Moraine_Board_Agenda.pdf",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/2026_09_09_moraine_board_agenda.pdf",
+      "label": "Board Meeting Agenda, September 9, 2026",
+      "category": "agenda",
+      "year": 2026,
+      "bytes": 93189,
       "ext": "pdf"
     },
     {
@@ -1577,6 +1614,15 @@
       "ext": "pdf"
     },
     {
+      "original": "https://www.morainetownship.org/s/Moraine-Township-Final-Audit-Report-FYE-3-31-26.pdf",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/moraine-township-final-audit-report-fye-3-31-26.pdf",
+      "label": "Audited Annual Financial Report, Fiscal Year 2025-2026",
+      "category": "audit",
+      "year": 2026,
+      "bytes": 868096,
+      "ext": "pdf"
+    },
+    {
       "original": "https://www.morainetownship.org/s/Application-Volunteer-Fillable.pdf",
       "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/application-volunteer-fillable.pdf",
       "label": "Volunteer Application",
@@ -1690,6 +1736,16 @@
       "subcategory": "comptroller",
       "year": 2025,
       "bytes": 1243922,
+      "ext": "pdf"
+    },
+    {
+      "original": "https://www.morainetownship.org/s/Comptroller-Report-Final-Moraine-Township-FY3-31-26.pdf",
+      "url": "https://rgkqokpqcyg7vyr1.public.blob.vercel-storage.com/documents/comptroller-report-final-moraine-township-fy3-31-26.pdf",
+      "label": "Comptroller's Annual Financial Report, Fiscal Year 2025-2026",
+      "category": "comptroller",
+      "subcategory": "comptroller",
+      "year": 2026,
+      "bytes": 519856,
       "ext": "pdf"
     },
     {

@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { ReadAloud } from "./ReadAloud";
-import type { Locale } from "@/lib/i18n";
+import { localePath, type Locale } from "@/lib/i18n";
 import type { Dictionary, LinkItem, Section } from "@/content/types";
 
 /**
@@ -92,10 +92,12 @@ export function Bullets({ items }: { items: readonly (string | LinkItem)[] }) {
 
 export function SectionBlock({
   section,
+  locale,
   externalNote,
   headingLevel = 3,
 }: {
   section: Section;
+  locale: Locale;
   externalNote: string;
   headingLevel?: 2 | 3;
 }) {
@@ -131,7 +133,11 @@ export function SectionBlock({
       ) : null}
       {section.bullets ? <Bullets items={section.bullets} /> : null}
       {section.links ? (
-        <LinkList links={section.links} externalNote={externalNote} />
+        <LinkList
+          links={section.links}
+          locale={locale}
+          externalNote={externalNote}
+        />
       ) : null}
     </section>
   );
@@ -149,16 +155,22 @@ function SubHeading({ level, children }: { level: number; children: string }) {
 
 export function LinkList({
   links,
+  locale,
   externalNote,
 }: {
   links: readonly LinkItem[];
+  locale: Locale;
   externalNote: string;
 }) {
   return (
     <ul className="mt-5 space-y-2.5">
       {links.map((link) => (
         <li key={link.href}>
-          <ExternalOrInternal link={link} externalNote={externalNote} />
+          <ExternalOrInternal
+            link={link}
+            locale={locale}
+            externalNote={externalNote}
+          />
         </li>
       ))}
     </ul>
@@ -168,13 +180,17 @@ export function LinkList({
 /**
  * External links get an explicit, screen-reader-visible note that they open a
  * new tab, and PDFs say so. Nobody should discover a format change only after
- * the download starts.
+ * the download starts. Internal links are stored unprefixed in every
+ * dictionary, so they get the reader's language here; without it a Spanish
+ * reader was sent to the English transportation page.
  */
 export function ExternalOrInternal({
   link,
+  locale,
   externalNote,
 }: {
   link: LinkItem;
+  locale: Locale;
   externalNote: string;
 }) {
   if (link.external) {
@@ -194,7 +210,12 @@ export function ExternalOrInternal({
     );
   }
   return (
-    <a className="link" href={link.href}>
+    <a
+      className="link"
+      href={
+        link.href.startsWith("/") ? localePath(locale, link.href) : link.href
+      }
+    >
       {link.label}
       {link.note ? (
         <span className="text-ink-muted"> ({link.note})</span>

@@ -25,6 +25,8 @@ import {
   programs,
   thankYou,
 } from "./pages-c";
+import { foiaBody } from "./foia-body";
+import { cmhbOpening } from "./cmhb-opening";
 
 export const en: Dictionary = {
   locale: "en",
@@ -42,11 +44,11 @@ export const en: Dictionary = {
   transportation,
   boardMeetings: { ...boardMeetings, minutesCards },
   cemeteries,
-  programs: { ...programs, grantees },
+  programs: { ...programs, grantees, cmhbOpening },
   getInvolved,
   donate,
   thankYou,
-  foia: { ...foia, ...foiaEmployees, noticeGroups },
+  foia: { ...foia, ...foiaEmployees, ...foiaBody, noticeGroups },
   contact,
   accessibility,
 };

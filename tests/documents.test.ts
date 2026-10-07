@@ -41,8 +41,8 @@ const ALL = manifest.migrated as Array<{
 
 describe("the manifest", () => {
   test("still holds every migrated file", () => {
-    assert.equal(ALL.length, 241);
-    assert.equal(DOCUMENT_COUNT, 241);
+    assert.equal(ALL.length, 247);
+    assert.equal(DOCUMENT_COUNT, 247);
   });
 
   test("records the 34 originals that were already 404 before migration", () => {
@@ -217,7 +217,7 @@ describe("helpers", () => {
       assert.deepEqual(dates, [...dates].sort().reverse(), group.year);
     }
     const [latest] = groupedByYear("minutes");
-    assert.equal(latest.docs[0].label, "Board Meeting Minutes, June 17, 2026");
+    assert.equal(latest.docs[0].label, "Board Meeting Minutes, August 5, 2026");
   });
 
   test("sortDate reads a date, a season or a year, in that order", () => {

@@ -59,6 +59,7 @@ export default async function BoardMeetingsPage({
   };
   const docNotes = {
     pdfNote: dict.common.pdfNote,
+    wordNote: dict.shared.wordNote,
     externalNote: dict.common.externalLinkNote,
   };
   const events = [...content.events].sort((a, b) =>
@@ -158,6 +159,7 @@ export default async function BoardMeetingsPage({
             <DocumentList
               docs={byCategory("schedule")}
               pdfNote={dict.common.pdfNote}
+              wordNote={dict.shared.wordNote}
               externalNote={dict.common.externalLinkNote}
             />
           </div>

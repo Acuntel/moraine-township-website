@@ -3,7 +3,7 @@ import manifest from "./documents.json";
 /**
  * The Township's document archive, re-hosted.
  *
- * All 275 files were served from morainetownship.org/s/* by Squarespace. The
+ * All 281 files were served from morainetownship.org/s/* by Squarespace. The
  * moment DNS points at this site those URLs stop resolving, taking the meeting
  * minutes, budgets, audits and levies that Illinois law requires the Township
  * to keep posted with them. They now live in this site's own Blob store, and

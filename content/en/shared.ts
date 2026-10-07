@@ -6,6 +6,9 @@ export const shared: Dictionary["shared"] = {
   squareMiles: "Square Miles",
   acres: "Acres",
   untranslatedNote: "",
+  bioInEnglishNote: "",
+  historyInEnglishNote: "",
+  wordNote: "Word document",
   tagline: "Get a Hand. Give a Hand.",
   foiaOfficerTitle: "FOIA Officer and Supervisor",
   sourcesHeading: "Sources and Acknowledgements",
@@ -16,6 +19,7 @@ export const shared: Dictionary["shared"] = {
     clerk: "Clerk",
     assessor: "Assessor",
     trustee: "Trustee",
+    trusteeWoman: "Trustee",
     caseworker: "Caseworker",
     coordinator: "Pantry and Transportation Coordinator",
     administrator: "Township Administrator and Deputy Clerk",
@@ -144,7 +148,7 @@ export const minutesCards: Dictionary["boardMeetings"]["minutesCards"] = [
 export const foiaEmployees = {
   employeesLabel: "Employees",
   employeesValue:
-    "Full and part-time staff of the Supervisor’s and Assessor’s offices. The current headcount is available on request from the Township office.",
+    "As of January 8, 2026, the Township estimated five full-time employees, three in the Assessor's office and two in the Supervisor's office. Part-time staff in the Supervisor's office together equal 1.16 full-time positions, and four part-time van drivers together equal one full-time position. These estimates include a seasonal summer intern.",
 };
 
 /**

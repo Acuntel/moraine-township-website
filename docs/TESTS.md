@@ -1,7 +1,7 @@
 # Tests
 
 ```bash
-npm test                       # 116 tests, no network, ~350ms
+npm test                       # 120 tests, no network, ~350ms
 npm run test:live              # + 18 smoke tests against the deployment
 node scripts/popup-check.mjs   # 12 checks, driven in a real browser
 npx tsc --noEmit               # the tests are typechecked with the site
@@ -32,9 +32,10 @@ tests import the exact files that ship, not a compiled copy that could drift.
 | `forms.test.ts`          | The contact form and the missed-call follow-up end to end, including every way they can fail. |
 | `admin-auth.test.ts`     | The password gate: forged cookies, extended expiries, and the unset-password case.            |
 | `i18n.test.ts`           | Routing between the three languages, including the `/en` regression described below.          |
-| `documents.test.ts`      | The 241-document archive, the statutory categories inside it, and newest-first date order.   |
+| `documents.test.ts`      | The 247-document archive, the statutory categories inside it, and newest-first date order.   |
 | `agendas.test.ts`        | Which agenda the Board Meetings page shows: the next meeting's, by the Chicago calendar.      |
 | `content.test.ts`        | English, Spanish and Russian checked against each other, plus every image description.        |
+| `foia.test.ts`           | The FOIA public body description: the same budget figures in every language, the Board roster drawn from the elected officials, and the IMRF link. |
 | `return-to-page.test.ts` | When the missed-call prompt and the donation thank-you are allowed to fire.                   |
 | `live.test.ts`           | The deployment itself. Skipped unless `RUN_LIVE_TESTS=1`.                                     |
 
@@ -101,5 +102,5 @@ dropped into English.
   live tests, which post a deliberately invalid body that is rejected at
   validation before the send path is reached.
 - Assertions carry a message naming the thing that broke, because a bare
-  `expected true to equal false` across 241 documents helps nobody.
+  `expected true to equal false` across 247 documents helps nobody.
 - Where a test encodes a legal requirement, cite the statute next to it.

@@ -6,6 +6,11 @@ export const shared: Dictionary["shared"] = {
   squareMiles: "Millas cuadradas",
   acres: "Acres",
   untranslatedNote: "Este artículo está disponible por ahora solo en inglés.",
+  bioInEnglishNote:
+    "Las biografías las escribieron los propios funcionarios y se publican en inglés.",
+  historyInEnglishNote:
+    "La historia detallada que sigue solo está disponible en inglés, porque cita escrituras de propiedad y periódicos antiguos que se conservan con su redacción original.",
+  wordNote: "Documento de Word",
   tagline: "Reciba una mano. Dé una mano.",
   foiaOfficerTitle: "Oficial de FOIA y Supervisora",
   sourcesHeading: "Fuentes y agradecimientos",
@@ -16,6 +21,7 @@ export const shared: Dictionary["shared"] = {
     clerk: "Secretaria",
     assessor: "Tasador",
     trustee: "Síndico",
+    trusteeWoman: "Síndica",
     caseworker: "Trabajadora social",
     coordinator: "Coordinadora de Despensa y Transporte",
     administrator: "Administradora del Township y Secretaria Adjunta",
@@ -147,7 +153,7 @@ export const minutesCards: Dictionary["boardMeetings"]["minutesCards"] = [
 export const foiaEmployees = {
   employeesLabel: "Empleados",
   employeesValue:
-    "Personal de tiempo completo y medio tiempo de las oficinas del Supervisor y del Tasador. El número actual de empleados está disponible a solicitud en la oficina del Township.",
+    "Al 8 de enero de 2026, el Township calculaba tener cinco empleados de tiempo completo: tres en la oficina del Tasador y dos en la oficina del Supervisor. El personal de medio tiempo de la oficina del Supervisor equivale en conjunto a 1.16 puestos de tiempo completo, y cuatro conductores de camioneta de medio tiempo equivalen en conjunto a un puesto de tiempo completo. Estas cifras incluyen a un pasante de verano.",
 };
 
 /**

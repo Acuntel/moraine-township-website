@@ -77,6 +77,7 @@ export default async function GetInvolvedPage({
           <DocumentList
             docs={byCategory("volunteer")}
             pdfNote={dict.common.pdfNote}
+            wordNote={dict.shared.wordNote}
             externalNote={dict.common.externalLinkNote}
           />
         </section>

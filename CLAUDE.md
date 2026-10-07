@@ -48,13 +48,13 @@ Highland Park, Illinois. Replaces their Squarespace site at morainetownship.org.
    Illinois law, not a nicety.
 
    ```bash
-   npm test                              # 116 tests, no network needed
+   npm test                              # 120 tests, no network needed
    npx tsc --noEmit                      # the tests are typechecked too
    node scripts/contrast.mjs             # 28 measured colour pairs
    node scripts/a11y-audit.mjs           # 12 WCAG criteria x 54 pages
    node scripts/image-audit.mjs          # every image has a real description
    node scripts/i18n-leak-check.mjs      # no English on the es/ru pages
-   node scripts/illinois-compliance.mjs  # 15 statutory postings
+   node scripts/illinois-compliance.mjs  # 16 statutory postings
    ```
 
    Two generators, run only when their source changes, not on every deploy:
@@ -145,7 +145,7 @@ Highland Park, Illinois. Replaces their Squarespace site at morainetownship.org.
     broken this way, and nothing threw. The hook also defers its callback by a
     tick, because navigating straight out of a `pageshow` handler races Next's
     own bfcache restore and the router puts the old URL back.
-11. **The document archive is load-bearing.** `lib/documents.json` maps 241 files
+11. **The document archive is load-bearing.** `lib/documents.json` maps 247 files
     that Illinois law requires to stay posted. Do not remove a category from a
     page without checking `scripts/illinois-compliance.mjs` still passes.
 

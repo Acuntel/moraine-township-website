@@ -145,6 +145,7 @@ export default function CemeteriesPage({
             <DocumentList
               docs={newestFirst(byCategory("cemetery"))}
               pdfNote={dict.common.pdfNote}
+              wordNote={dict.shared.wordNote}
               externalNote={dict.common.externalLinkNote}
             />
           </DocGroup>

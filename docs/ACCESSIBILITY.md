@@ -220,9 +220,14 @@ is present **and reachable**, not merely described. A page that says "budgets ar
 posted here" and links nothing is a compliance failure, and that is the failure
 mode this catches.
 
-**Result: 15/15 satisfied.** Covering 5 ILCS 120/2.02(a), 2.02(b), 2.06(b) and 7.3;
-5 ILCS 140/3, /4 and /6; 30 ILCS 15; 35 ILCS 200/18-60; 50 ILCS 205/20;
-60 ILCS 1 Articles 80 and 130; and 28 CFR 35.200.
+**Result: 16/16 satisfied.** Covering 5 ILCS 120/2.02(a), 2.02(b), 2.06(b) and 7.3;
+5 ILCS 140/3, /4 and /6; 30 ILCS 15; 35 ILCS 200/18-60; 40 ILCS 5/7-135.5(b);
+50 ILCS 205/20; 60 ILCS 1 Articles 80 and 130; and 28 CFR 35.200.
+
+The 5 ILCS 140/4 check was tightened on 2026-10-07. It used to pass on the words
+"operating budget" and "employee" alone; it now needs the appropriation figure,
+the employee estimate, and the membership of each board and committee, because
+the statute asks for those and the page did not give them.
 
 ---
 

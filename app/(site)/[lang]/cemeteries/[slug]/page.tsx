@@ -40,6 +40,7 @@ export default function CemeteryHistoryPage({
   const dict = getDictionary(locale);
   const history = getHistory(locale, params.slug);
   if (!history) notFound();
+  const english = locale === "en";
 
   return (
     <>
@@ -52,8 +53,18 @@ export default function CemeteryHistoryPage({
       />
 
       <Container className="space-y-10">
+        {/* The archival sections stay in English on the Spanish and Russian
+            pages (see content/histories.ts). They are marked lang="en" so a
+            screen reader switches voice instead of reading English with
+            Spanish or Russian pronunciation (WCAG 3.1.2), and the reader is
+            told why. */}
+        {dict.shared.historyInEnglishNote ? (
+          <p className="max-w-prose italic text-ink-muted">
+            {dict.shared.historyInEnglishNote}
+          </p>
+        ) : null}
         {history.sections.map((section) => (
-          <section key={section.heading}>
+          <section key={section.heading} lang={english ? undefined : "en"}>
             <h2 className="text-2xl font-bold sm:text-3xl">
               {section.heading}
             </h2>
@@ -94,7 +105,10 @@ export default function CemeteryHistoryPage({
 
         <section className="rounded-2xl bg-surface-alt p-6">
           <h2 className="text-lg font-bold">{dict.shared.sourcesHeading}</h2>
-          <p className="mt-2 max-w-prose text-sm text-ink-muted">
+          <p
+            lang={english ? undefined : "en"}
+            className="mt-2 max-w-prose text-sm text-ink-muted"
+          >
             {history.sources}
           </p>
         </section>
